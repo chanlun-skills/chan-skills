@@ -63,6 +63,7 @@ def print_rows(rows, cols, width=60):
 def main():
     ap = argparse.ArgumentParser(description="缠论案例库检索")
     ap.add_argument("--list", action="store_true", help="列出个股清单（按案例数排序）")
+    ap.add_argument("--stats", action="store_true", help="显示数据统计概览")
     ap.add_argument("--code", help="按股票代码检索")
     ap.add_argument("--name", help="按股票名称模糊检索")
     ap.add_argument("--type", dest="ctype", help="按内容类型过滤")
@@ -71,6 +72,30 @@ def main():
     ap.add_argument("--timeline", metavar="CODE", help="查看某股操作时间线")
     ap.add_argument("--top", type=int, default=20, help="最多显示条数（默认 20）")
     args = ap.parse_args()
+
+    # --stats: 数据概览
+    if args.stats:
+        stocks = read_csv(STOCKS)
+        cases = read_csv(DETAIL)
+        timeline = read_csv(TIMELINE)
+        print("=" * 72)
+        print("缠论案例大全 · 数据概览")
+        print("=" * 72)
+        print(f"个股数量      : {len(stocks)} 只")
+        print(f"案例总数      : {len(cases)} 条")
+        print(f"时间线条目    : {len(timeline)} 条")
+        years = sorted({(r.get("日期", "") or "")[:4] for r in cases if r.get("日期")})
+        years = [y for y in years if y.isdigit()]
+        if years:
+            print(f"日期跨度      : {years[0]} ~ {years[-1]}（主体为 2002-2008 年，"
+                  f"个别条目日期字段异常）")
+        if stocks:
+            top = sorted(stocks, key=lambda r: -int(r.get("案例数", 0) or 0))[:5]
+            print(f"案例最多个股  : " + "、".join(
+                f"{r.get('名称','')}({r.get('案例数','')})" for r in top))
+        print("=" * 72)
+        print(DISCLAIMER)
+        return
 
     # --list: 个股清单
     if args.list:
