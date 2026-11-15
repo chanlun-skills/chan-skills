@@ -120,9 +120,22 @@ python scripts/search_cases.py --stats
 
 **扫码进群** —— 👉 [**点此打开加群页**](./docs/join.html)
 
+<table>
+<tr>
+<td align="center"><b>QQ 群（永久有效）</b><br>
+<img src="docs/images/qq-qrcode.png" width="200" alt="QQ群二维码" onerror="this.closest('td').innerHTML='<b>QQ 群</b><br><br><small>群号 1132948221</small>'"></td>
+<td align="center"><b>微信群（7 天有效）</b><br>
+<img src="docs/images/qun-qrcode.png" width="160" alt="微信群二维码" onerror="this.closest('td').innerHTML='<b>微信群</b><br><br><small>见加群页</small>'"></td>
+</tr>
+<tr>
+<td align="center">群号 <code>1132948221</code></td>
+<td align="center">见加群页</td>
+</tr>
+</table>
+
 加群页是一个**永久地址**：微信群二维码 7 天过期，但你只需替换 `docs/images/qun-qrcode.png` 这一张图并推送，这个链接和 README 都不用改。
 
-> 💡 **最省心做法**：加群页里也放了 **QQ 群（永久不过期）**，用它可以完全绕开定期换码的麻烦。
+> 💡 **最省心做法**：直接用 **QQ 群**（二维码永久不过期），可以完全绕开定期换码的麻烦。
 
 Discussions 开放 Q&A 与案例讨论，欢迎把你的复盘结果发上来。
 
@@ -144,6 +157,8 @@ Discussions 开放 Q&A 与案例讨论，欢迎把你的复盘结果发上来。
 </table>
 
 这些 Skill 是完全免费开源的。维护它们需要时间 —— 数据纠错、脚本维护、文档更新。如果对你有帮助，一杯咖啡就是最好的支持。
+
+> 微信 / 支付宝扫码时备注里写个 **"缠论"** 或 **"咖啡"**，方便我认出来 ❤️
 
 ---
 

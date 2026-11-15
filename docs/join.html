@@ -67,10 +67,30 @@
       <p class="sub">案例复盘 · 三买研讨 · 工具共创 · 疑难解答</p>
     </header>
 
+    <!-- ======== QQ群（永久有效 · 主入口） ======== -->
+    <div class="qq" style="margin-bottom:8px">
+      <b>QQ 群 · 永久有效</b>
+    </div>
+    <div class="qrbox" style="padding:18px">
+      <img src="images/qq-qrcode.png" alt="QQ 群二维码"
+           style="max-width:250px;width:250px;border-radius:8px;border:1px solid rgba(0,0,0,.06)"
+           onerror="this.style.display='none';document.getElementById('ph-qq').style.display='flex';">
+      <div class="placeholder" id="ph-qq" style="display:none;width:250px;height:250px;font-size:12.5px">
+        QQ 群二维码<br>（永久不过期）<br><br><code>docs/images/qq-qrcode.png</code>
+      </div>
+      <p class="tip">QQ 群二维码不会失效，是最省心的入口</p>
+      <p style="margin-top:10px;font-size:14px;color:#3c3489">
+        群号：<code style="background:#eeedfe;padding:2px 8px;border-radius:5px;font-family:Consolas,monospace">1132948221</code>
+        <span style="color:#8a8a84;font-size:12.5px">（复制后到 QQ 加群）</span>
+      </p>
+    </div>
+
+    <div class="divider"><span>微信群（7 天有效期）</span></div>
+
     <!-- ======== 微信群 ======== -->
     <div class="qrbox">
       <!--
-        ▼▼▼ 群二维码过期时，只需要做这一件事 ▼▼▼
+        ▼▼▼ 微信群二维码过期时，只需要做这一件事 ▼▼▼
         1. 重新生成群二维码，保存为 images/qun-qrcode.png 覆盖旧图
         2. 提交推送： git commit -am "chore: 更新群二维码" && git push
         3. 完成 —— 本页面与 README 中的链接永远不用改
@@ -78,8 +98,9 @@
         图片不存在时自动显示下方提示框（onerror 切换），放了图就自动生效
       -->
       <img src="images/qun-qrcode.png" alt="微信群二维码"
+           style="max-width:220px;width:220px;border-radius:8px;border:1px solid rgba(0,0,0,.06)"
            onerror="this.style.display='none';document.getElementById('ph-wechat').style.display='flex';">
-      <div class="placeholder" id="ph-wechat" style="display:none">
+      <div class="placeholder" id="ph-wechat" style="display:none;width:220px;height:220px;font-size:12.5px">
         微信群二维码<br>（7 天有效期）<br><br>图片位置：<br><code>docs/images/qun-qrcode.png</code>
       </div>
       <p class="tip">微信群二维码 7 天过期 —— 每次打开本页看到的是最新版本</p>
@@ -88,22 +109,6 @@
     <a class="btn" href="https://github.com/chanlun-skills/chan-skills/issues" target="_blank">
       二维码失效？点这里获取最新群码
     </a>
-
-    <div class="divider"><span>或</span></div>
-
-    <!-- ======== QQ群（永久有效） ======== -->
-    <div class="qq" style="margin-bottom:8px">
-      <b>QQ 群（永久有效）</b>
-    </div>
-    <div class="qrbox" style="padding:18px">
-      <img src="images/qq-qrcode.png" alt="QQ 群二维码"
-           style="max-width:190px;width:190px;height:190px;border-radius:8px;object-fit:cover;border:1px solid rgba(0,0,0,.06)"
-           onerror="this.style.display='none';document.getElementById('ph-qq').style.display='flex';">
-      <div class="placeholder" id="ph-qq" style="display:none;width:190px;height:190px;font-size:12.5px">
-        QQ 群二维码<br>（永久不过期）<br><br><code>docs/images/qq-qrcode.png</code>
-      </div>
-      <p class="tip">QQ 群二维码不失效，是最省心的入口</p>
-    </div>
 
     <div class="divider"><span>其他方式</span></div>
 
