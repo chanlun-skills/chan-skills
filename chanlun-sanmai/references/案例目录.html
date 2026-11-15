@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>缠师日线3买 · 案例目录与检索</title>
+<style>
+:root{
+  --bg:#F7F6F3; --card:#FFFFFF; --ink:#1A1A1A; --ink2:#4A4A4A; --ink3:#7A7A7A;
+  --line:#E2E0DA; --gold:#B8944A; --goldL:#8A6D2F; --red:#C0392B; --green:#2E7D52;
+  --blue:#2C5F8A; --amber:#B07A1E;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);
+  font:15px/1.75 -apple-system,"Microsoft YaHei","PingFang SC",sans-serif}
+.wrap{max-width:1180px;margin:0 auto;padding:0 20px 80px}
+
+header{background:linear-gradient(135deg,#1C1A16 0%,#2A2419 100%);color:#F5F1E8;
+  padding:46px 20px 40px;margin-bottom:30px}
+header .wrap{padding-bottom:0}
+.kicker{font-size:12px;letter-spacing:.22em;color:var(--gold);opacity:.9;margin-bottom:12px}
+h1{margin:0 0 14px;font-size:30px;letter-spacing:.02em;font-weight:600}
+.lead{color:#CFC8B8;font-size:14.5px;max-width:900px;margin:0 0 20px}
+.head-stats{display:flex;gap:26px;flex-wrap:wrap;margin-top:20px;padding-top:18px;
+  border-top:1px solid rgba(184,148,74,.28)}
+.hs{min-width:96px}
+.hs .n{font-size:23px;color:var(--gold);font-weight:600;line-height:1.2}
+.hs .l{font-size:11.5px;color:#9C9484;letter-spacing:.06em;margin-top:3px}
+
+section{margin:34px 0}
+h2{font-size:19px;margin:0 0 6px;padding-left:11px;border-left:3px solid var(--gold);
+  font-weight:600}
+h2 .en{font-size:11px;color:var(--ink3);letter-spacing:.14em;margin-left:9px;font-weight:400}
+.lead2{color:var(--ink2);font-size:14px;margin:8px 0 18px;padding-left:14px}
+
+.card{background:var(--card);border:1px solid var(--line);border-radius:10px;
+  padding:18px 20px;margin-bottom:14px;box-shadow:0 1px 3px rgba(0,0,0,.04)}
+.card h3{margin:0 0 10px;font-size:15.5px;font-weight:600}
+.card h3 .tag{display:inline-block;font-size:11px;padding:2px 8px;border-radius:4px;
+  margin-left:8px;vertical-align:2px;font-weight:500}
+.t-ok{background:rgba(46,125,82,.11);color:var(--green)}
+.t-no{background:rgba(192,57,43,.10);color:var(--red)}
+.t-lv{background:rgba(44,95,138,.10);color:var(--blue)}
+.card p{margin:0 0 8px;color:var(--ink2);font-size:14px}
+.quote{border-left:3px solid var(--gold);background:rgba(184,148,74,.06);
+  padding:11px 15px;margin:10px 0;color:var(--ink);font-size:14px;border-radius:0 6px 6px 0}
+.quote .src{display:block;margin-top:6px;font-size:12px;color:var(--ink3)}
+code{background:rgba(0,0,0,.05);padding:1px 5px;border-radius:3px;font-size:13px;
+  font-family:"Cascadia Mono",Consolas,monospace}
+
+.rules{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:12px}
+.rule{background:var(--card);border:1px solid var(--line);border-radius:9px;padding:15px 17px}
+.rule .no{font-size:11px;color:var(--gold);letter-spacing:.12em;font-weight:600}
+.rule .tt{font-size:14.5px;font-weight:600;margin:5px 0 7px}
+.rule .bd{font-size:13px;color:var(--ink2);line-height:1.7}
+
+.toolbar{background:var(--card);border:1px solid var(--line);border-radius:10px;
+  padding:14px 16px;margin-bottom:16px;position:sticky;top:0;z-index:20;
+  box-shadow:0 2px 8px rgba(0,0,0,.06)}
+.searchrow{display:flex;gap:10px;flex-wrap:wrap;align-items:center}
+input[type=search]{flex:1;min-width:220px;padding:9px 13px;border:1px solid var(--line);
+  border-radius:7px;font-size:14px;font-family:inherit;background:#FCFBF9}
+input[type=search]:focus{outline:none;border-color:var(--gold);background:#fff}
+.chips{display:flex;gap:7px;flex-wrap:wrap;margin-top:11px}
+.chip{padding:5px 12px;border:1px solid var(--line);border-radius:20px;font-size:13px;
+  cursor:pointer;background:#FCFBF9;color:var(--ink2);user-select:none;transition:.15s}
+.chip:hover{border-color:var(--gold);color:var(--ink)}
+.chip.on{background:var(--gold);border-color:var(--gold);color:#fff;font-weight:500}
+.count{font-size:13px;color:var(--ink3);margin:10px 0 0}
+
+table{width:100%;border-collapse:collapse;font-size:13.5px;background:var(--card);
+  border:1px solid var(--line);border-radius:9px;overflow:hidden}
+th{background:#F0EEE9;text-align:left;padding:10px 12px;font-weight:600;font-size:12.5px;
+  color:var(--ink2);border-bottom:1px solid var(--line);white-space:nowrap}
+td{padding:10px 12px;border-bottom:1px solid #F0EEE9;vertical-align:top}
+tr:last-child td{border-bottom:none}
+tr:hover td{background:#FCFBF9}
+td.nm{font-weight:600;white-space:nowrap}
+td.cd{font-family:"Cascadia Mono",Consolas,monospace;color:var(--ink2);white-space:nowrap}
+.up{color:var(--red);font-weight:600}
+.dn{color:var(--green);font-weight:600}
+.fl{font-size:12px;color:var(--ink3)}
+
+.bar{height:6px;background:#EDEAE4;border-radius:3px;overflow:hidden;min-width:54px}
+.bar i{display:block;height:100%;background:linear-gradient(90deg,#D4B36A,#B8944A)}
+
+.warnbox{background:#FDF6EC;border:1px solid #EBD9B8;border-left:3px solid var(--amber);
+  border-radius:0 9px 9px 0;padding:15px 18px;margin:14px 0}
+.warnbox b{color:#8A5F12}
+.warnbox ul{margin:9px 0 0;padding-left:20px;color:var(--ink2);font-size:13.5px}
+.warnbox li{margin:4px 0}
+
+.split{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+@media(max-width:760px){.split{grid-template-columns:1fr}}
+.srcref{font-size:12px;color:var(--ink3);line-height:1.9}
+.srcref a{color:var(--blue);text-decoration:none;border-bottom:1px dotted #A9C0D4}
+.srcref a:hover{border-bottom-style:solid}
+
+footer{border-top:1px solid var(--line);margin-top:44px;padding-top:20px;
+  font-size:12.5px;color:var(--ink3);line-height:1.9}
+.empty{display:none;padding:26px;text-align:center;color:var(--ink3);
+  background:var(--card);border:1px dashed var(--line);border-radius:9px}
+</style>
+</head>
+<body>
+
+<header>
+<div class="wrap">
+  <div class="kicker">缠中说禅 · 2006–2007 原始图例核实与索引</div>
+  <h1>缠师确认过的「日线第三类买点」案例目录</h1>
+  <p class="lead">
+    本目录基于用户提供的《当年缠师确认的日线3买》PDF（12 页 / 35 张 K 线图例），
+    逐张提取图内均线指纹与价格锚点，<b>反查回真实标的与截止日期</b>，
+    再对照缠中说禅博客原文（含完整转载存档）逐条核实，
+    最后用东方财富历史行情复算每个案例的后续走势。<br>
+    <b>凡未经原文证实的图例，一律标注为「仅图例、原文未证」，不作为教学结论使用。</b>
+  </p>
+  <div class="head-stats">
+    <div class="hs"><div class="n" id="s-total">—</div><div class="l">核心案例</div></div>
+    <div class="hs"><div class="n" id="s-ok">—</div><div class="l">缠师明确确认</div></div>
+    <div class="hs"><div class="n" id="s-no">—</div><div class="l">缠师明确否认</div></div>
+    <div class="hs"><div class="n" id="s-list">—</div><div class="l">涨停名单</div></div>
+    <div class="hs"><div class="n">20</div><div class="l">引用出处</div></div>
+  </div>
+</div>
+</header>
+
+<div class="wrap">
+
+<section>
+  <h2>判定链条<span class="en">THE VERIFICATION CHAIN · 三级共振，不可跳级</span></h2>
+  <p class="lead2">缠师原话：「以日线的第三类买点。要找这个买点，就看一个 30 分钟的回抽，而该回抽低点，就看 5 分钟的背弛。<b>必须三个级别共同来才可以。</b>」</p>
+  <div class="rules">
+    <div class="rule"><div class="no">STEP 1 · 日线</div><div class="tt">找中枢上沿 ZG</div>
+      <div class="bd">第三类买点<b>必然在中枢之上</b>出现。日线图上画中枢框，标出上沿 ZG 与下沿 ZD。</div></div>
+    <div class="rule"><div class="no">STEP 2 · 30分钟</div><div class="tt">确认三段回抽</div>
+      <div class="bd">离开段向上 → 回抽段必须是<b>三段 30 分钟</b>走势（跌-弹-跌），回抽低点<b>不跌破日线中枢 ZG</b>。</div></div>
+    <div class="rule"><div class="no">STEP 3 · 5分钟</div><div class="tt">找背驰定位点</div>
+      <div class="bd">在回抽段内部找 <b>5 分钟底背驰</b>，或「次次级别背驰 / 双次回拉确认」，作为精确介入点。</div></div>
+    <div class="rule"><div class="no">STEP 4 · 佐证</div><div class="tt">30分钟 MACD 回抽 0 轴</div>
+      <div class="bd">「这时候，30 分钟的 MACD 有一个回抽 0 轴的动作，<b>一般都不该跌破 0 轴</b>。」（2007-01-16）</div></div>
+  </div>
+  <div class="quote">
+    「第三类买点一定要<b>等到次次级别的背驰或双次回拉确认</b>，因为这种刚上 0 轴的，根本就谈不上背驰。」
+    <span class="src">—— 缠中说禅 2007-01-26 15:22:50</span>
+  </div>
+</section>
+
+<section>
+  <h2>核心案例<span class="en">CORE CASES · 缠师点名 + 日期明确</span></h2>
+  <p class="lead2">下表可搜索、按结论与级别筛选。涨幅为<b>不复权</b>口径，以 3 买日收盘价为基准（东方财富历史行情复算，2026-11-05 核）。</p>
+
+  <div class="toolbar">
+    <div class="searchrow">
+      <input type="search" id="q" placeholder="搜索：股票名 / 代码 / 买点日期 / 缠师原话关键词（如 中枢扩张、背驰、奔走）">
+    </div>
+    <div class="chips" id="chips">
+      <span class="chip on" data-f="all">全部</span>
+      <span class="chip" data-f="确认">缠师确认</span>
+      <span class="chip" data-f="否认">缠师否认</span>
+      <span class="chip" data-f="日线">日线级</span>
+      <span class="chip" data-f="周线">周线级</span>
+      <span class="chip" data-f="big">涨幅 &gt; 100%</span>
+    </div>
+    <div class="count" id="count"></div>
+  </div>
+
+  <table id="tbl">
+    <thead><tr>
+      <th>标的</th><th>3 买日</th><th>级别</th><th>缠师结论</th>
+      <th>10日</th><th>20日</th><th>60日</th><th>120日最大</th><th>要点</th>
+    </tr></thead>
+    <tbody id="tbody"></tbody>
+  </table>
+  <div class="empty" id="empty">没有匹配的案例 —— 换个关键词试试</div>
+</section>
+
+<section>
+  <h2>逐案释义<span class="en">CASE NOTES · 缠师原话 + 走势验证</span></h2>
+  <div id="notes"></div>
+</section>
+
+<section>
+  <h2>2007-01-16 涨停名单<span class="en">THE LIMIT-UP LIST · 「从 3 买启动」的补涨股</span></h2>
+  <p class="lead2">缠师原话：「各位看看今天涨停的股票，有多少是<b>从第三类买点启动</b>的，就上海的，而且只说低价的，随便说几个：600608、600555、600784、600684、600300、600829、600587、600820、600884。」</p>
+  <div class="split">
+    <div class="card">
+      <h3>名单内走势复算<span class="tag t-lv">基准 2007-01-16 收盘</span></h3>
+      <table>
+        <thead><tr><th>代码</th><th>当年名称</th><th>20日</th><th>60日</th><th>120日</th><th>区间最大</th></tr></thead>
+        <tbody id="lst"></tbody>
+      </table>
+    </div>
+    <div class="card">
+      <h3>怎么读这张表<span class="tag t-lv">方法论</span></h3>
+      <p>这批票 3 买<b>启动日不精确</b>（缠师只是说「今天涨停的股票里有很多是从 3 买启动的」），所以基准统一取名单公布当日收盘，属于<b>粗略口径</b>。</p>
+      <p>真正能读出来的是：<b>9 只沪市低价股里 8 只在 120 个交易日内接近或达到翻倍</b>（鲁银 +118% 区间最大、杉杉 +290%、九龙山 +125%、珠江 +147%、新华医疗 +101%、维维 +95%）。</p>
+      <p>这说明缠师「3 买启动 → 补涨行情」的判断，在 2007 年 1 月这一波里<b>兑现度极高</b>；但反过来，<b>不能用这批票证明方法有效</b> —— 名单本身就是按「已经涨停」筛出来的，存在选择偏差。</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2>PDF 图例的代码校正<span class="en">OCR CORRECTIONS · 讲错标的就会讲错课</span></h2>
+  <div class="warnbox">
+    <b>⚠️ 图例上的股票代码不能直接采信</b>
+    <ul>
+      <li><b>东方明珠 = 600832</b>（2006 年即此名，已终止上市）。600637 在 2006 年叫「广电信息 / G 上广电」，2011 年改百视通、<b>2015 年才改成「东方明珠」</b> —— 这是同名前缀陷阱。<br>
+        验证：PDF 图例左上角 MA5:6.21，用东财<b>前复权</b>数据匹配到 <code>600832 / 2006-12-08 收盘 6.19</code>，误差 0.005；而 600637 全区间无匹配点。日期也正是缠师原话确认的「12 月 8 日」。</li>
+      <li><b>鲁银投资 = 600784</b>，不是 000777（000777 是中核科技）。缠师 2007-01-16 原话点名「600784」。</li>
+      <li><b>600300 = 维维股份</b>，不是冠豪高新。缠师原话写「600300 日线图」，与图上「维维食品」是同一只票。</li>
+      <li>其余多数属<b>名称变更</b>（非错误）：000767 晋控电力（原漳泽电力）、000800 一汽解放（原一汽轿车）、600684 珠江股份（原珠江实业）、002034 旺能环境（原新源实业）、600862 中航高科（原航天高科）等。<b>以代码为准</b>。</li>
+    </ul>
+  </div>
+</section>
+
+<section>
+  <h2>图例中<b>不可作教学案例</b>的部分<span class="en">EXCLUDE LIST</span></h2>
+  <div class="warnbox">
+    <b>以下 20 余张图例没有对应的缠师原话，且图起点普遍处于当月高位</b>
+    <ul>
+      <li>涉及标的：新源实业 002034、航天动力 600343、九龙山 600555、华润三九 000999、隆平高科 000998、复旦复材 600624、山大华特 300238、新兴铸管 000778、民生投资 000762、中信国安 000839、京能热电 600550、盘江股份 600395、鲁西化工 000830、远兴能源 000683、一汽轿车 600742、恩华药业 002262、佛山照明 000541、中国船舶 600150、航天高科 600862、建设能源、新华医疗 600587、杉杉股份 600884、上证指数等。</li>
+      <li>这批图的起点多在 <b>2006-11-01</b>，当天普遍处于当月收盘高位或次高位（多数标的随后 5–10 日先跌 −5%~−17%），<b>更可能是行情顶部/左侧，而非 3 买当日</b>。</li>
+      <li>仅 600555 / 600784 / 600684 / 600300 / 600587 / 600884 因出现在 2007-01-16 的涨停名单里，可作<b>间接佐证</b>；其余<b>查无实据</b>。</li>
+      <li>另：「北辰实业 11 月 14 日构成日线 3 买」是缠师原话，但他<b>未给代码</b>；社区常写 000588，<b>未检索到原文支持</b>。</li>
+    </ul>
+  </div>
+</section>
+
+<section>
+  <h2>引用出处<span class="en">SOURCES · 全部可访问链接</span></h2>
+  <div class="card">
+    <div class="srcref">
+      <b>缠师原文（含完整转载 / 存档）</b><br>
+      1. 《教你炒股票20：走势中枢级别扩张及第三类买卖点》2007-01-05 — <a href="https://chzhshch.blog/stocks/020" target="_blank">chzhshch.blog/stocks/020</a><br>
+      2. 《教你炒股票21：买卖点分析的完备性》2007-01-09 — <a href="http://chzhshch.blog/stocks/021/" target="_blank">chzhshch.blog/stocks/021/</a><br>
+      3. 《教你炒股票23：市场与人生》2007-01-16 — <a href="http://yutao.org/finance/%E7%BC%A0%E4%B8%AD%E8%AF%B4%E7%A6%96-%E6%95%99%E4%BD%A0%E7%82%A8%E8%82%A1-23/" target="_blank">yutao.org/finance/缠中说禅-教你炒股-23/</a><br>
+      4. 《教你炒股票24：MACD对背驰的辅助判断》2007-01-22 — <a href="https://yutao.org/finance/%E7%BC%A0%E4%B8%AD%E8%AF%B4%E7%A6%96-%E6%95%99%E4%BD%A0%E7%82%A8%E8%82%A1-24" target="_blank">yutao.org/finance/缠中说禅-教你炒股-24</a><br>
+      5. 缠师历史解盘【2007-01-17】（含 600832 长回复全文）2007-01-18 — <a href="https://blog.sina.com.cn/s/blog_6026bcf90100wio0.html" target="_blank">blog.sina.com.cn/s/blog_6026bcf90100wio0.html</a><br>
+      6. 扩张扩展（一）（含 600832 原文）2007-01-23 — <a href="https://blog.sina.com.cn/s/blog_4aeb5d150100ne5l.html" target="_blank">blog.sina.com.cn/s/blog_4aeb5d150100ne5l.html</a><br>
+      7. 缠论23：回复（含 600684 / 000767 / 000800 问答）2007-01-16 — <a href="https://blog.sina.com.cn/s/blog_1607565d00102wdl7.html" target="_blank">blog.sina.com.cn/s/blog_1607565d00102wdl7.html</a><br>
+      8. 23课缠师的回帖整理2（含 600021 日线3买原文）2007-01-16 — <a href="https://blog.sina.com.cn/s/blog_649f0b930100q0gz.html" target="_blank">blog.sina.com.cn/s/blog_649f0b930100q0gz.html</a><br>
+      9. 精彩回复之教你炒股票23（二）2007-01-16 — <a href="https://blog.sina.com.cn/s/blog_3e0ce19c0102ybr0.html" target="_blank">blog.sina.com.cn/s/blog_3e0ce19c0102ybr0.html</a><br>
+      10. 缠中说禅说三类卖买点（辩微版，含 000767/000800 原文）— <a href="https://blog.sina.com.cn/s/blog_67d8b7480100mxpu.html" target="_blank">blog.sina.com.cn/s/blog_67d8b7480100mxpu.html</a><br>
+      11. 教你炒股票23 微信完整版（含 600085 / 600021 原话与图）— <a href="http://mp.weixin.qq.com/s?__biz=MzUxODYyOTYxOQ==&mid=2247485126&idx=7" target="_blank">mp.weixin.qq.com</a><br>
+      12. 学习9（雪球，含 600832 原文）— <a href="https://xueqiu.com/1480715824/274054335" target="_blank">xueqiu.com/1480715824/274054335</a><br>
+      13. 缠师历史解盘【2007-01-04—2007-01-31】雪球版 — <a href="https://xueqiu.com/7781577216/218013713" target="_blank">xueqiu.com/7781577216/218013713</a><br>
+      14. MACD对背弛的辅助判断（微博，含 600033 原话时间戳）— <a href="https://www.weibo.com/ttarticle/p/show?id=2309404375014802633106" target="_blank">weibo.com/ttarticle</a><br>
+      15. 《市场哲学的数学原理》PDF（定理课号汇编）— <a href="https://resources.chzhshch.blog/docs/%E6%95%99%E4%BD%A0%E7%82%A8%E8%82%A1%E6%A0%87--%E5%9B%9B%E5%8C%BA%E7%89%88--%E7%B9%81%E4%BD%93.pdf" target="_blank">resources.chzhshch.blog/docs</a><br>
+      16. 网易云课堂《教你炒股票20》注解版（思考题二参考答案）— <a href="https://m.study.163.com/article/1053658358" target="_blank">m.study.163.com/article/1053658358</a><br>
+      17. 教你炒股票24 MACD（今日头条全文转载，含 600033 原话）— <a href="https://www.toutiao.com/article/7152326429311500841/" target="_blank">toutiao.com/article/7152326429311500841</a><br>
+      18. 带���炒股票23（哔哩哔哩，含 000767 原文与图）— <a href="https://www.bilibili.com/read/mobile?id=33391069" target="_blank">bilibili.com/read/mobile?id=33391069</a><br>
+      19. 缠师原文第三类买卖点实例汇总（社区整理，案例索引）— <a href="http://mp.weixin.qq.com/s?__biz=Mzg3NzYxMzk1MA==&mid=2247491832&idx=1&sn=63bf1db74b13651a5d6a690718975b9c" target="_blank">mp.weixin.qq.com</a><br>
+      20. 缠师历史解盘（雪球）· 缠中说禅历史解盘归档 — <a href="https://xueqiu.com/9149516451/178926919" target="_blank">xueqiu.com/9149516451/178926919</a><br>
+      <br>
+      <b>社区解读 / 辅助工具（明确标注为解读，非缠师原话）</b><br>
+      21. 教你炒股23（回复16）所有买点都是调整时出现的（600684 图解版）— <a href="https://xukzhao168.web.app/html/%E6%95%99%E4%BD%A0%E7%82%A8%E8%82%A123%EF%BC%88%E5%9B%9E%E5%A4%8D16%EF%BC%89%E6%89%80%E6%9C%89%E4%B9%B0%E7%82%B9%EF%BC%8C%E9%83%BD%E6%98%AF%E8%B0%83%E6%95%B4%E6%97%B6%E5%87%BA%E7%8E%B0%E7%9A%84.html" target="_blank">xukzhao168.web.app</a><br>
+      22. 缠论新解：缠论三买个例图文详解（代有才人）— <a href="https://qqhbx.com/huibao/131233.html" target="_blank">qqhbx.com/huibao/131233.html</a><br>
+      23. 缠中说禅：1-3类买卖点图示（雪球）— <a href="https://xueqiu.com/1468953003/78447616" target="_blank">xueqiu.com/1468953003/78447616</a><br>
+      24. 教你学缠论(十)：通过画图理解背驰和三类买卖点（缠论研习院）— <a href="https://chanlunschool.com/" target="_blank">chanlunschool.com</a><br>
+      25. 缠论日线三买的增值方法讲解（赢家财富网）— <a href="http://www.yingjia360.com/chanlun/2016-08-04/31573.html" target="_blank">yingjia360.com</a><br>
+      26. 第三类买点（百度百科）— <a href="https://baike.baidu.com/item/%E7%AC%AC%E4%B8%89%E7%B1%BB%E4%B9%B0%E7%82%B9/8820514" target="_blank">baike.baidu.com</a><br>
+      <br>
+      <b>行情数据（可复现）</b><br>
+      东方财富历史行情接口（日线，<code>fqt=0</code> 不复权 / <code>fqt=1</code> 前复权）：
+      <code>push2his.eastmoney.com/api/qt/stock/kline/get?secid={1|0}.{code}&fields1=f1,f2,f3&fields2=f51,f52,f53,f54,f55,f56,f57&klt=101&fqt=0&beg=20060101&end=20071231</code>
+    </div>
+  </div>
+</section>
+
+<footer>
+  核实对象：<code>D:\传统文化构建\当年缠师确认的日线3买.pdf</code>（12 页 / 35 张图例）<br>
+  核实方法：① 图内 MA5/MA13/MA34/MA55 指纹 + 价格锚点反查标的与截止日期（前复权口径）<br>
+  ② 缠中说禅原博客及完整转载存档逐句比对 ③ 东方财富历史行情复算后续走势<br>
+  核验日 2026-11-05 ｜ 行情样本区间 2006-01-01 ~ 2007-12-31 ｜ 涨幅基准为 3 买日<b>不复权</b>收盘价<br>
+  <br>
+  <b>免责声明</b>：以上内容基于公开数据与历史文本整理，仅供参考，<b>不构成投资建议</b>。市场有风险，投资需谨慎。
+  任何投资决策应结合个人风险承受能力、资金状况和投资目标独立判断，必要时咨询持牌专业机构。过往表现不预示未来收益。
+</footer>
+
+</div>
+
+<script>
+var DATA = {"core": [{"code": "600832", "name": "东方明珠", "buy": "2006-12-08", "quote_date": "2007-01-18", "cat": "确认", "note": "日线3买；后成\"复杂中枢扩张\"（非趋势）", "level": "日线", "perf": {"base_close": 10.9, "r10": 5.8, "r20": 18.9, "r40": 40.4, "r60": 35.6, "r120": 75.6, "max_gain": 116.2, "max_draw": -0.2, "high_120": 23.57}}, {"code": "600832", "name": "东方明珠", "buy": "2007-01-17", "quote_date": "2007-01-18", "cat": "确认", "note": "三段30分钟回拉型3买；买点≠回拉最低点", "level": "日线", "perf": {"base_close": 12.29, "r10": 8.0, "r20": 28.6, "r40": 23.3, "r60": 48.6, "r120": 25.4, "max_gain": 91.8, "max_draw": -1.7, "high_120": 23.57}}, {"code": "600085", "name": "同仁堂", "buy": "2006-12-28", "quote_date": "2007-01-15", "cat": "确认", "note": "周线级3买；B段上冲猛、C段微破A高点的\"奔走式\"", "level": "周线", "perf": {"base_close": 16.73, "r10": 41.0, "r20": 43.1, "r40": 33.8, "r60": 34.0, "r120": 124.7, "max_gain": 177.9, "max_draw": -0.5, "high_120": 46.5}}, {"code": "601398", "name": "工商银行", "buy": "2006-12-14", "quote_date": "2007-01-05", "cat": "确认", "note": "教科书案例；14:40 完成三段5分钟走势，精确点位 4.2 元", "level": "日线", "perf": {"base_close": 4.27, "r10": 37.0, "r20": 29.3, "r40": 15.0, "r60": 20.8, "r120": 20.6, "max_gain": 59.0, "max_draw": -1.6, "high_120": 6.79}}, {"code": "600779", "name": "水井坊", "buy": "2006-12-05", "quote_date": "2007-01-10", "cat": "确认", "note": "近期最标准的一个日线3买", "level": "日线", "perf": {"base_close": 10.9, "r10": 29.4, "r20": 18.9, "r40": 22.7, "r60": 31.1, "r120": 76.3, "max_gain": 97.2, "max_draw": -0.9, "high_120": 21.5}}, {"code": "000767", "name": "晋控电力", "buy": "2006-12-26", "quote_date": "2007-01-16", "cat": "确认", "note": "原漳泽电力；标准3买，无奔走", "level": "日线", "perf": {"base_close": 4.98, "r10": 10.4, "r20": 26.5, "r40": 49.8, "r60": 59.2, "r120": 111.2, "max_gain": 190.2, "max_draw": -1.6, "high_120": 14.45}}, {"code": "000800", "name": "一汽解放", "buy": "2006-12-22", "quote_date": "2007-01-16", "cat": "确认", "note": "原一汽轿车；标准3买，全样本涨幅最猛", "level": "日线", "perf": {"base_close": 3.87, "r10": 30.0, "r20": 56.3, "r40": 75.7, "r60": 130.7, "r120": 177.8, "max_gain": 266.7, "max_draw": -0.5, "high_120": 14.19}}, {"code": "600684", "name": "珠江股份", "buy": "2007-01-12", "quote_date": "2007-01-16", "cat": "确认", "note": "周线中枢内、日线中枢外；级别中枢独立", "level": "日线", "perf": {"base_close": 5.03, "r10": 7.8, "r20": 21.7, "r40": 61.0, "r60": 75.7, "r120": 150.5, "max_gain": 185.9, "max_draw": -2.4, "high_120": 14.38}}, {"code": "600021", "name": "上海电力", "buy": "2007-01-05", "quote_date": "2007-01-16", "cat": "确认", "note": "短期最弱，走了近1个月才启动", "level": "日线", "perf": {"base_close": 5.24, "r10": 2.3, "r20": 2.5, "r40": 25.4, "r60": 48.9, "r120": 62.6, "max_gain": 147.5, "max_draw": -8.2, "high_120": 12.97}}, {"code": "600033", "name": "福建高速", "buy": "2007-01-09", "quote_date": "2007-01-22", "cat": "否认", "note": "缠师明确否认：\"一天不可能完成，只是第一段中途休整\"", "level": "日线", "perf": {"base_close": 5.71, "r10": 10.0, "r20": 3.2, "r40": 15.2, "r60": 25.0, "r120": 25.9, "max_gain": 80.2, "max_draw": -4.7, "high_120": 10.29}}, {"code": "600033", "name": "福建高速", "buy": "2006-12-22", "quote_date": "2007-01-05", "cat": "否认", "note": "思考题二参考答案：对中枢的第一次回抽才构成买点", "level": "日线", "perf": {"base_close": 5.32, "r10": 12.2, "r20": 19.0, "r40": 18.0, "r60": 29.9, "r120": 43.0, "max_gain": 93.4, "max_draw": -5.5, "high_120": 10.29}}, {"code": "600832", "name": "东方明珠", "buy": "2006-11-14", "quote_date": "2007-01-05", "cat": "确认", "note": "缠师原文点名\"北辰实业在11月14日构成典型的日线级别第三类买点\"（未给代码）", "level": "日线", "perf": {"base_close": 10.27, "r10": 8.6, "r20": 9.3, "r40": 16.6, "r60": 51.0, "r120": 98.0, "max_gain": 119.5, "max_draw": -3.1, "high_120": 22.54}}], "list0116": [{"code": "600784", "name": "鲁银投资", "perf": {"base_close": 6.8, "r10": 12.4, "r20": 21.6, "r40": 32.4, "r60": 52.1, "r120": 27.6, "max_gain": 117.6, "max_draw": -11.6, "high_120": 14.8}}, {"code": "600684", "name": "珠江股份", "perf": {"base_close": 5.82, "r10": 1.0, "r20": 11.0, "r40": 44.8, "r60": 65.6, "r120": 131.3, "max_gain": 147.1, "max_draw": -15.6, "high_120": 14.38}}, {"code": "600300", "name": "维维股份", "perf": {"base_close": 6.81, "r10": 10.3, "r20": 10.4, "r40": 4.6, "r60": 47.0, "r120": 33.3, "max_gain": 94.9, "max_draw": -9.3, "high_120": 13.27}}, {"code": "600820", "name": "隧道股份", "perf": {"base_close": 6.73, "r10": 17.2, "r20": 35.2, "r40": 26.7, "r60": 86.5, "r120": 88.0, "max_gain": 137.0, "max_draw": -8.9, "high_120": 15.95}}, {"code": "600555", "name": "九龙山", "perf": {"base_close": 8.76, "r10": -3.5, "r20": -7.5, "r40": 27.3, "r60": 62.1, "r120": 55.8, "max_gain": 124.9, "max_draw": -20.4, "high_120": 19.7}}, {"code": "600587", "name": "新华医疗", "perf": {"base_close": 10.8, "r10": 24.0, "r20": 41.7, "r40": 37.7, "r60": 61.3, "r120": 36.4, "max_gain": 101.3, "max_draw": -6.0, "high_120": 21.74}}, {"code": "600608", "name": "上海科技", "perf": null}, {"code": "600829", "name": "人民同泰", "perf": {"base_close": 17.6, "r10": 1.5, "r20": 2.2, "r40": -1.7, "r60": 18.9, "r120": 16.3, "max_gain": 58.5, "max_draw": -11.4, "high_120": 27.9}}, {"code": "600884", "name": "杉杉股份", "perf": {"base_close": 6.9, "r10": 10.1, "r20": 21.6, "r40": 30.7, "r60": 71.0, "r120": 178.1, "max_gain": 289.6, "max_draw": -8.7, "high_120": 26.88}}]};
+
+function pct(v){ return (v === null || v === undefined) ? '—' : (v > 0 ? '+' : '') + v.toFixed(1) + '%'; }
+function cls(v){ return (v === null || v === undefined) ? '' : (v > 0 ? 'up' : 'dn'); }
+function bar(v){
+  var w = Math.max(3, Math.min(100, Math.abs(v)));
+  return '<div class="bar"><i style="width:' + w + '%"></i></div>';
+}
+
+var QUOTES = {
+  '600832|2006-12-08': {
+    q: '12月8日是一个日线的第三类买点。一般这种买点出现后，肯定会回升，但并不一定就能形成趋势上涨，还可能演化成复杂的中枢扩张，该股就属于后者。',
+    src: '缠中说禅 2007-01-18 22:11:08',
+    tag: '中枢扩张的样本'
+  },
+  '600832|2007-01-17': {
+    q: '1月17日，是一个三段30分钟回拉的日线第三类买点。注意，第三类买点的结束位置不一定是整个回拉的最低位置。因为一个三段回来，C段并不一定创新低。',
+    src: '缠中说禅 2007-01-18 22:11:08',
+    tag: '「结束位置 ≠ 最低点」'
+  },
+  '600085|2006-12-28': {
+    q: '不对，在日线上，这段时间没有第一、二类的买点，30分钟上当然是有的。不过12月28日那一周却是一个精确的周线上的第三类买点。这个日线上的次级别回抽有点特殊，形成一种奔走行的走势，就是B段的上冲比较厉害，C段的回拉只是稍微跌破A段的高点。这种走势以后的个股一般都会出现快速上扬。',
+    src: '缠中说禅 2007-01-15 22:32:09',
+    tag: '奔走式 → 快速上扬'
+  },
+  '601398|2006-12-14': {
+    q: '对日线中枢来说，次级别是30分钟，而次级别的完成，需要再次级别，也就是5分钟图上呈现3段走势类型。这在工行14那天有着完美的表现。那天14.40左右刚好完成这三段5分钟的走势类型，你可以精确地找到4.2元的买点。请把这三层次的级别关系搞清楚。',
+    src: '缠中说禅 2007-01-05 17:15:02',
+    tag: '三级共振的教科书'
+  },
+  '600779|2006-12-05': {
+    q: '该股在日线上最近的一个买点就是12月5日的第三类买点。对于这样的股票，只能是在低位买的继续持有，按照低级别图弄点短差。当然，中线是没问题的。',
+    src: '缠中说禅 2007-01-10 21:44:20',
+    tag: '低位持有型'
+  },
+  '000767|2006-12-26': {
+    q: '000767在12月26日是一个标准的第三类买点，没什么奔走的。000800是12月22日，也没有什么奔走。',
+    src: '缠中说禅 2007-01-16 22:17:01',
+    tag: '标准 3 买'
+  },
+  '000800|2006-12-22': {
+    q: '000767在12月26日是一个标准的第三类买点，没什么奔走的。000800是12月22日，也没有什么奔走。',
+    src: '缠中说禅 2007-01-16 22:17:01',
+    tag: '标准 3 买 · 全样本最猛'
+  },
+  '600684|2007-01-12': {
+    q: '是在周线的中枢里，但在日线的中枢（红色虚线框）外，而对于日线上的第三类买点，只要一个30分钟级别的回抽不破日线中枢就可以了。有时候不同级别的中枢缠绕在一起，会对判断产生困难。',
+    src: '缠中说禅 2007-01-16 22:00:30',
+    tag: '级别中枢相互独立'
+  },
+  '600021|2007-01-05': {
+    q: '中线该股问题不大，但站在短线角度，最快速的就是30分钟回抽所对应的日线上的第三类买点。例如对该股，1月5日的第三类买点（红箭头处）介入后，在5分钟发现背驰后离开。',
+    src: '缠中说禅 2007-01-16（23课回复）',
+    tag: '短期最弱的一个'
+  },
+  '600033|2007-01-09': {
+    q: '日线级别的第三类买点怎么可能是一天完成的？必须有30分钟上明确的三段走势，这不会一天就能完成，你说的那天根本不是第三类买点，只是突破的第一段的中途休整。',
+    src: '缠中说禅 2007-01-22 20:48:49',
+    tag: '完美反例 · 走势确实没跟上'
+  },
+  '600033|2006-12-22': {
+    q: '思考题：工商银行在12月22日构成日线级别第三类买点吗？参考答案：不构成第三类买点。对中枢的第一次回抽才构成买点。',
+    src: '《教你炒股票20》思考题二 · 网易云课堂注解版',
+    tag: '「必须是第一次」'
+  },
+  '600832|2006-11-14': {
+    q: '例如，工商银行在12月14日构成典型的日线级别第三类买点；北辰实业在11月14日构成典型的日线级别第三类买点；000803在1月20日构成典型的日线级别第三类卖点。',
+    src: '《教你炒股票20》2007-01-05（未给代码，需核实）',
+    tag: '原话点名 · 代码待考'
+  }
+};
+
+function renderTable(){
+  var tb = document.getElementById('tbody');
+  var q = document.getElementById('q').value.trim().toLowerCase();
+  var act = document.querySelector('.chip.on').getAttribute('data-f');
+  var html = '', n = 0;
+
+  DATA.core.forEach(function(c){
+    var p = c.perf || {};
+    var hay = (c.name + ' ' + c.code + ' ' + c.buy + ' ' + c.note + ' ' +
+      (QUOTES[c.code + '|' + c.buy] ? QUOTES[c.code + '|' + c.buy].q : '') +
+      (QUOTES[c.code + '|' + c.buy] ? QUOTES[c.code + '|' + c.buy].tag : '')).toLowerCase();
+    if (q && hay.indexOf(q) === -1) return;
+    if (act === '确认' && c.cat !== '确认') return;
+    if (act === '否认' && c.cat !== '否认') return;
+    if (act === '日线' && c.level !== '日线') return;
+    if (act === '周线' && c.level !== '周线') return;
+    if (act === 'big' && !(p.max_gain > 100)) return;
+    n++;
+    var mg = p.max_gain;
+    html += '<tr>'
+      + '<td class="nm">' + c.name + '<div class="fl">' + c.code + '</div></td>'
+      + '<td class="cd">' + c.buy + '</td>'
+      + '<td><span class="fl">' + c.level + '</span></td>'
+      + '<td><span class="tag t-ok">' + c.cat + '</span></td>'
+      + '<td class="' + cls(p.r10) + '">' + pct(p.r10) + '</td>'
+      + '<td class="' + cls(p.r20) + '">' + pct(p.r20) + '</td>'
+      + '<td class="' + cls(p.r60) + '">' + pct(p.r60) + '</td>'
+      + '<td class="' + cls(mg) + '">' + pct(mg) + '<div class="bar"><i style="width:'
+        + Math.min(100, Math.abs(mg || 0)) + '%"></i></div></td>'
+      + '<td class="fl">' + c.note + '</td>'
+      + '</tr>';
+  });
+  tb.innerHTML = html;
+  document.getElementById('empty').style.display = n ? 'none' : 'block';
+  document.getElementById('count').textContent = '显示 ' + n + ' / ' + DATA.core.length + ' 个案例';
+}
+
+function renderNotes(){
+  var box = document.getElementById('notes');
+  var html = '';
+  DATA.core.forEach(function(c){
+    var p = c.perf || {};
+    var k = c.code + '|' + c.buy;
+    var qt = QUOTES[k];
+    html += '<div class="card">'
+      + '<h3>' + c.name + ' <span class="fl">' + c.code + '</span>'
+      + '<span class="tag ' + (c.cat === '确认' ? 't-ok' : 't-no') + '">' + c.cat + '</span>'
+      + '<span class="tag t-lv">' + c.level + '级</span>'
+      + (qt ? '<span class="tag t-lv">' + qt.tag + '</span>' : '') + '</h3>'
+      + '<p><b>3 买日：' + c.buy + '</b> ｜ 基准收盘 ' + (p.base_close !== undefined ? p.base_close : '—')
+      + ' 元 ｜ 区间最高 ' + (p.high_120 !== undefined ? p.high_120 : '—') + ' 元'
+      + ' ｜ 20日 ' + pct(p.r20) + ' ｜ 60日 ' + pct(p.r60) + ' ｜ 120日最大 ' + pct(p.max_gain)
+      + ' ｜ 最大回撤 ' + pct(p.max_draw) + '</p>';
+    if (qt) {
+      html += '<div class="quote">' + qt.q + '<span class="src">—— ' + qt.src + '</span></div>';
+    }
+    html += '<p>' + c.note + '</p></div>';
+  });
+  box.innerHTML = html;
+}
+
+function renderList(){
+  var tb = document.getElementById('lst');
+  var html = '';
+  DATA.list0116.forEach(function(x){
+    var p = x.perf || {};
+    html += '<tr><td class="cd">' + x.code + '</td><td class="nm">' + x.name + '</td>'
+      + '<td class="' + cls(p.r20) + '">' + pct(p.r20) + '</td>'
+      + '<td class="' + cls(p.r60) + '">' + pct(p.r60) + '</td>'
+      + '<td class="' + cls(p.r120) + '">' + pct(p.r120) + '</td>'
+      + '<td class="' + cls(p.max_gain) + '">' + pct(p.max_gain) + '</td></tr>';
+  });
+  tb.innerHTML = html;
+}
+
+document.getElementById('q').addEventListener('input', renderTable);
+document.querySelectorAll('.chip').forEach(function(el){
+  el.addEventListener('click', function(){
+    document.querySelectorAll('.chip').forEach(function(x){ x.classList.remove('on'); });
+    el.classList.add('on');
+    renderTable();
+  });
+});
+
+renderTable();
+renderNotes();
+renderList();
+document.getElementById('s-total').textContent = DATA.core.length;
+document.getElementById('s-ok').textContent = DATA.core.filter(function(c){ return c.cat === '确认'; }).length;
+document.getElementById('s-no').textContent = DATA.core.filter(function(c){ return c.cat === '否认'; }).length;
+document.getElementById('s-list').textContent = DATA.list0116.length;
+</script>
+</body>
+</html>

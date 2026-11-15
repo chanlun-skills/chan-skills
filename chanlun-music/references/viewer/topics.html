@@ -1,0 +1,2092 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>缠师周末音乐会 · 风景+音乐 短视频选题库</title>
+<style>
+:root{--bg:#f5f4f1;--paper:#fffefc;--ink:#1f1d1a;--ink2:#4d4941;--ink3:#878176;
+--line:#e3dfd5;--line2:#cfc9bb;--accent:#8a2f2f}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);
+ font-family:-apple-system,"PingFang SC","Microsoft YaHei","Noto Sans SC",sans-serif;
+ font-size:15px;line-height:1.8;-webkit-font-smoothing:antialiased}
+.wrap{max-width:1180px;margin:0 auto;padding:0 18px}
+header.top{position:sticky;top:0;z-index:50;background:rgba(245,244,241,.96);
+ backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+header.top .wrap{display:flex;align-items:center;gap:16px;height:54px;flex-wrap:wrap}
+h1{font-size:16px;margin:0;font-weight:700}
+h1 span{color:var(--accent)}
+.tabs{display:flex;gap:6px;flex-wrap:wrap}
+.tabs button{font:inherit;font-size:13px;padding:5px 13px;border:1px solid var(--line2);
+ background:var(--paper);color:var(--ink2);border-radius:99px;cursor:pointer}
+.tabs button.on{background:var(--accent);border-color:var(--accent);color:#fff}
+.hero{padding:38px 0 26px;border-bottom:1px solid var(--line);
+ background:linear-gradient(180deg,#fffdf8,var(--bg))}
+.hero h2{font-size:27px;margin:0 0 8px}
+.hero p{margin:0 0 20px;color:var(--ink2);max-width:860px}
+.kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(128px,1fr));gap:12px}
+.kpi{background:var(--paper);border:1px solid var(--line);border-radius:4px;padding:12px 15px}
+.kpi b{display:block;font-size:22px;color:var(--accent);font-variant-numeric:tabular-nums;line-height:1.3}
+.kpi span{font-size:12px;color:var(--ink3)}
+section{padding:30px 0;border-bottom:1px solid var(--line)}
+.sechead{display:flex;align-items:baseline;gap:12px;margin-bottom:14px;flex-wrap:wrap}
+.sechead h3{font-size:20px;margin:0}
+.sechead .hint{font-size:13px;color:var(--ink3)}
+table{width:100%;border-collapse:collapse;font-size:13.5px;background:var(--paper)}
+th{background:#f1ebdf;text-align:left;padding:9px 12px;font-size:12.5px;color:var(--ink2);
+ border-bottom:1px solid var(--line2);white-space:nowrap;position:sticky;top:54px}
+td{padding:9px 12px;border-bottom:1px solid var(--line);vertical-align:top}
+tbody tr:hover{background:#fdfaf2}
+.cno{color:var(--ink3);font-variant-numeric:tabular-nums;white-space:nowrap}
+.cttl b{color:var(--ink);font-weight:600}
+.cdesc{color:var(--ink2);font-size:12.5px;line-height:1.7;white-space:pre-line;max-width:420px}
+.cmus{color:var(--ink3);font-size:12.5px}
+.tblwrap{border:1px solid var(--line);border-radius:4px;overflow:auto;max-height:74vh}
+.card{background:var(--paper);border:1px solid var(--line);border-radius:5px;
+ margin-bottom:16px;overflow:hidden;scroll-margin-top:66px}
+.chead{padding:14px 20px;background:linear-gradient(180deg,#fdfbf5,#faf7ee);
+ border-bottom:1px solid var(--line);display:flex;gap:14px;align-items:flex-start}
+.cno2{font-size:22px;font-weight:700;color:var(--accent);font-variant-numeric:tabular-nums;
+ min-width:38px;line-height:1.25}
+.ctitle{font-size:17px;font-weight:600;line-height:1.5;flex:1}
+.cgroup{font-size:12px;color:var(--ink3);margin-top:2px}
+.cbtn{font:inherit;font-size:12px;padding:4px 11px;border:1px solid var(--line2);
+ background:var(--paper);color:var(--ink2);border-radius:3px;cursor:pointer;white-space:nowrap;flex-shrink:0}
+.cbtn:hover{border-color:var(--accent);color:var(--accent)}
+.cbody{padding:16px 20px 18px}
+.blabel{font-size:11px;color:var(--ink3);letter-spacing:.05em;margin-bottom:5px}
+.bval{background:#fbf9f3;border:1px solid var(--line);border-radius:3px;padding:11px 13px;
+ font-size:14.5px;line-height:1.9;white-space:pre-line}
+.bval.t{background:#fdf6f4;border-color:#ecd4cf;font-weight:600;font-size:16px}
+.bval.m{background:#f4f6f4;border-color:#d5e0d5;color:var(--ink2);font-size:14px}
+.brow{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:12px}
+.tags{margin-top:12px;display:flex;gap:6px;flex-wrap:wrap}
+.tag{font-size:12px;background:#f1ebdf;color:var(--ink2);border:1px solid var(--line);
+ padding:2px 10px;border-radius:99px}
+.mood{font-size:13px;color:var(--ink3);margin-top:8px}
+footer{padding:26px 0 50px;color:var(--ink3);font-size:12.5px;line-height:1.9}
+.hidden{display:none !important}
+@media(max-width:760px){.brow{grid-template-columns:1fr}.cdesc{max-width:none}}
+</style></head><body>
+<header class="top"><div class="wrap">
+<h1>缠师周末音乐会 · <span>短视频选题库</span></h1>
+<div class="tabs">
+<button class="on" data-t="table">全部选题</button>
+<button data-t="cards">逐期文案</button>
+</div></div></header>
+
+<div class="hero"><div class="wrap">
+<h2>75 期，风景 + 古典音乐</h2>
+<p>无字幕、无旁白，纯风景配音乐。所以每一期的<b>标题</b>是唯一的信息入口，<b>简介</b>要自己把事情说清楚：
+哪一年、谁写的、什么作品、为什么值得听。配乐已指定到具体曲目，画面基调也标了方向，配你现成的素材。</p>
+<div class="kpis">
+<div class="kpi"><b>75</b><span>总期数</span></div>
+<div class="kpi"><b>42</b><span>主系列</span></div>
+<div class="kpi"><b>31</b><span>番外</span></div>
+<div class="kpi"><b>2</b><span>定调/收官</span></div>
+<div class="kpi"><b>✅</b><span>红线自检通过</span></div>
+</div></div></div>
+
+<section id="table"><div class="wrap">
+<div class="sechead"><h3>全部选题</h3><span class="hint">点「逐期文案」看完整简介</span></div>
+<div class="tblwrap"><table><thead><tr>
+<th style="width:44px">期</th><th>标题与简介首句</th><th style="width:210px">配乐</th><th style="width:150px">画面基调</th>
+</tr></thead><tbody><tr><td class="cno">0</td>
+<td class="cttl"><b>2006年，他把八千张唱片搬上了互联网</b><div class="cdesc">一个人在自己的博客上发了一条公告：既然不是每个人都有时间、有钱去听现场音乐会，那就用网络把这件事办了。…</div></td>
+<td class="cmus">舒伯特《C大调第五交响曲》第三乐章 / 巴赫《G弦上的咏叹调》</td>
+<td class="cmus">黎明·海岸线·城市苏醒</td></tr><tr><td class="cno">1</td>
+<td class="cttl"><b>第一场音乐会，节目单只有一个名字</b><div class="cdesc">2006年7月21日，星期五。…</div></td>
+<td class="cmus">舒伯特《即兴曲》D.899 作品90 / 舒伯特《流浪者幻想曲》D.</td>
+<td class="cmus">晨雾·山脊·麦田</td></tr><tr><td class="cno">2</td>
+<td class="cttl"><b>把古典的秩序和火热的激情摁在一起</b><div class="cdesc">这一期是舒伯特钢琴作品专场：两套即兴曲，一首幻想曲，最后一首四手联弹《军队进行曲》当返场。…</div></td>
+<td class="cmus">舒伯特《即兴曲》D.899 / 《流浪者幻想曲》D.760 / 《军</td>
+<td class="cmus">维也纳·老街·琴房窗户</td></tr><tr><td class="cno">3</td>
+<td class="cttl"><b>写给逝去时代的一封信</b><div class="cdesc">19世纪下半叶，德国的音乐版图是分裂的：德奥被瓦格纳主导，莱比锡的勃拉姆斯却坚持用古典的曲式。…</div></td>
+<td class="cmus">勃拉姆斯《e小调第四交响曲》作品98 / 舒伯特《f小调四手联弹幻想</td>
+<td class="cmus">黄昏·金色大厅·山脊晚照</td></tr><tr><td class="cno">4</td>
+<td class="cttl"><b>三千多首作品，三十一年</b><div class="cdesc">音乐史上被误会的荣誉头衔，大概就是"歌曲之王"这四个字。戴上它，遮住的正是一个顶级的器乐大师。…</div></td>
+<td class="cmus">舒伯特《降B大调钢琴奏鸣曲》D.961 / 《C大调弦乐五重奏》D.</td>
+<td class="cmus">雪原·空旷的湖·古堡远山</td></tr><tr><td class="cno">5</td>
+<td class="cttl"><b>1827年的冬天，他写了24首歌</b><div class="cdesc">维也纳城里一间租来的小房子，舒伯特三十岁，距离离开这个世界还有不到两年。…</div></td>
+<td class="cmus">舒伯特《冬之旅》D.911 全文 / 《菩提树》《小溪旁》</td>
+<td class="cmus">雪原·枯树·风雪中的窗灯</td></tr><tr><td class="cno">6</td>
+<td class="cttl"><b>莫扎特这一年，36岁</b><div class="cdesc">1756年生在小宫廷乐师家里，6岁写小提琴奏鸣曲，11岁被父亲带去维也纳弹琴，全城轰动。…</div></td>
+<td class="cmus">莫扎特《C大调第四十一交响曲》"朱庇特" / 《安魂曲》安息经</td>
+<td class="cmus">维也纳·金色大厅·欧洲古城</td></tr><tr><td class="cno">7</td>
+<td class="cttl"><b>他最亮的那部作品，写在他最落魄那年</b><div class="cdesc">莫扎特写了几百部器乐作品，小调少得离谱。因为他是宫廷雇员、剧院乐长、签约交稿的人——那时候把气氛弄得太暗是要出事的。…</div></td>
+<td class="cmus">莫扎特《g小调第四十交响曲》K.550 / 《c小调幻想曲》K.47</td>
+<td class="cmus">湖面·晨雾·秋日森林</td></tr><tr><td class="cno">8</td>
+<td class="cttl"><b>他一辈子在"见证"，却不被允许演奏</b><div class="cdesc">1905年生在彼得格勒一个工程师家里，1923年从列宁格勒音乐学院毕业，此后一辈子没离开过那座城市。…</div></td>
+<td class="cmus">萧斯塔科维奇《C大调第八弦乐四重奏》作品110 / 《第十交响曲》作</td>
+<td class="cmus">雪夜·废墟·极地冰原</td></tr><tr><td class="cno">9</td>
+<td class="cttl"><b>临终前的三部奏鸣曲，安静得不像话</b><div class="cdesc">c小调D.959、A大调D.960、降B大调D.961——全是舒伯特生命最后阶段写的。…</div></td>
+<td class="cmus">舒伯特《降B大调钢琴奏鸣曲》D.961 / 《A大调钢琴奏鸣曲》D.</td>
+<td class="cmus">空旷的湖·雪原·独木</td></tr><tr><td class="cno">10</td>
+<td class="cttl"><b>十九岁，他把一首歌变成了一首四重奏</b><div class="cdesc">D.810，a小调，1816年，舒伯特十九岁。…</div></td>
+<td class="cmus">舒伯特《死神与少女》D.810 第二乐章 / 艺术歌曲《死神与少女》</td>
+<td class="cmus">秋日森林·落日·墓园般的宁静</td></tr><tr><td class="cno">11</td>
+<td class="cttl"><b>一整期，只有一部交响曲</b><div class="cdesc">它动笔的那一年，这座城市的音乐生活几乎停摆：原来的乐团散了，能凑齐的只有十几个还在岗的乐手。…</div></td>
+<td class="cmus">萧斯塔科维奇《C大调第七交响曲》作品60 第一乐章</td>
+<td class="cmus">废墟·雪原·肃穆的旷野</td></tr><tr><td class="cno">12</td>
+<td class="cttl"><b>舒伯特也有很亮的时候</b><div class="cdesc">一般人印象里的舒伯特是阴郁的——《魔王》十八岁写的，一气呵成，钢琴从第一个音就是马蹄的三连音。…</div></td>
+<td class="cmus">舒伯特《C大调弦乐五重奏》D.956 末乐章 / 《夏日夜晚》D.2</td>
+<td class="cmus">春田·花海·阳光下的溪流</td></tr><tr><td class="cno">13</td>
+<td class="cttl"><b>把维也纳的四个人请进同一间屋子</b><div class="cdesc">现实中不可能办的一场音乐会：莫扎特、贝多芬、舒伯特、勃拉姆斯。…</div></td>
+<td class="cmus">莫扎特《C大调第四十一交响曲》/ 贝多芬《降B大调钢琴奏鸣曲》作品1</td>
+<td class="cmus">欧洲古城·金色大厅·秋日森林</td></tr><tr><td class="cno">14</td>
+<td class="cttl"><b>他放弃了法官的工作，去学作曲</b><div class="cdesc">1840年生在乌拉尔山下的冶金厂工程师家庭，十岁被送去彼得堡读法律，十九岁法律学校毕业，在司法部当了四年小官。…</div></td>
+<td class="cmus">柴可夫斯基《e小调第五交响曲》作品64 第二乐章 / 《第一钢琴协奏</td>
+<td class="cmus">冬日森林·雪原·城市灯火</td></tr><tr><td class="cno">15</td>
+<td class="cttl"><b>有一类音乐，听的人两极分化</b><div class="cdesc">他办这一期办得很不情愿，吐槽说上周因为是柴可夫斯基的，回复数量居然多了起来，真是岂有此理。…</div></td>
+<td class="cmus">柴可夫斯基《第一钢琴协奏曲》作品23 / 《e小调第五交响曲》作品6</td>
+<td class="cmus">城市夜景·雨夜·霓虹</td></tr><tr><td class="cno">16</td>
+<td class="cttl"><b>他柔弱，他身后的人强悍</b><div class="cdesc">肖邦二十九岁因为肺结核去世，一生大部分时间在病里，社交极差，几乎不出门。…</div></td>
+<td class="cmus">肖邦《降E大调第二钢琴协奏曲》/ 《E小调第一叙事曲》</td>
+<td class="cmus">雨后街道·窗边·复古的沙龙</td></tr><tr><td class="cno">17</td>
+<td class="cttl"><b>他被自己的身体困住，也被一段说不清的关系困住</b><div class="cdesc">贝多芬四岁那年父亲去世，母亲改嫁，弟弟卡尔承担起照顾哥哥的责任——后来终身未婚。…</div></td>
+<td class="cmus">贝多芬《升C小调第十四钢琴四重奏》作品131 / 《D大调第十五钢琴</td>
+<td class="cmus">维也纳·夜色·墓园</td></tr><tr><td class="cno">18</td>
+<td class="cttl"><b>今夜，只让大提琴陪你</b><div class="cdesc">大提琴是所有乐器里最接近人的。它音域低，音色厚而不闷，还有一层天鹅绒似的暖。…</div></td>
+<td class="cmus">德沃夏克《b小调大提琴协奏曲》作品104 / 圣桑《d小调第一大提琴</td>
+<td class="cmus">深夜·海面·烛光</td></tr><tr><td class="cno">19</td>
+<td class="cttl"><b>十九岁，他写完就去找工作了</b><div class="cdesc">他把这个"节目单"递过去，人家说太年轻。…</div></td>
+<td class="cmus">舒伯特《阿佩乔尼》大提琴奏鸣曲 第四乐章 / 艺术歌曲《圣母颂》</td>
+<td class="cmus">夜色·水边·孤独的灯</td></tr><tr><td class="cno">20</td>
+<td class="cttl"><b>天才的第一次，和你的第一次一样</b><div class="cdesc">莫扎特十一岁写下的《C大调钢琴奏鸣曲》K.545，是他最著名的入门作品。…</div></td>
+<td class="cmus">莫扎特《C大调钢琴奏鸣曲》K.545 / 《D大调第十钢琴奏鸣曲》K</td>
+<td class="cmus">清晨·原野·少年</td></tr><tr><td class="cno">21</td>
+<td class="cttl"><b>不要讲解，去感受</b><div class="cdesc">这一期他放的是巴赫。…</div></td>
+<td class="cmus">巴赫《C大调前奏曲》BWV846 / 《歌德堡变奏曲》BWV988 </td>
+<td class="cmus">白墙与窗·空旷的公路·落灰的琴键</td></tr><tr><td class="cno">22</td>
+<td class="cttl"><b>有人问：能不能放点本民族的</b><div class="cdesc">他说他有一套中国古典音乐的全集，各种古曲都全了，一大箱，可惜不在北京的家里，在外地的房子里，暂时点不了。…</div></td>
+<td class="cmus">德沃夏克《b小调大提琴协奏曲》作品104 / 《e小调第九交响曲》"</td>
+<td class="cmus">草原·海天交界·辽阔的地平线</td></tr><tr><td class="cno">23</td>
+<td class="cttl"><b>他们各自都往回走了一点</b><div class="cdesc">拉赫玛尼诺夫，1899年离开俄罗斯。那年他三十七岁，妻子刚去世，婚姻不被当时的社会接受，演奏会的收入断了。…</div></td>
+<td class="cmus">拉赫玛尼诺夫《c小调第二钢琴协奏曲》作品18 / 萧斯塔科维奇《d小</td>
+<td class="cmus">雪原·冬日城市·落日</td></tr><tr><td class="cno">24</td>
+<td class="cttl"><b>他得写出些东西让后来的作曲家穷尽他的技巧</b><div class="cdesc">帕格尼尼1784年生于热那亚。传闻他不用琴弓也能演奏，用一根头发丝拨弦，甚至能在市场上用不同的弦、不同的弓法演同一首曲子迷惑听众。…</div></td>
+<td class="cmus">帕格尼尼《D大调第一小提琴协奏曲》作品6 / 李斯特《降E大调第一钢</td>
+<td class="cmus">巴洛克老城·烛光·镜面水池</td></tr><tr><td class="cno">25</td>
+<td class="cttl"><b>第一遍弹的版本，输给了第二遍</b><div class="cdesc">拉赫玛尼诺夫第二钢琴协奏曲的开头，是他趴在桌上想旋律时脑子里全有的闹钟滴答声。…</div></td>
+<td class="cmus">拉赫玛尼诺夫《c小调第二钢琴协奏曲》作品18 / 帕格尼尼《D大调第</td>
+<td class="cmus">深夜·城市天际线·孤独的钢琴</td></tr><tr><td class="cno">26</td>
+<td class="cttl"><b>暴风雨有两种</b><div class="cdesc">罗西尼《威廉退尔》序曲，1828年首演。那段著名的"渐强"，弦乐一层一层叠上去，最后铜管和木管在最高点一起炸开，然后一下收住，只剩木管的几声回音。…</div></td>
+<td class="cmus">罗西尼《威廉退尔》序曲 / 贝多芬《d小调第十七钢琴奏鸣曲》"暴风雨</td>
+<td class="cmus">暴风雨·海浪·乌云下的原野</td></tr><tr><td class="cno">27</td>
+<td class="cttl"><b>别太相信名字</b><div class="cdesc">有两部著名交响乐，一部叫《古典》，一部叫《浪漫》。而这两部，都跟古典、浪漫没什么关系。…</div></td>
+<td class="cmus">普罗科菲耶夫《D大调第一交响曲》"古典" / 德彪西《幻想交响曲》作</td>
+<td class="cmus">晨光·旧城广场·梦幻的森林</td></tr><tr><td class="cno">28</td>
+<td class="cttl"><b>他十七岁写下的序曲，至今还在婚礼上</b><div class="cdesc">1826年，十七岁的门德尔松写下《仲夏夜之梦》序曲。…</div></td>
+<td class="cmus">门德尔松《仲夏夜之梦》序曲 / 婚礼进行曲</td>
+<td class="cmus">月夜·森林·精灵般的微光</td></tr><tr><td class="cno">29</td>
+<td class="cttl"><b>录下这个声音，用的是一间小屋</b><div class="cdesc">1903到1906年，卡鲁索留下的那些录音，是人类录音史上最早的男声录音。…</div></td>
+<td class="cmus">卡鲁索早期录音实况选段 / 《理想，找不到》</td>
+<td class="cmus">老唱片·烛光·泛黄的房间</td></tr><tr><td class="cno">30</td>
+<td class="cttl"><b>一个男高音，和一种音乐形态的诞生</b><div class="cdesc">人类录音史上最早的一批男声录音，1903到1906年。…</div></td>
+<td class="cmus">卡鲁索《Neurotica》/ 《Cavatina》/ 早期录音收藏</td>
+<td class="cmus">剧院帷幕·暗红丝绒·烛光</td></tr><tr><td class="cno">31</td>
+<td class="cttl"><b>他写完第九交响曲的那年，死了</b><div class="cdesc">马勒1860年生，1911年去世。…</div></td>
+<td class="cmus">马勒《D小调第九交响曲》"复活" / 第二乐章"秋天里的孤独者"</td>
+<td class="cmus">秋日旷野·落日·孤独的旅人</td></tr><tr><td class="cno">32</td>
+<td class="cttl"><b>两百年前乐谱，两百年后有人把它演奏活了</b><div class="cdesc">巴赫写这套《无伴奏大提琴组曲》，作品1012，大约在1720年前后。…</div></td>
+<td class="cmus">巴赫《六首无伴奏大提琴组曲》BWV1012 / 卡萨尔斯录音版</td>
+<td class="cmus">空旷的厅堂·一束光·独坐</td></tr><tr><td class="cno">33</td>
+<td class="cttl"><b>他让卡拉扬成了小丑</b><div class="cdesc">富特文格勒1886年生，1954年去世。…</div></td>
+<td class="cmus">富特文格勒指挥贝多芬《d小调第九交响曲》"合唱" / 《降E大调第五</td>
+<td class="cmus">柏林·冬夜·空荡的乐池</td></tr><tr><td class="cno">34</td>
+<td class="cttl"><b>有一种四季是沉的，有一种是亮的</b><div class="cdesc">关于四季的音乐，最流行的无非两部。…</div></td>
+<td class="cmus">维瓦尔第《四季》"春"/"秋" 作品8 / 柴可夫斯基《a小调四季》</td>
+<td class="cmus">四季流转·麦田·落叶</td></tr><tr><td class="cno">35</td>
+<td class="cttl"><b>艺术是唯一不需要证明的地方</b><div class="cdesc">这一期放的是一组歌剧里的男女二重唱。…</div></td>
+<td class="cmus">普契尼《图兰朵》"柳"二重唱 / 威尔第《茶花女》经典二重唱</td>
+<td class="cmus">暗夜歌剧院·帷幕·双人剪影</td></tr><tr><td class="cno">36</td>
+<td class="cttl"><b>不要成为牺牲品</b><div class="cdesc">《第三交响曲》现在叫《英雄交响曲》，但贝多芬最初写它的时候，标题是"悲怆的凯旋"。…</div></td>
+<td class="cmus">贝多芬《降E大调第三交响曲》"英雄" / 《降E大调第五钢琴协奏曲》</td>
+<td class="cmus">高山之巅·云海·孤峰</td></tr><tr><td class="cno">37</td>
+<td class="cttl"><b>他的苦难，是心里的那一种</b><div class="cdesc">比起现实的苦难，心灵的苦难才真是人之大患，这是中西一脉的。…</div></td>
+<td class="cmus">马勒《D小调第二交响曲》"复活" 第四乐章 / 第二乐章</td>
+<td class="cmus">大地·旷野·天光初开</td></tr><tr><td class="cno">38</td>
+<td class="cttl"><b>没有艺术的世界，我们去海边</b><div class="cdesc">这一期他上传音乐上传得很费劲，网站有问题，只能先把音乐甩到网上再转移。…</div></td>
+<td class="cmus">小提琴小品选段 / 苏佩《诗人与农夫》序曲 / 韦伯《自由射手》序曲</td>
+<td class="cmus">海浪·礁石·咸味的空气</td></tr><tr><td class="cno">39</td>
+<td class="cttl"><b>未完成，不一定最后</b><div class="cdesc">未完成，不一定最后；最后，不一定未完成。…</div></td>
+<td class="cmus">舒伯特《c小调弦乐四重奏》D.956 / 《C大调钢琴奏鸣曲》D.6</td>
+<td class="cmus">雪与静谧·空屋·未完的纸页</td></tr><tr><td class="cno">40</td>
+<td class="cttl"><b>不必玄，也不必神</b><div class="cdesc">他提前开音乐会，因为第二天一早要出门。…</div></td>
+<td class="cmus">贝多芬《A大调第九小提琴奏鸣曲》"克鲁采"作品47 / 《a小调弦乐</td>
+<td class="cmus">山脊·风·开阔的高地</td></tr><tr><td class="cno">41</td>
+<td class="cttl"><b>一个阳光下的贝多芬，注定不是贝多芬</b><div class="cdesc">第一钢琴奏鸣曲、第一小提琴奏鸣曲、第一弦乐四重奏、第一交响曲——按写作年份排的四部"第一次"。…</div></td>
+<td class="cmus">贝多芬《F大调第一钢琴奏鸣曲》作品2之1 / 《C大调第一弦乐四重奏</td>
+<td class="cmus">原野·第一缕光·未名湖畔</td></tr><tr><td class="cno">42</td>
+<td class="cttl"><b>风，依然是风；山，依然是山</b><div class="cdesc">生与死，问题是人生的终极，不管你是否意识到，这问题终极地横亘在任何一个人面前。…</div></td>
+<td class="cmus">马勒《D小调第二交响曲》"复活" 第五乐章 / 巴赫《无伴奏大提琴组</td>
+<td class="cmus">夜·星轨·远山剪影</td></tr><tr><td class="cno">43</td>
+<td class="cttl"><b>他先送了一首最少人听过的舒伯特</b><div class="cdesc">2006年3月，他发了一条公告，标题里带着四个字：一诺千金。…</div></td>
+<td class="cmus">舒伯特《C大调第十交响曲》D.944</td>
+<td class="cmus">旧电脑·窗外天光·磁盘转动</td></tr><tr><td class="cno">44</td>
+<td class="cttl"><b>可以点播，但有一个条件</b><div class="cdesc">他说家里有CD，"没有一万都有八千，都是原版"，放在屋里独听有点浪费，要和大家分享。…</div></td>
+<td class="cmus">莫扎特 / 贝多芬 / 舒伯特 / 勃拉姆斯 全集选段</td>
+<td class="cmus">留言板·屏幕光·深夜的桌面</td></tr><tr><td class="cno">45</td>
+<td class="cttl"><b>2006年，网页可以自带背景音乐</b><div class="cdesc">那时候的博客功能还在互相抄，播放器经常报错，文件还传不上去。…</div></td>
+<td class="cmus">巴赫《哥德堡变奏曲》/ 任意古典器乐长段</td>
+<td class="cmus">CRT屏幕·老式鼠标·窗外雨</td></tr><tr><td class="cno">46</td>
+<td class="cttl"><b>一切从一句求助开始</b><div class="cdesc">2006年2月8日，他连发两帖，标题是"如何把音乐上传到网上"。…</div></td>
+<td class="cmus">莫扎特《C大调第四十一交响曲》/ 任意开场曲</td>
+<td class="cmus">拨号上网·老式房间·拨号音</td></tr><tr><td class="cno">47</td>
+<td class="cttl"><b>他的第一段音乐，只有1分钟</b><div class="cdesc">2006年3月，他把一段一分多钟的钢琴小回旋曲传上了网，管它叫"网上处女录音"。…</div></td>
+<td class="cmus">钢琴小回旋曲（中学时期作品）</td>
+<td class="cmus">书桌·旧谱纸·窗边阳光</td></tr><tr><td class="cno">48</td>
+<td class="cttl"><b>青春期的朦胧，被他留在了琴里</b><div class="cdesc">他说这首曲子随手写的，也没太费工夫。但音乐很多时候和工夫的花费无关。…</div></td>
+<td class="cmus">钢琴小品《淡远的游思》（中学时期作品）</td>
+<td class="cmus">黄昏·旧琴房·单车经过</td></tr><tr><td class="cno">49</td>
+<td class="cttl"><b>人大概对第一次都有特殊感情</b><div class="cdesc">他说，这是第一部钢琴奏鸣曲，还有第一部交响乐、第一部歌剧——不过那些都太大了，没法上传。…</div></td>
+<td class="cmus">第一钢琴奏鸣曲（中学时期作品）</td>
+<td class="cmus">崭新·未竟·第一束光</td></tr><tr><td class="cno">50</td>
+<td class="cttl"><b>他给自己的评价，一点都不谦虚</b><div class="cdesc">第三钢琴奏鸣曲，标题后面跟着七个字：中国人18岁前所写最佳钢琴奏鸣曲。…</div></td>
+<td class="cmus">第三钢琴奏鸣曲（中学时期作品）</td>
+<td class="cmus">长夜·长镜头·未完成的一夜</td></tr><tr><td class="cno">51</td>
+<td class="cttl"><b>十八岁，他写了第一首没有调的音乐</b><div class="cdesc">他上传这首无调性作品时，正在为一首马勒交响曲传不上去而犯愁，只好拿自己十八岁写的第一首无调性音乐"滥竽充数"。…</div></td>
+<td class="cmus">第一首无调性作品《寂》（十八岁创作）</td>
+<td class="cmus">静止·空旷·无声</td></tr><tr><td class="cno">52</td>
+<td class="cttl"><b>他说业余和专业，差在对规则的把握</b><div class="cdesc">三首中学时的曲式小作业。他请读者把背景音乐先停了，否则声音会重叠。…</div></td>
+<td class="cmus">三首曲式小作业（中学时期作品）</td>
+<td class="cmus">案头·谱纸·灯光下的桌面</td></tr><tr><td class="cno">53</td>
+<td class="cttl"><b>当唱歌变成了一种声音</b><div class="cdesc">他讨论一个现象：当所有歌唱都被往同一个方向拉，流行也就失去了歌唱。…</div></td>
+<td class="cmus">歌剧二重唱选段 / 意大利民歌</td>
+<td class="cmus">工业感的都市·霓虹·被规整的节奏</td></tr><tr><td class="cno">54</td>
+<td class="cttl"><b>一个人，怎么做一场现场</b><div class="cdesc">那场音乐会号称跨界，开场晚点，序曲被演奏得无限缩水。…</div></td>
+<td class="cmus">普契尼《图兰朵》"柳"二重唱 / 男高音咏叹调十四首精选</td>
+<td class="cmus">剧院后台·幕布缝隙·灯光</td></tr><tr><td class="cno">55</td>
+<td class="cttl"><b>一堂硬核的声乐科普课</b><div class="cdesc">海豚发出三种声音，频率从0.25千赫兹到220千赫兹；20千赫兹以上人耳听不见，某些频率甚至能把猎物击昏。…</div></td>
+<td class="cmus">女高音花腔/华彩段落 / 海豚音与咽音对比</td>
+<td class="cmus">高塔·仰视·穿透的频率</td></tr><tr><td class="cno">56</td>
+<td class="cttl"><b>上传失败那天，他聊了数学</b><div class="cdesc">他本来要开音乐会，结果网站上传总是失败，只好说说数学，说说哥德巴赫猜想。…</div></td>
+<td class="cmus">哥德巴赫相关 / 巴赫《数学的圣经》选段</td>
+<td class="cmus">草稿纸·公式·深夜台灯</td></tr><tr><td class="cno">57</td>
+<td class="cttl"><b>他写下的最后一段文字</b><div class="cdesc">2008年7月7日，博客里有一篇《唱歌其实是很简单的事情》。…</div></td>
+<td class="cmus">人声自然状态 / 歌剧人声对照</td>
+<td class="cmus">晨光·窗·第一声啼哭</td></tr><tr><td class="cno">58</td>
+<td class="cttl"><b>他也写诗</b><div class="cdesc">他换ID不久的时候写过三首诗，题目是：死亡、地铁、坟墓。…</div></td>
+<td class="cmus">默读 / 城市环境音 / 极简打击乐</td>
+<td class="cmus">地铁·长隧道·冷光</td></tr><tr><td class="cno">59</td>
+<td class="cttl"><b>五个小片段，和一个手机铃声</b><div class="cdesc">他说这些是学作曲时写的一些简单的乐句——当时从写乐句、乐段开始练。…</div></td>
+<td class="cmus">五个小片段（中学时期习作）</td>
+<td class="cmus">街边·耳机·走路的节奏</td></tr><tr><td class="cno">60</td>
+<td class="cttl"><b>2003年，一个女孩在谈戏剧男高音</b><div class="cdesc">2003年6月，一个叫「喜欢数学的女孩」的网友，在国家级论坛发了一篇长文。…</div></td>
+<td class="cmus">意大利歌剧咏叹调 / 德语艺术歌曲</td>
+<td class="cmus">旧论坛·荧光屏·深夜</td></tr><tr><td class="cno">61</td>
+<td class="cttl"><b>他怎么看流行音乐</b><div class="cdesc">一个受过正统古典训练的人，认真分析了一首当年的热门流行歌。…</div></td>
+<td class="cmus">早期摇滚 / 摇滚乐队现场 / 摇滚人声</td>
+<td class="cmus">六七十年代·旧城·立麦</td></tr><tr><td class="cno">62</td>
+<td class="cttl"><b>同一首歌，二十种唱法</b><div class="cdesc">2006年7月，他在博客上贴了两首自己写的摇滚词。…</div></td>
+<td class="cmus">摇滚编制 / 失真吉他 / 独立摇滚现场</td>
+<td class="cmus">旧厂房·排练室·烟味</td></tr><tr><td class="cno">63</td>
+<td class="cttl"><b>2005年，舆论场的另一面</b><div class="cdesc">2005年夏天的中文互联网上，有过一场挺火的争论。…</div></td>
+<td class="cmus">古琴 / 昆曲 / 江南丝竹</td>
+<td class="cmus">江南·烟雨·旧宅</td></tr><tr><td class="cno">64</td>
+<td class="cttl"><b>2007年，一场失败的跨界音乐会</b><div class="cdesc">他去了，评价很直接。开场晚点，序曲被演奏得无限缩水，三位四十来岁的歌手声音都太窄。…</div></td>
+<td class="cmus">普契尼《图兰朵》/ 男高音咏叹调精选</td>
+<td class="cmus">剧场·空座·谢幕</td></tr><tr><td class="cno">65</td>
+<td class="cttl"><b>一个人怎么练出好嗓子</b><div class="cdesc">2006年7月，一个人在自己的博客上发了一条公告。…</div></td>
+<td class="cmus">舒伯特 / 莫扎特 / 贝多芬 / 马勒 各选一段</td>
+<td class="cmus">片头·同一片风景·新的季节</td></tr><tr><td class="cno">66</td>
+<td class="cttl"><b>先做诗人，再开口</b><div class="cdesc">他说过一个听起来很奇怪的要求：…</div></td>
+<td class="cmus">艺术歌曲 / 意大利语歌剧咏叹调</td>
+<td class="cmus">旧图书馆·诗页·烛光</td></tr><tr><td class="cno">67</td>
+<td class="cttl"><b>他写的最后一篇音乐文章</b><div class="cdesc">文章开门见山：光有感情是不行的，一些最基本的技术是必须的。…</div></td>
+<td class="cmus">人声自然状态 / 婴儿啼哭与歌剧人声对照</td>
+<td class="cmus">晨光·窗·第一声啼哭</td></tr><tr><td class="cno">68</td>
+<td class="cttl"><b>他写的最后一篇杂谈</b><div class="cdesc">2008年7月9日，标题里列了四件事：股票、音乐、房价、病情。…</div></td>
+<td class="cmus">任选其一段他最熟悉的长段 / 歌剧与弦乐</td>
+<td class="cmus">旧电脑·窗外雪·最后一页</td></tr><tr><td class="cno">69</td>
+<td class="cttl"><b>他最后一次完整地讲了一遍音乐</b><div class="cdesc">2007年8月25日，最后一期音乐会。…</div></td>
+<td class="cmus">马勒《D小调第二交响曲》"复活" 第五乐章</td>
+<td class="cmus">长镜头·夜·四十二次日出</td></tr><tr><td class="cno">70</td>
+<td class="cttl"><b>一场关于美声的深夜对话</b><div class="cdesc">2005年10月的一个晚上，有人和一位中央音乐学院的教授通了电话，谈的是声乐。…</div></td>
+<td class="cmus">美声与戏剧男高音 / 意大利语咏叹调</td>
+<td class="cmus">深夜·电话线·窗外的城市</td></tr><tr><td class="cno">71</td>
+<td class="cttl"><b>你今天听到的音乐，是从这样的地方来的</b><div class="cdesc">2006年，中国的网络上还没有"打赏"、没有"知识付费"，也没有"IP"这个词。…</div></td>
+<td class="cmus">任意器乐长段（建议用慢板）</td>
+<td class="cmus">旧电脑·风扇转动·窗外天光</td></tr><tr><td class="cno">72</td>
+<td class="cttl"><b>2005年，一个名字引发的喧哗</b><div class="cdesc">2005年夏天的中文互联网上，有过一场挺火的争论。…</div></td>
+<td class="cmus">古琴 / 昆曲 / 江南丝竹</td>
+<td class="cmus">江南·烟雨·旧宅</td></tr><tr><td class="cno">73</td>
+<td class="cttl"><b>他最后说的一句话</b><div class="cdesc">2007年8月25日，第42期《生与死的拷问》。…</div></td>
+<td class="cmus">马勒《D小调第二交响曲》"复活" 第五乐章 / 巴赫《G弦上的咏叹调</td>
+<td class="cmus">极夜·静止·山的轮廓</td></tr><tr><td class="cno">74</td>
+<td class="cttl"><b>把四十二场音乐会，一次听完</b><div class="cdesc">从2006年7月到2007年8月，一年零一个月，四十二个周五。…</div></td>
+<td class="cmus">四十二期主题曲连缀 / 舒伯特《冬之旅》终曲收尾</td>
+<td class="cmus">四季·同一机位·四十二次</td></tr></tbody></table></div>
+</div></section>
+
+<section id="cards" class="hidden"><div class="wrap">
+<div class="sechead"><h3>逐期文案</h3><span class="hint">每期右上角「复制全部」可直接粘到抖音发布框</span></div>
+<article class="card" id="c0">
+<div class="chead">
+<div class="cno2">0</div>
+<div style="flex:1;min-width:0">
+<div class="ctitle">2006年，他把八千张唱片搬上了互联网</div>
+<div class="cgroup">序章｜第一场网络音乐会</div>
+</div>
+<button class="cbtn" data-cp="c0">复制全部</button>
+</div>
+<div class="cbody">
+<div class="blabel">发布标题</div>
+<div class="bval t">2006年，他把八千张唱片搬上了互联网</div>
+<div class="blabel" style="margin-top:14px">简介（直接复制发布）</div>
+<div class="bval" id="d0">一个人在自己的博客上发了一条公告：既然不是每个人都有时间、有钱去听现场音乐会，那就用网络把这件事办了。
+每周五一场，一场一小时半到两小时，按最标准的音乐会形式排曲序、有上下半场、有返场。
+这是中文互联网上最早的系列音乐会，一办就是四十二期。</div>
+<div class="brow">
+<div><div class="blabel">配乐</div><div class="bval m">舒伯特《C大调第五交响曲》第三乐章 / 巴赫《G弦上的咏叹调》</div></div>
+<div><div class="blabel">画面基调</div><div class="bval m">黎明·海岸线·城市苏醒</div></div>
+</div>
+<div class="tags"><span class="tag">#古典音乐</span><span class="tag">#风景</span><span class="tag">#音乐故事</span></div>
+</div>
+</article><article class="card" id="c1">
+<div class="chead">
+<div class="cno2">1</div>
+<div style="flex:1;min-width:0">
+<div class="ctitle">第一场音乐会，节目单只有一个名字</div>
+<div class="cgroup">第1期｜第一张节目单</div>
+</div>
+<button class="cbtn" data-cp="c1">复制全部</button>
+</div>
+<div class="cbody">
+<div class="blabel">发布标题</div>
+<div class="bval t">第一场音乐会，节目单只有一个名字</div>
+<div class="blabel" style="margin-top:14px">简介（直接复制发布）</div>
+<div class="bval" id="d1">2006年7月21日，星期五。
+他说：所有能进入音乐会的，都是最值得保留、流传的，都是人类伟大艺术灵魂最真诚的倾诉。
+注意他用的词是"真诚"，不是"经典"，也不是"名曲"。
+第一场能听见的，是舒伯特的钢琴。</div>
+<div class="brow">
+<div><div class="blabel">配乐</div><div class="bval m">舒伯特《即兴曲》D.899 作品90 / 舒伯特《流浪者幻想曲》D.760</div></div>
+<div><div class="blabel">画面基调</div><div class="bval m">晨雾·山脊·麦田</div></div>
+</div>
+<div class="tags"><span class="tag">#舒伯特</span><span class="tag">#古典音乐</span><span class="tag">#钢琴</span></div>
+</div>
+</article><article class="card" id="c2">
+<div class="chead">
+<div class="cno2">2</div>
+<div style="flex:1;min-width:0">
+<div class="ctitle">把古典的秩序和火热的激情摁在一起</div>
+<div class="cgroup">第2期｜舒伯特的钢琴</div>
+</div>
+<button class="cbtn" data-cp="c2">复制全部</button>
+</div>
+<div class="cbody">
+<div class="blabel">发布标题</div>
+<div class="bval t">把古典的秩序和火热的激情摁在一起</div>
+<div class="blabel" style="margin-top:14px">简介（直接复制发布）</div>
+<div class="bval" id="d2">这一期是舒伯特钢琴作品专场：两套即兴曲，一首幻想曲，最后一首四手联弹《军队进行曲》当返场。
+他在演讲曲里更少地回望，在幻想曲里更大地开拓——古典的架子被拆开之后，他还能重新找到均衡。
+这一步，比很多写了一辈子的人都没走通。</div>
+<div class="brow">
+<div><div class="blabel">配乐</div><div class="bval m">舒伯特《即兴曲》D.899 / 《流浪者幻想曲》D.760 / 《军队进行曲》D.733</div></div>
+<div><div class="blabel">画面基调</div><div class="bval m">维也纳·老街·琴房窗户</div></div>
+</div>
+<div class="tags"><span class="tag">#舒伯特</span><span class="tag">#钢琴</span><span class="tag">#古典音乐</span></div>
+</div>
+</article><article class="card" id="c3">
+<div class="chead">
+<div class="cno2">3</div>
+<div style="flex:1;min-width:0">
+<div class="ctitle">写给逝去时代的一封信</div>
+<div class="cgroup">第3期｜勃拉姆斯与古典的旧梦</div>
+</div>
+<button class="cbtn" data-cp="c3">复制全部</button>
+</div>
+<div class="cbody">
+<div class="blabel">发布标题</div>
+<div class="bval t">写给逝去时代的一封信</div>
+<div class="blabel" style="margin-top:14px">简介（直接复制发布）</div>
+<div class="bval" id="d3">19世纪下半叶，德国的音乐版图是分裂的：德奥被瓦格纳主导，莱比锡的勃拉姆斯却坚持用古典的曲式。
+他说：舒伯特之后，古典主义基本就没有了，这憧憬只剩一个梦。
+所以第四交响曲的末乐章里，他埋了一句几乎像"欢乐颂"的音调——同样的动机再来一次，人是自由的。
+他曾是舒伯特遗稿的第一位编订者。</div>
+<div class="brow">
+<div><div class="blabel">配乐</div><div class="bval m">勃拉姆斯《e小调第四交响曲》作品98 / 舒伯特《f小调四手联弹幻想曲》D.940</div></div>
+<div><div class="blabel">画面基调</div><div class="bval m">黄昏·金色大厅·山脊晚照</div></div>
+</div>
+<div class="tags"><span class="tag">#勃拉姆斯</span><span class="tag">#古典主义</span><span class="tag">#交响乐</span></div>
+</div>
+</article><article class="card" id="c4">
+<div class="chead">
+<div class="cno2">4</div>
+<div style="flex:1;min-width:0">
+<div class="ctitle">三千多首作品，三十一年</div>
+<div class="cgroup">第4期｜歌之外的舒伯特</div>
+</div>
+<button class="cbtn" data-cp="c4">复制全部</button>
+</div>
+<div class="cbody">
+<div class="blabel">发布标题</div>
+<div class="bval t">三千多首作品，三十一年</div>
+<div class="blabel" style="margin-top:14px">简介（直接复制发布）</div>
+<div class="bval" id="d4">音乐史上被误会的荣誉头衔，大概就是"歌曲之王"这四个字。戴上它，遮住的正是一个顶级的器乐大师。
+舒伯特留下三千多首作品，六百多首艺术歌曲、二十一首钢琴奏鸣曲、十五首弦乐四重奏、十部交响曲。
+这个产量是在三十一年里完成的。
+他离开这个世界时，巴赫和贝多芬在同样的年纪才刚开始真正的创造。</div>
+<div class="brow">
+<div><div class="blabel">配乐</div><div class="bval m">舒伯特《降B大调钢琴奏鸣曲》D.961 / 《C大调弦乐五重奏》D.956 / 《"伟大"第九交响曲》D.944</div></div>
+<div><div class="blabel">画面基调</div><div class="bval m">雪原·空旷的湖·古堡远山</div></div>
+</div>
+<div class="tags"><span class="tag">#舒伯特</span><span class="tag">#室内乐</span><span class="tag">#古典音乐</span></div>
+</div>
+</article><article class="card" id="c5">
+<div class="chead">
+<div class="cno2">5</div>
+<div style="flex:1;min-width:0">
+<div class="ctitle">1827年的冬天，他写了24首歌</div>
+<div class="cgroup">第5期｜冬之旅</div>
+</div>
+<button class="cbtn" data-cp="c5">复制全部</button>
+</div>
+<div class="cbody">
+<div class="blabel">发布标题</div>
+<div class="bval t">1827年的冬天，他写了24首歌</div>
+<div class="blabel" style="margin-top:14px">简介（直接复制发布）</div>
+<div class="bval" id="d5">维也纳城里一间租来的小房子，舒伯特三十岁，距离离开这个世界还有不到两年。
+词是威廉·米勒尔的，诗人本来写了两卷，他只要了第一卷。
+他给这二十四首一路编号到二十四——他不是随手写二十四个情绪，他是写了一条下坡路。
+有一首叫《菩提树》：我每天经过那棵老树，如今它还在那里，可是从此我再也不能回到那熟悉的树下。</div>
+<div class="brow">
+<div><div class="blabel">配乐</div><div class="bval m">舒伯特《冬之旅》D.911 全文 / 《菩提树》《小溪旁》</div></div>
+<div><div class="blabel">画面基调</div><div class="bval m">雪原·枯树·风雪中的窗灯</div></div>
+</div>
+<div class="tags"><span class="tag">#舒伯特</span><span class="tag">#冬之旅</span><span class="tag">#艺术歌曲</span></div>
+</div>
+</article><article class="card" id="c6">
+<div class="chead">
+<div class="cno2">6</div>
+<div style="flex:1;min-width:0">
+<div class="ctitle">莫扎特这一年，36岁</div>
+<div class="cgroup">第6期｜天使莫扎特</div>
+</div>
+<button class="cbtn" data-cp="c6">复制全部</button>
+</div>
+<div class="cbody">
+<div class="blabel">发布标题</div>
+<div class="bval t">莫扎特这一年，36岁</div>
+<div class="blabel" style="margin-top:14px">简介（直接复制发布）</div>
+<div class="bval" id="d6">1756年生在小宫廷乐师家里，6岁写小提琴奏鸣曲，11岁被父亲带去维也纳弹琴，全城轰动。
+真正的转折是1781年，他终于搬进维也纳。这十年：弹钢琴、授课、跑场子、卖谱子、为一夜几百块钱写一首下个月要交货的歌剧。
+最后那部《安魂曲》写到一半，人就不在了。
+他说：从来没有天使，但天使下来时奏的音乐一定是莫扎特式的。</div>
+<div class="brow">
+<div><div class="blabel">配乐</div><div class="bval m">莫扎特《C大调第四十一交响曲》"朱庇特" / 《安魂曲》安息经</div></div>
+<div><div class="blabel">画面基调</div><div class="bval m">维也纳·金色大厅·欧洲古城</div></div>
+</div>
+<div class="tags"><span class="tag">#莫扎特</span><span class="tag">#交响乐</span><span class="tag">#维也纳</span></div>
+</div>
+</article><article class="card" id="c7">
+<div class="chead">
+<div class="cno2">7</div>
+<div style="flex:1;min-width:0">
+<div class="ctitle">他最亮的那部作品，写在他最落魄那年</div>
+<div class="cgroup">第7期｜莫扎特的小调</div>
+</div>
+<button class="cbtn" data-cp="c7">复制全部</button>
+</div>
+<div class="cbody">
+<div class="blabel">发布标题</div>
+<div class="bval t">他最亮的那部作品，写在他最落魄那年</div>
+<div class="blabel" style="margin-top:14px">简介（直接复制发布）</div>
+<div class="bval" id="d7">莫扎特写了几百部器乐作品，小调少得离谱。因为他是宫廷雇员、剧院乐长、签约交稿的人——那时候把气氛弄得太暗是要出事的。
+所以他的小调常常出现得很短，转两个弯就回大调去，像走错了一间屋子，赶紧退出来。
+而他最亮的第41交响曲，恰恰写在他最落魄的那一年。
+天使也有烦恼的时候，何况这天使也只是一个比喻。</div>
+<div class="brow">
+<div><div class="blabel">配乐</div><div class="bval m">莫扎特《g小调第四十交响曲》K.550 / 《c小调幻想曲》K.475</div></div>
+<div><div class="blabel">画面基调</div><div class="bval m">湖面·晨雾·秋日森林</div></div>
+</div>
+<div class="tags"><span class="tag">#莫扎特</span><span class="tag">#小调</span><span class="tag">#古典音乐</span></div>
+</div>
+</article><article class="card" id="c8">
+<div class="chead">
+<div class="cno2">8</div>
+<div style="flex:1;min-width:0">
+<div class="ctitle">他一辈子在"见证"，却不被允许演奏</div>
+<div class="cgroup">第8期｜萧斯塔科维奇</div>
+</div>
+<button class="cbtn" data-cp="c8">复制全部</button>
+</div>
+<div class="cbody">
+<div class="blabel">发布标题</div>
+<div class="bval t">他一辈子在"见证"，却不被允许演奏</div>
+<div class="blabel" style="margin-top:14px">简介（直接复制发布）</div>
+<div class="bval" id="d8">1905年生在彼得格勒一个工程师家里，1923年从列宁格勒音乐学院毕业，此后一辈子没离开过那座城市。
+这一期放三样东西：第一交响曲、第十五交响曲、最后的第八弦乐四重奏。按年代排，中间隔着五十五年。
+他说：音乐可以见证，但音乐不光是见证。</div>
+<div class="brow">
+<div><div class="blabel">配乐</div><div class="bval m">萧斯塔科维奇《C大调第八弦乐四重奏》作品110 / 《第十交响曲》作品93</div></div>
+<div><div class="blabel">画面基调</div><div class="bval m">雪夜·废墟·极地冰原</div></div>
+</div>
+<div class="tags"><span class="tag">#萧斯塔科维奇</span><span class="tag">#弦乐四重奏</span><span class="tag">#二十世纪</span></div>
+</div>
+</article><article class="card" id="c9">
+<div class="chead">
+<div class="cno2">9</div>
+<div style="flex:1;min-width:0">
+<div class="ctitle">临终前的三部奏鸣曲，安静得不像话</div>
+<div class="cgroup">第9期｜键盘上的天鹅之歌</div>
+</div>
+<button class="cbtn" data-cp="c9">复制全部</button>
+</div>
+<div class="cbody">
+<div class="blabel">发布标题</div>
+<div class="bval t">临终前的三部奏鸣曲，安静得不像话</div>
+<div class="blabel" style="margin-top:14px">简介（直接复制发布）</div>
+<div class="bval" id="d9">c小调D.959、A大调D.960、降B大调D.961——全是舒伯特生命最后阶段写的。
+写这三首的时候他已经在生病，医生开的处方是"避免刺激"。
+晚年的舒伯特写法变了：表面极静，底下极深。D.959第一乐章末尾，主题塌进不谐和音里。
+音乐不是用来讲解的，只需要倾听。</div>
+<div class="brow">
+<div><div class="blabel">配乐</div><div class="bval m">舒伯特《降B大调钢琴奏鸣曲》D.961 / 《A大调钢琴奏鸣曲》D.960</div></div>
+<div><div class="blabel">画面基调</div><div class="bval m">空旷的湖·雪原·独木</div></div>
+</div>
+<div class="tags"><span class="tag">#舒伯特</span><span class="tag">#钢琴</span><span class="tag">#天鹅之歌</span></div>
+</div>
+</article><article class="card" id="c10">
+<div class="chead">
+<div class="cno2">10</div>
+<div style="flex:1;min-width:0">
+<div class="ctitle">十九岁，他把一首歌变成了一首四重奏</div>
+<div class="cgroup">第10期｜死神与少女</div>
+</div>
+<button class="cbtn" data-cp="c10">复制全部</button>
+</div>
+<div class="cbody">
+<div class="blabel">发布标题</div>
+<div class="bval t">十九岁，他把一首歌变成了一首四重奏</div>
+<div class="blabel" style="margin-top:14px">简介（直接复制发布）</div>
+<div class="bval" id="d10">D.810，a小调，1816年，舒伯特十九岁。
+他把自己那首艺术歌曲《死神与少女》的主题拿过来，交给四把琴，第二乐章做成变奏。
+这就是声乐与器乐的联姻。
+同一场音乐会里还放了另一个东西：一个完成了的未完成——因为未完成就是未完成，永远也没必要去完成。</div>
+<div class="brow">
+<div><div class="blabel">配乐</div><div class="bval m">舒伯特《死神与少女》D.810 第二乐章 / 艺术歌曲《死神与少女》D.7</div></div>
+<div><div class="blabel">画面基调</div><div class="bval m">秋日森林·落日·墓园般的宁静</div></div>
+</div>
+<div class="tags"><span class="tag">#舒伯特</span><span class="tag">#四重奏</span><span class="tag">#死神与少女</span></div>
+</div>
+</article><article class="card" id="c11">
+<div class="chead">
+<div class="cno2">11</div>
+<div style="flex:1;min-width:0">
+<div class="ctitle">一整期，只有一部交响曲</div>
+<div class="cgroup">第11期｜第七交响曲</div>
+</div>
+<button class="cbtn" data-cp="c11">复制全部</button>
+</div>
+<div class="cbody">
+<div class="blabel">发布标题</div>
+<div class="bval t">一整期，只有一部交响曲</div>
+<div class="blabel" style="margin-top:14px">简介（直接复制发布）</div>
+<div class="bval" id="d11">它动笔的那一年，这座城市的音乐生活几乎停摆：原来的乐团散了，能凑齐的只有十几个还在岗的乐手。
+第一乐章将近三十分钟。开头是大提琴和低音提琴在小调上对峙，一个不祥的音型反复出现，像远处有人在敲一段固执的信号。
+他说：音乐不在倾听中，但音乐必须倾听。</div>
+<div class="brow">
+<div><div class="blabel">配乐</div><div class="bval m">萧斯塔科维奇《C大调第七交响曲》作品60 第一乐章</div></div>
+<div><div class="blabel">画面基调</div><div class="bval m">废墟·雪原·肃穆的旷野</div></div>
+</div>
+<div class="tags"><span class="tag">#萧斯塔科维奇</span><span class="tag">#第七交响曲</span><span class="tag">#二十世纪</span></div>
+</div>
+</article><article class="card" id="c12">
+<div class="chead">
+<div class="cno2">12</div>
+<div style="flex:1;min-width:0">
+<div class="ctitle">舒伯特也有很亮的时候</div>
+<div class="cgroup">第12期｜阳光舒伯特</div>
+</div>
+<button class="cbtn" data-cp="c12">复制全部</button>
+</div>
+<div class="cbody">
+<div class="blabel">发布标题</div>
+<div class="bval t">舒伯特也有很亮的时候</div>
+<div class="blabel" style="margin-top:14px">简介（直接复制发布）</div>
+<div class="bval" id="d12">一般人印象里的舒伯特是阴郁的——《魔王》十八岁写的，一气呵成，钢琴从第一个音就是马蹄的三连音。
+但他也有很亮的时候，而且亮得很彻底。他亮的时候集中在二十五岁之前：1815到1819，跟歌德、席勒的诗较上劲。
+《鳟鱼》五重奏的客厅里，一屋子人边听边聊。
+阳光是年轻的莫扎特的词语，对后期的舒伯特来说，阳光是一种奢侈品。</div>
+<div class="brow">
+<div><div class="blabel">配乐</div><div class="bval m">舒伯特《C大调弦乐五重奏》D.956 末乐章 / 《夏日夜晚》D.289</div></div>
+<div><div class="blabel">画面基调</div><div class="bval m">春田·花海·阳光下的溪流</div></div>
+</div>
+<div class="tags"><span class="tag">#舒伯特</span><span class="tag">#五重奏</span><span class="tag">#春天</span></div>
+</div>
+</article><article class="card" id="c13">
+<div class="chead">
+<div class="cno2">13</div>
+<div style="flex:1;min-width:0">
+<div class="ctitle">把维也纳的四个人请进同一间屋子</div>
+<div class="cgroup">第13期｜维也纳的四个人</div>
+</div>
+<button class="cbtn" data-cp="c13">复制全部</button>
+</div>
+<div class="cbody">
+<div class="blabel">发布标题</div>
+<div class="bval t">把维也纳的四个人请进同一间屋子</div>
+<div class="blabel" style="margin-top:14px">简介（直接复制发布）</div>
+<div class="bval" id="d13">现实中不可能办的一场音乐会：莫扎特、贝多芬、舒伯特、勃拉姆斯。
+出场顺序按年代排。莫扎特那部《朱庇特》最后乐章里，五支木管叠在一起各走各的调，最后又拢回一处——当时从没这么干过。
+他说：这四个人是"一场颠峰决战"。</div>
+<div class="brow">
+<div><div class="blabel">配乐</div><div class="bval m">莫扎特《C大调第四十一交响曲》/ 贝多芬《降B大调钢琴奏鸣曲》作品106 / 勃拉姆斯《第一钢琴三重奏》作品25</div></div>
+<div><div class="blabel">画面基调</div><div class="bval m">欧洲古城·金色大厅·秋日森林</div></div>
+</div>
+<div class="tags"><span class="tag">#维也纳</span><span class="tag">#古典主义</span><span class="tag">#大师</span></div>
+</div>
+</article><article class="card" id="c14">
+<div class="chead">
+<div class="cno2">14</div>
+<div style="flex:1;min-width:0">
+<div class="ctitle">他放弃了法官的工作，去学作曲</div>
+<div class="cgroup">第14期｜柴可夫斯基的十年</div>
+</div>
+<button class="cbtn" data-cp="c14">复制全部</button>
+</div>
+<div class="cbody">
+<div class="blabel">发布标题</div>
+<div class="bval t">他放弃了法官的工作，去学作曲</div>
+<div class="blabel" style="margin-top:14px">简介（直接复制发布）</div>
+<div class="bval" id="d14">1840年生在乌拉尔山下的冶金厂工程师家庭，十岁被送去彼得堡读法律，十九岁法律学校毕业，在司法部当了四年小官。
+二十一岁那年他辞掉官职，去上大钢琴家鲁宾斯坦的音乐教室学作曲。
+第五交响曲1888年首演，那年他辞去教职搬到彼得堡。第二乐章是大提琴与圆号一唱一和，慢得让人心里发软。</div>
+<div class="brow">
+<div><div class="blabel">配乐</div><div class="bval m">柴可夫斯基《e小调第五交响曲》作品64 第二乐章 / 《第一钢琴协奏曲》作品23</div></div>
+<div><div class="blabel">画面基调</div><div class="bval m">冬日森林·雪原·城市灯火</div></div>
+</div>
+<div class="tags"><span class="tag">#柴可夫斯基</span><span class="tag">#交响乐</span><span class="tag">#俄罗斯</span></div>
+</div>
+</article><article class="card" id="c15">
+<div class="chead">
+<div class="cno2">15</div>
+<div style="flex:1;min-width:0">
+<div class="ctitle">有一类音乐，听的人两极分化</div>
+<div class="cgroup">第15期｜那些让人吵起来的音乐</div>
+</div>
+<button class="cbtn" data-cp="c15">复制全部</button>
+</div>
+<div class="cbody">
+<div class="blabel">发布标题</div>
+<div class="bval t">有一类音乐，听的人两极分化</div>
+<div class="blabel" style="margin-top:14px">简介（直接复制发布）</div>
+<div class="bval" id="d15">他办这一期办得很不情愿，吐槽说上周因为是柴可夫斯基的，回复数量居然多了起来，真是岂有此理。
+但他选的曲目很说明问题：《第一钢琴协奏曲》和《第五交响曲》，都不是最出名的那些。
+他说这部第五交响曲在技术上相当粗糙，但它的价值在于那种"直白的情感"。
+音乐是给人听的，不是给人吵架的。</div>
+<div class="brow">
+<div><div class="blabel">配乐</div><div class="bval m">柴可夫斯基《第一钢琴协奏曲》作品23 / 《e小调第五交响曲》作品64</div></div>
+<div><div class="blabel">画面基调</div><div class="bval m">城市夜景·雨夜·霓虹</div></div>
+</div>
+<div class="tags"><span class="tag">#柴可夫斯基</span><span class="tag">#俄罗斯</span><span class="tag">#音乐评论</span></div>
+</div>
+</article><article class="card" id="c16">
+<div class="chead">
+<div class="cno2">16</div>
+<div style="flex:1;min-width:0">
+<div class="ctitle">他柔弱，他身后的人强悍</div>
+<div class="cgroup">第16期｜肖邦和他身后的故事</div>
+</div>
+<button class="cbtn" data-cp="c16">复制全部</button>
+</div>
+<div class="cbody">
+<div class="blabel">发布标题</div>
+<div class="bval t">他柔弱，他身后的人强悍</div>
+<div class="blabel" style="margin-top:14px">简介（直接复制发布）</div>
+<div class="bval" id="d16">肖邦二十九岁因为肺结核去世，一生大部分时间在病里，社交极差，几乎不出门。
+可他写出来的，是整个浪漫主义里最有力量的。
+他背后站着乔治·桑——女钢琴家，演出日程排得比男人还满。
+肖邦没有娶她。他们在一起九年，最后分开。
+一百多年后，你仍能在最幽深的地方听到她的痕迹。</div>
+<div class="brow">
+<div><div class="blabel">配乐</div><div class="bval m">肖邦《降E大调第二钢琴协奏曲》/ 《E小调第一叙事曲》</div></div>
+<div><div class="blabel">画面基调</div><div class="bval m">雨后街道·窗边·复古的沙龙</div></div>
+</div>
+<div class="tags"><span class="tag">#肖邦</span><span class="tag">#钢琴</span><span class="tag">#乔治桑</span></div>
+</div>
+</article><article class="card" id="c17">
+<div class="chead">
+<div class="cno2">17</div>
+<div style="flex:1;min-width:0">
+<div class="ctitle">他被自己的身体困住，也被一段说不清的关系困住</div>
+<div class="cgroup">第17期｜维也纳的黑暗往事</div>
+</div>
+<button class="cbtn" data-cp="c17">复制全部</button>
+</div>
+<div class="cbody">
+<div class="blabel">发布标题</div>
+<div class="bval t">他被自己的身体困住，也被一段说不清的关系困住</div>
+<div class="blabel" style="margin-top:14px">简介（直接复制发布）</div>
+<div class="bval" id="d17">贝多芬四岁那年父亲去世，母亲改嫁，弟弟卡尔承担起照顾哥哥的责任——后来终身未婚。
+1814年卡尔去世时，路德维希在遗嘱里提到了他。
+1827年3月26日他去世，葬礼参加人数超过两万人，送葬的陌生人超过一半。
+音乐史上还有个细节：他写的最后一部作品，是第十钢琴弦乐四重奏的变奏曲。</div>
+<div class="brow">
+<div><div class="blabel">配乐</div><div class="bval m">贝多芬《升C小调第十四钢琴四重奏》作品131 / 《D大调第十五钢琴四重奏》作品131</div></div>
+<div><div class="blabel">画面基调</div><div class="bval m">维也纳·夜色·墓园</div></div>
+</div>
+<div class="tags"><span class="tag">#贝多芬</span><span class="tag">#四重奏</span><span class="tag">#音乐史</span></div>
+</div>
+</article><article class="card" id="c18">
+<div class="chead">
+<div class="cno2">18</div>
+<div style="flex:1;min-width:0">
+<div class="ctitle">今夜，只让大提琴陪你</div>
+<div class="cgroup">第18期｜只让大提琴陪着你</div>
+</div>
+<button class="cbtn" data-cp="c18">复制全部</button>
+</div>
+<div class="cbody">
+<div class="blabel">发布标题</div>
+<div class="bval t">今夜，只让大提琴陪你</div>
+<div class="blabel" style="margin-top:14px">简介（直接复制发布）</div>
+<div class="bval" id="d18">大提琴是所有乐器里最接近人的。它音域低，音色厚而不闷，还有一层天鹅绒似的暖。
+它是独奏乐器里最像人声的——很多歌剧里那个"男中音"位置，其实都是大提琴在唱。
+它的频率和人的胸腔共振区高度重合，你听它的时候，身体会跟着放松。
+他说：音乐从来不只是耳朵的事。</div>
+<div class="brow">
+<div><div class="blabel">配乐</div><div class="bval m">德沃夏克《b小调大提琴协奏曲》作品104 / 圣桑《d小调第一大提琴协奏曲》</div></div>
+<div><div class="blabel">画面基调</div><div class="bval m">深夜·海面·烛光</div></div>
+</div>
+<div class="tags"><span class="tag">#大提琴</span><span class="tag">#夜晚</span><span class="tag">#独奏</span></div>
+</div>
+</article><article class="card" id="c19">
+<div class="chead">
+<div class="cno2">19</div>
+<div style="flex:1;min-width:0">
+<div class="ctitle">十九岁，他写完就去找工作了</div>
+<div class="cgroup">第19期｜大提琴，继续的夜晚</div>
+</div>
+<button class="cbtn" data-cp="c19">复制全部</button>
+</div>
+<div class="cbody">
+<div class="blabel">发布标题</div>
+<div class="bval t">十九岁，他写完就去找工作了</div>
+<div class="blabel" style="margin-top:14px">简介（直接复制发布）</div>
+<div class="bval" id="d19">他把这个"节目单"递过去，人家说太年轻。
+他当场拿出乐谱写了这首奏鸣曲，当场演奏，剧院立刻录用了他。
+一共五个乐章，比常规多两个。而第四乐章那个著名的拨弦段落，是全曲最出名的部分。
+舒伯特后来还把这段旋律用了一次——在《圣母颂》里。</div>
+<div class="brow">
+<div><div class="blabel">配乐</div><div class="bval m">舒伯特《阿佩乔尼》大提琴奏鸣曲 第四乐章 / 艺术歌曲《圣母颂》</div></div>
+<div><div class="blabel">画面基调</div><div class="bval m">夜色·水边·孤独的灯</div></div>
+</div>
+<div class="tags"><span class="tag">#舒伯特</span><span class="tag">#大提琴</span><span class="tag">#拨弦</span></div>
+</div>
+</article><article class="card" id="c20">
+<div class="chead">
+<div class="cno2">20</div>
+<div style="flex:1;min-width:0">
+<div class="ctitle">天才的第一次，和你的第一次一样</div>
+<div class="cgroup">第20期｜天才的第一次</div>
+</div>
+<button class="cbtn" data-cp="c20">复制全部</button>
+</div>
+<div class="cbody">
+<div class="blabel">发布标题</div>
+<div class="bval t">天才的第一次，和你的第一次一样</div>
+<div class="blabel" style="margin-top:14px">简介（直接复制发布）</div>
+<div class="bval" id="d20">莫扎特十一岁写下的《C大调钢琴奏鸣曲》K.545，是他最著名的入门作品。
+常被当成"简单"来教——但拿它跟莫扎特后来的作品比，会发现那种简洁不是因为他技术不够，恰恰相反。
+有意思的是：莫扎特一生没有碰过钢琴奏鸣曲，这是唯一一首。
+他说：关闭一切背景音乐，打开你的心。</div>
+<div class="brow">
+<div><div class="blabel">配乐</div><div class="bval m">莫扎特《C大调钢琴奏鸣曲》K.545 / 《D大调第十钢琴奏鸣曲》K.576</div></div>
+<div><div class="blabel">画面基调</div><div class="bval m">清晨·原野·少年</div></div>
+</div>
+<div class="tags"><span class="tag">#莫扎特</span><span class="tag">#钢琴</span><span class="tag">#天赋</span></div>
+</div>
+</article><article class="card" id="c21">
+<div class="chead">
+<div class="cno2">21</div>
+<div style="flex:1;min-width:0">
+<div class="ctitle">不要讲解，去感受</div>
+<div class="cgroup">第21期｜只要感受就好</div>
+</div>
+<button class="cbtn" data-cp="c21">复制全部</button>
+</div>
+<div class="cbody">
+<div class="blabel">发布标题</div>
+<div class="bval t">不要讲解，去感受</div>
+<div class="blabel" style="margin-top:14px">简介（直接复制发布）</div>
+<div class="bval" id="d21">这一期他放的是巴赫。
+《平均律键盘曲集》第二卷，1742年出版，比第一卷晚了整整二十年。
+"平均律"的意思是调律妥当——在这之前，键盘上能用的调太少，远处的调会跑音。
+这件事把音乐的可能性整个打开了。
+他说：音乐不是用来讲解的，音乐只需要倾听。</div>
+<div class="brow">
+<div><div class="blabel">配乐</div><div class="bval m">巴赫《C大调前奏曲》BWV846 / 《歌德堡变奏曲》BWV988 咏叹调</div></div>
+<div><div class="blabel">画面基调</div><div class="bval m">白墙与窗·空旷的公路·落灰的琴键</div></div>
+</div>
+<div class="tags"><span class="tag">#巴赫</span><span class="tag">#平均律</span><span class="tag">#键盘</span></div>
+</div>
+</article><article class="card" id="c22">
+<div class="chead">
+<div class="cno2">22</div>
+<div style="flex:1;min-width:0">
+<div class="ctitle">有人问：能不能放点本民族的</div>
+<div class="cgroup">第22期｜民族，还是世界</div>
+</div>
+<button class="cbtn" data-cp="c22">复制全部</button>
+</div>
+<div class="cbody">
+<div class="blabel">发布标题</div>
+<div class="bval t">有人问：能不能放点本民族的</div>
+<div class="blabel" style="margin-top:14px">简介（直接复制发布）</div>
+<div class="bval" id="d22">他说他有一套中国古典音乐的全集，各种古曲都全了，一大箱，可惜不在北京的家里，在外地的房子里，暂时点不了。
+于是这一期放的是德沃夏克——但他说得清楚：民族乐派里也不是一无是处，只是别把框画死。
+他用世界的工具讲地方的故事。
+真正的音乐，只有音乐。</div>
+<div class="brow">
+<div><div class="blabel">配乐</div><div class="bval m">德沃夏克《b小调大提琴协奏曲》作品104 / 《e小调第九交响曲》"自新大陆" 第二乐章</div></div>
+<div><div class="blabel">画面基调</div><div class="bval m">草原·海天交界·辽阔的地平线</div></div>
+</div>
+<div class="tags"><span class="tag">#德沃夏克</span><span class="tag">#民族</span><span class="tag">#交响乐</span></div>
+</div>
+</article><article class="card" id="c23">
+<div class="chead">
+<div class="cno2">23</div>
+<div style="flex:1;min-width:0">
+<div class="ctitle">他们各自都往回走了一点</div>
+<div class="cgroup">第23期｜二十世纪的保守主义者</div>
+</div>
+<button class="cbtn" data-cp="c23">复制全部</button>
+</div>
+<div class="cbody">
+<div class="blabel">发布标题</div>
+<div class="bval t">他们各自都往回走了一点</div>
+<div class="blabel" style="margin-top:14px">简介（直接复制发布）</div>
+<div class="bval" id="d23">拉赫玛尼诺夫，1899年离开俄罗斯。那年他三十七岁，妻子刚去世，婚姻不被当时的社会接受，演奏会的收入断了。
+他说：我必须继续漂泊，如果我停下来，我就会死。
+萧斯塔科维奇，1938年之后自己的国家不再允许他演出自己的作品。
+他们各自都往回走了一点——回到十九世纪的语法里，把最要紧的话说清楚。</div>
+<div class="brow">
+<div><div class="blabel">配乐</div><div class="bval m">拉赫玛尼诺夫《c小调第二钢琴协奏曲》作品18 / 萧斯塔科维奇《d小调第五交响曲》作品47</div></div>
+<div><div class="blabel">画面基调</div><div class="bval m">雪原·冬日城市·落日</div></div>
+</div>
+<div class="tags"><span class="tag">#拉赫玛尼诺夫</span><span class="tag">#萧斯塔科维奇</span><span class="tag">#二十世纪</span></div>
+</div>
+</article><article class="card" id="c24">
+<div class="chead">
+<div class="cno2">24</div>
+<div style="flex:1;min-width:0">
+<div class="ctitle">他得写出些东西让后来的作曲家穷尽他的技巧</div>
+<div class="cgroup">第24期｜两位乐器之王的第一次</div>
+</div>
+<button class="cbtn" data-cp="c24">复制全部</button>
+</div>
+<div class="cbody">
+<div class="blabel">发布标题</div>
+<div class="bval t">他得写出些东西让后来的作曲家穷尽他的技巧</div>
+<div class="blabel" style="margin-top:14px">简介（直接复制发布）</div>
+<div class="bval" id="d24">帕格尼尼1784年生于热那亚。传闻他不用琴弓也能演奏，用一根头发丝拨弦，甚至能在市场上用不同的弦、不同的弓法演同一首曲子迷惑听众。
+李斯特比他小二十七岁，听完他演奏就改行当钢琴家，转头认定自己能做得更好。
+帕格尼尼的第一协奏曲，是所有小提琴家的必修课。</div>
+<div class="brow">
+<div><div class="blabel">配乐</div><div class="bval m">帕格尼尼《D大调第一小提琴协奏曲》作品6 / 李斯特《降E大调第一钢琴协奏曲》作品14</div></div>
+<div><div class="blabel">画面基调</div><div class="bval m">巴洛克老城·烛光·镜面水池</div></div>
+</div>
+<div class="tags"><span class="tag">#帕格尼尼</span><span class="tag">#李斯特</span><span class="tag">#小提琴</span></div>
+</div>
+</article><article class="card" id="c25">
+<div class="chead">
+<div class="cno2">25</div>
+<div style="flex:1;min-width:0">
+<div class="ctitle">第一遍弹的版本，输给了第二遍</div>
+<div class="cgroup">第25期｜两首不肯屈居第一的协奏曲</div>
+</div>
+<button class="cbtn" data-cp="c25">复制全部</button>
+</div>
+<div class="cbody">
+<div class="blabel">发布标题</div>
+<div class="bval t">第一遍弹的版本，输给了第二遍</div>
+<div class="blabel" style="margin-top:14px">简介（直接复制发布）</div>
+<div class="bval" id="d25">拉赫玛尼诺夫第二钢琴协奏曲的开头，是他趴在桌上想旋律时脑子里全有的闹钟滴答声。
+第一乐章那个极缓的开头，主题在钟声般的分解和弦里浮现，钢琴家要等它完全浮现才能进入流动。
+据说1930年代卡内维音乐厅那场演出后，托卡尼尼站起来走了。
+有人问他为什么走，他说：我是来争第一的，现在第一在我面前，我还能做什么。</div>
+<div class="brow">
+<div><div class="blabel">配乐</div><div class="bval m">拉赫玛尼诺夫《c小调第二钢琴协奏曲》作品18 / 帕格尼尼《D大调第一小提琴协奏曲》</div></div>
+<div><div class="blabel">画面基调</div><div class="bval m">深夜·城市天际线·孤独的钢琴</div></div>
+</div>
+<div class="tags"><span class="tag">#拉赫玛尼诺夫</span><span class="tag">#帕格尼尼</span><span class="tag">#协奏曲</span></div>
+</div>
+</article><article class="card" id="c26">
+<div class="chead">
+<div class="cno2">26</div>
+<div style="flex:1;min-width:0">
+<div class="ctitle">暴风雨有两种</div>
+<div class="cgroup">第26期｜两种暴风雨</div>
+</div>
+<button class="cbtn" data-cp="c26">复制全部</button>
+</div>
+<div class="cbody">
+<div class="blabel">发布标题</div>
+<div class="bval t">暴风雨有两种</div>
+<div class="blabel" style="margin-top:14px">简介（直接复制发布）</div>
+<div class="bval" id="d26">罗西尼《威廉退尔》序曲，1828年首演。那段著名的"渐强"，弦乐一层一层叠上去，最后铜管和木管在最高点一起炸开，然后一下收住，只剩木管的几声回音。
+但他指出：这段音乐里最出名的并不是暴风雨的描写，因为那不过是一些不太高明的模拟。
+真正出名的是暴风雨过后的田园牧笛。
+贝多芬那首不需要模拟——里面只有内心。</div>
+<div class="brow">
+<div><div class="blabel">配乐</div><div class="bval m">罗西尼《威廉退尔》序曲 / 贝多芬《d小调第十七钢琴奏鸣曲》"暴风雨" / 德沃夏克《e小调第九交响曲》</div></div>
+<div><div class="blabel">画面基调</div><div class="bval m">暴风雨·海浪·乌云下的原野</div></div>
+</div>
+<div class="tags"><span class="tag">#暴风雨</span><span class="tag">#罗西尼</span><span class="tag">#贝多芬</span></div>
+</div>
+</article><article class="card" id="c27">
+<div class="chead">
+<div class="cno2">27</div>
+<div style="flex:1;min-width:0">
+<div class="ctitle">别太相信名字</div>
+<div class="cgroup">第27期｜别太相信名字</div>
+</div>
+<button class="cbtn" data-cp="c27">复制全部</button>
+</div>
+<div class="cbody">
+<div class="blabel">发布标题</div>
+<div class="bval t">别太相信名字</div>
+<div class="blabel" style="margin-top:14px">简介（直接复制发布）</div>
+<div class="bval" id="d27">有两部著名交响乐，一部叫《古典》，一部叫《浪漫》。而这两部，都跟古典、浪漫没什么关系。
+普罗科菲耶夫的《D大调第一交响曲》写于1917年——《春之祭》刚在巴黎演砸，他故意写了一部彻底古典的，标题就叫"古典"。
+德彪西的《幻想交响曲》，四个乐章全是幻想。
+名实不符，并不意味着作品一定不好，只是让重名轻实的人多犯点糊涂。</div>
+<div class="brow">
+<div><div class="blabel">配乐</div><div class="bval m">普罗科菲耶夫《D大调第一交响曲》"古典" / 德彪西《幻想交响曲》作品62</div></div>
+<div><div class="blabel">画面基调</div><div class="bval m">晨光·旧城广场·梦幻的森林</div></div>
+</div>
+<div class="tags"><span class="tag">#普罗科菲耶夫</span><span class="tag">#德彪西</span><span class="tag">#交响乐</span></div>
+</div>
+</article><article class="card" id="c28">
+<div class="chead">
+<div class="cno2">28</div>
+<div style="flex:1;min-width:0">
+<div class="ctitle">他十七岁写下的序曲，至今还在婚礼上</div>
+<div class="cgroup">第28期｜幻想，是有温度的</div>
+</div>
+<button class="cbtn" data-cp="c28">复制全部</button>
+</div>
+<div class="cbody">
+<div class="blabel">发布标题</div>
+<div class="bval t">他十七岁写下的序曲，至今还在婚礼上</div>
+<div class="blabel" style="margin-top:14px">简介（直接复制发布）</div>
+<div class="bval" id="d28">1826年，十七岁的门德尔松写下《仲夏夜之梦》序曲。
+开头那段著名的弦乐"颤音"，一出来就是精灵王国——木管和弦加快速的弦乐，像月光下的空气在动。
+中间那段小号独奏是婚礼进行曲，莎士比亚剧本里并没有，是他自己加的。
+1940年迪士尼做《幻想交响曲》，直接把它拿去用了。
+幻想有了温度，就有了光。</div>
+<div class="brow">
+<div><div class="blabel">配乐</div><div class="bval m">门德尔松《仲夏夜之梦》序曲 / 婚礼进行曲</div></div>
+<div><div class="blabel">画面基调</div><div class="bval m">月夜·森林·精灵般的微光</div></div>
+</div>
+<div class="tags"><span class="tag">#门德尔松</span><span class="tag">#仲夏夜之梦</span><span class="tag">#幻想</span></div>
+</div>
+</article><article class="card" id="c29">
+<div class="chead">
+<div class="cno2">29</div>
+<div style="flex:1;min-width:0">
+<div class="ctitle">录下这个声音，用的是一间小屋</div>
+<div class="cgroup">第29期｜没有音乐的声乐时代</div>
+</div>
+<button class="cbtn" data-cp="c29">复制全部</button>
+</div>
+<div class="cbody">
+<div class="blabel">发布标题</div>
+<div class="bval t">录下这个声音，用的是一间小屋</div>
+<div class="blabel" style="margin-top:14px">简介（直接复制发布）</div>
+<div class="bval" id="d29">1903到1906年，卡鲁索留下的那些录音，是人类录音史上最早的男声录音。
+歌手要进到一个很小的房间（后来被称为"蜡室"），站定，对着巨大的喇叭口唱。工程师在另一间屋子转蜡盘。
+房间很闷，混响很重，音量小到几乎听不见别的。
+所以那些录音又闷、又远、又薄。
+他说：能把这声音留下来，无论录音技术此后产生多少罪恶，都可以被赦免了。</div>
+<div class="brow">
+<div><div class="blabel">配乐</div><div class="bval m">卡鲁索早期录音实况选段 / 《理想，找不到》</div></div>
+<div><div class="blabel">画面基调</div><div class="bval m">老唱片·烛光·泛黄的房间</div></div>
+</div>
+<div class="tags"><span class="tag">#卡鲁索</span><span class="tag">#男高音</span><span class="tag">#录音史</span></div>
+</div>
+</article><article class="card" id="c30">
+<div class="chead">
+<div class="cno2">30</div>
+<div style="flex:1;min-width:0">
+<div class="ctitle">一个男高音，和一种音乐形态的诞生</div>
+<div class="cgroup">第30期｜声音如何穿越百年</div>
+</div>
+<button class="cbtn" data-cp="c30">复制全部</button>
+</div>
+<div class="cbody">
+<div class="blabel">发布标题</div>
+<div class="bval t">一个男高音，和一种音乐形态的诞生</div>
+<div class="blabel" style="margin-top:14px">简介（直接复制发布）</div>
+<div class="bval" id="d30">人类录音史上最早的一批男声录音，1903到1906年。
+恩里科·卡鲁索，1873年生，1921年去世。声音的力量不靠技巧堆叠，而来自那种特别的音色和穿透力。
+他录的那些咏叹调在当时就已经是"专辑"式的存在——不是演出片段，是专门为了录音而进行的演唱。
+正是这些录音，让"唱片"从歌剧的附属品变成了独立的艺术形态。
+伟大的声音只需要倾听，一切的讲解都是多余的。</div>
+<div class="brow">
+<div><div class="blabel">配乐</div><div class="bval m">卡鲁索《Neurotica》/ 《Cavatina》/ 早期录音收藏版</div></div>
+<div><div class="blabel">画面基调</div><div class="bval m">剧院帷幕·暗红丝绒·烛光</div></div>
+</div>
+<div class="tags"><span class="tag">#卡鲁索</span><span class="tag">#男高音</span><span class="tag">#歌剧</span></div>
+</div>
+</article><article class="card" id="c31">
+<div class="chead">
+<div class="cno2">31</div>
+<div style="flex:1;min-width:0">
+<div class="ctitle">他写完第九交响曲的那年，死了</div>
+<div class="cgroup">第31期｜世纪尽头的马勒</div>
+</div>
+<button class="cbtn" data-cp="c31">复制全部</button>
+</div>
+<div class="cbody">
+<div class="blabel">发布标题</div>
+<div class="bval t">他写完第九交响曲的那年，死了</div>
+<div class="blabel" style="margin-top:14px">简介（直接复制发布）</div>
+<div class="bval" id="d31">马勒1860年生，1911年去世。
+《第九交响曲》最不寻常的地方在于它有文本——他同时写了交响曲和一套歌剧歌词，五个乐章各配一段。
+《复活》这个标题，来自他的一首诗里的一句：被埋葬的春天仍会长出生命。
+他写这部作品断断续续花了七年，中间经历了双亲的去世、婚姻破裂、孩子的夭折。
+他没听到完整的演出。1911年他去世，1912年首演。</div>
+<div class="brow">
+<div><div class="blabel">配乐</div><div class="bval m">马勒《D小调第九交响曲》"复活" / 第二乐章"秋天里的孤独者"</div></div>
+<div><div class="blabel">画面基调</div><div class="bval m">秋日旷野·落日·孤独的旅人</div></div>
+</div>
+<div class="tags"><span class="tag">#马勒</span><span class="tag">#复活</span><span class="tag">#交响乐</span></div>
+</div>
+</article><article class="card" id="c32">
+<div class="chead">
+<div class="cno2">32</div>
+<div style="flex:1;min-width:0">
+<div class="ctitle">两百年前乐谱，两百年后有人把它演奏活了</div>
+<div class="cgroup">第32期｜一个人的对白</div>
+</div>
+<button class="cbtn" data-cp="c32">复制全部</button>
+</div>
+<div class="cbody">
+<div class="blabel">发布标题</div>
+<div class="bval t">两百年前乐谱，两百年后有人把它演奏活了</div>
+<div class="blabel" style="margin-top:14px">简介（直接复制发布）</div>
+<div class="bval" id="d32">巴赫写这套《无伴奏大提琴组曲》，作品1012，大约在1720年前后。
+但他自己似乎并不看重它——没有出版，没有出现在他的作品目录里。
+它默默躺了两百年，直到1937年，二十岁的卡萨尔斯发现它，1938年在巴赫的故居开始演奏。
+去掉伴奏，只剩下大提琴和空气——你听到的不再是"大提琴在乐队里"，是"一个人在说话"。</div>
+<div class="brow">
+<div><div class="blabel">配乐</div><div class="bval m">巴赫《六首无伴奏大提琴组曲》BWV1012 / 卡萨尔斯录音版</div></div>
+<div><div class="blabel">画面基调</div><div class="bval m">空旷的厅堂·一束光·独坐</div></div>
+</div>
+<div class="tags"><span class="tag">#巴赫</span><span class="tag">#大提琴</span><span class="tag">#无伴奏</span></div>
+</div>
+</article><article class="card" id="c33">
+<div class="chead">
+<div class="cno2">33</div>
+<div style="flex:1;min-width:0">
+<div class="ctitle">他让卡拉扬成了小丑</div>
+<div class="cgroup">第33期｜那个德国老头</div>
+</div>
+<button class="cbtn" data-cp="c33">复制全部</button>
+</div>
+<div class="cbody">
+<div class="blabel">发布标题</div>
+<div class="bval t">他让卡拉扬成了小丑</div>
+<div class="blabel" style="margin-top:14px">简介（直接复制发布）</div>
+<div class="bval" id="d33">富特文格勒1886年生，1954年去世。
+他是那种"复调指挥"——通常指挥在复调时用左手，他反过来，用右手指挥复调，左手打拍子。
+因为贝多芬的复调是"横向的"，各声部像在对话，而不是叠成一团。
+1947年他录的贝多芬《第九》，是音乐史上被讨论最多的录音之一。
+一个人可以在音乐上极其崇高，同时在历史上背着洗不掉的污点。这两件事同时成立。</div>
+<div class="brow">
+<div><div class="blabel">配乐</div><div class="bval m">富特文格勒指挥贝多芬《d小调第九交响曲》"合唱" / 《降E大调第五交响曲》</div></div>
+<div><div class="blabel">画面基调</div><div class="bval m">柏林·冬夜·空荡的乐池</div></div>
+</div>
+<div class="tags"><span class="tag">#富特文格勒</span><span class="tag">#指挥</span><span class="tag">#贝多芬</span></div>
+</div>
+</article><article class="card" id="c34">
+<div class="chead">
+<div class="cno2">34</div>
+<div style="flex:1;min-width:0">
+<div class="ctitle">有一种四季是沉的，有一种是亮的</div>
+<div class="cgroup">第34期｜有重量的四季</div>
+</div>
+<button class="cbtn" data-cp="c34">复制全部</button>
+</div>
+<div class="cbody">
+<div class="blabel">发布标题</div>
+<div class="bval t">有一种四季是沉的，有一种是亮的</div>
+<div class="blabel" style="margin-top:14px">简介（直接复制发布）</div>
+<div class="bval" id="d34">关于四季的音乐，最流行的无非两部。
+维瓦尔第《四季》四首小提琴协奏曲，每首都配了一首十四行诗——印在总谱前面，演奏者照着念就知道该演什么。
+柴可夫斯基那部，更准确的翻译是"关于月份的记忆"：十二首，十二月，每个月都有明确的物候。
+本质没有重量，能有重量的是生命本身。</div>
+<div class="brow">
+<div><div class="blabel">配乐</div><div class="bval m">维瓦尔第《四季》"春"/"秋" 作品8 / 柴可夫斯基《a小调四季》作品37a</div></div>
+<div><div class="blabel">画面基调</div><div class="bval m">四季流转·麦田·落叶</div></div>
+</div>
+<div class="tags"><span class="tag">#维瓦尔第</span><span class="tag">#柴可夫斯基</span><span class="tag">#四季</span></div>
+</div>
+</article><article class="card" id="c35">
+<div class="chead">
+<div class="cno2">35</div>
+<div style="flex:1;min-width:0">
+<div class="ctitle">艺术是唯一不需要证明的地方</div>
+<div class="cgroup">第35期｜艺术为什么自由</div>
+</div>
+<button class="cbtn" data-cp="c35">复制全部</button>
+</div>
+<div class="cbody">
+<div class="blabel">发布标题</div>
+<div class="bval t">艺术是唯一不需要证明的地方</div>
+<div class="blabel" style="margin-top:14px">简介（直接复制发布）</div>
+<div class="bval" id="d35">这一期放的是一组歌剧里的男女二重唱。
+它不是"两段独唱加在一起"——在最好的歌剧里，两个人在同一时刻唱不同的旋律，一条走句，一条走线。
+这在技术上极难：两位歌手必须互相听得见，还要精确知道自己在哪里。
+最著名的那段是高潮，但真正决定好坏的是中间的铺垫。
+在所有与创造有关的行当里，艺术与自由的关系最为密切。</div>
+<div class="brow">
+<div><div class="blabel">配乐</div><div class="bval m">普契尼《图兰朵》"柳"二重唱 / 威尔第《茶花女》经典二重唱</div></div>
+<div><div class="blabel">画面基调</div><div class="bval m">暗夜歌剧院·帷幕·双人剪影</div></div>
+</div>
+<div class="tags"><span class="tag">#歌剧</span><span class="tag">#二重唱</span><span class="tag">#艺术</span></div>
+</div>
+</article><article class="card" id="c36">
+<div class="chead">
+<div class="cno2">36</div>
+<div style="flex:1;min-width:0">
+<div class="ctitle">不要成为牺牲品</div>
+<div class="cgroup">第36期｜不必成为谁的英雄</div>
+</div>
+<button class="cbtn" data-cp="c36">复制全部</button>
+</div>
+<div class="cbody">
+<div class="blabel">发布标题</div>
+<div class="bval t">不要成为牺牲品</div>
+<div class="blabel" style="margin-top:14px">简介（直接复制发布）</div>
+<div class="bval" id="d36">《第三交响曲》现在叫《英雄交响曲》，但贝多芬最初写它的时候，标题是"悲怆的凯旋"。
+悲怆和凯旋，在他身上是同时成立的。
+他写完这年的自己，正在经历丧师、听力崩溃和拿破仑的阴影。
+所以他说：战胜世界的英雄并不一定能战胜自己。
+对于一般人来说，不要成为牺牲品，去让某些人得以用全人类的血来染他们的英雄梦，这比任何定义都更要重要。</div>
+<div class="brow">
+<div><div class="blabel">配乐</div><div class="bval m">贝多芬《降E大调第三交响曲》"英雄" / 《降E大调第五钢琴协奏曲》</div></div>
+<div><div class="blabel">画面基调</div><div class="bval m">高山之巅·云海·孤峰</div></div>
+</div>
+<div class="tags"><span class="tag">#贝多芬</span><span class="tag">#英雄</span><span class="tag">#人生</span></div>
+</div>
+</article><article class="card" id="c37">
+<div class="chead">
+<div class="cno2">37</div>
+<div style="flex:1;min-width:0">
+<div class="ctitle">他的苦难，是心里的那一种</div>
+<div class="cgroup">第37期｜大地的歌</div>
+</div>
+<button class="cbtn" data-cp="c37">复制全部</button>
+</div>
+<div class="cbody">
+<div class="blabel">发布标题</div>
+<div class="bval t">他的苦难，是心里的那一种</div>
+<div class="blabel" style="margin-top:14px">简介（直接复制发布）</div>
+<div class="bval" id="d37">比起现实的苦难，心灵的苦难才真是人之大患，这是中西一脉的。
+《复活》第四乐章里，马勒引用了一个俄国农民歌曲的旋律，同时用了德语诗人的原词——在他的年代，这是很特别的一次跨国引用。
+第二乐章那段著名的英国管独奏，来自一支古老的民谣，被他处理得极其克制。
+放开你的心灵，去听那份苦难。</div>
+<div class="brow">
+<div><div class="blabel">配乐</div><div class="bval m">马勒《D小调第二交响曲》"复活" 第四乐章 / 第二乐章</div></div>
+<div><div class="blabel">画面基调</div><div class="bval m">大地·旷野·天光初开</div></div>
+</div>
+<div class="tags"><span class="tag">#马勒</span><span class="tag">#大地之歌</span><span class="tag">#复活</span></div>
+</div>
+</article><article class="card" id="c38">
+<div class="chead">
+<div class="cno2">38</div>
+<div style="flex:1;min-width:0">
+<div class="ctitle">没有艺术的世界，我们去海边</div>
+<div class="cgroup">第38期｜想逃的时候，去听点真的</div>
+</div>
+<button class="cbtn" data-cp="c38">复制全部</button>
+</div>
+<div class="cbody">
+<div class="blabel">发布标题</div>
+<div class="bval t">没有艺术的世界，我们去海边</div>
+<div class="blabel" style="margin-top:14px">简介（直接复制发布）</div>
+<div class="bval" id="d38">这一期他上传音乐上传得很费劲，网站有问题，只能先把音乐甩到网上再转移。
+因为不能扔太大的东西，这次只能弄点小品上来。
+今天都是些甜得发腻的、用小提琴矫揉造作的声音，让你起鸡皮疙瘩的玩意。
+他说：让小提琴继续小提琴，让尖叫继续尖叫，本ID去SPA算了。
+——没有艺术的世界，我们去海边。</div>
+<div class="brow">
+<div><div class="blabel">配乐</div><div class="bval m">小提琴小品选段 / 苏佩《诗人与农夫》序曲 / 韦伯《自由射手》序曲</div></div>
+<div><div class="blabel">画面基调</div><div class="bval m">海浪·礁石·咸味的空气</div></div>
+</div>
+<div class="tags"><span class="tag">#小提琴</span><span class="tag">#海边</span><span class="tag">#音乐评论</span></div>
+</div>
+</article><article class="card" id="c39">
+<div class="chead">
+<div class="cno2">39</div>
+<div style="flex:1;min-width:0">
+<div class="ctitle">未完成，不一定最后</div>
+<div class="cgroup">第39期｜未完成与最后</div>
+</div>
+<button class="cbtn" data-cp="c39">复制全部</button>
+</div>
+<div class="cbody">
+<div class="blabel">发布标题</div>
+<div class="bval t">未完成，不一定最后</div>
+<div class="blabel" style="margin-top:14px">简介（直接复制发布）</div>
+<div class="bval" id="d39">未完成，不一定最后；最后，不一定未完成。
+但两者都给人以遗憾与希望，而人的希望，又何尝不多归于遗憾？没有遗憾，人非人矣。
+这一期放的是舒伯特的几部未完成之作：只写了一个乐章的c小调四重奏、二乐章的C大调钢琴奏鸣曲。
+他给了一个漂亮的收口：未完成就是未完成，永远也没可能也没必要去完成。</div>
+<div class="brow">
+<div><div class="blabel">配乐</div><div class="bval m">舒伯特《c小调弦乐四重奏》D.956 / 《C大调钢琴奏鸣曲》D.664</div></div>
+<div><div class="blabel">画面基调</div><div class="bval m">雪与静谧·空屋·未完的纸页</div></div>
+</div>
+<div class="tags"><span class="tag">#舒伯特</span><span class="tag">#未完成</span><span class="tag">#人生</span></div>
+</div>
+</article><article class="card" id="c40">
+<div class="chead">
+<div class="cno2">40</div>
+<div style="flex:1;min-width:0">
+<div class="ctitle">不必玄，也不必神</div>
+<div class="cgroup">第40期｜不玄不神的那种精神</div>
+</div>
+<button class="cbtn" data-cp="c40">复制全部</button>
+</div>
+<div class="cbody">
+<div class="blabel">发布标题</div>
+<div class="bval t">不必玄，也不必神</div>
+<div class="blabel" style="margin-top:14px">简介（直接复制发布）</div>
+<div class="bval" id="d40">他提前开音乐会，因为第二天一早要出门。
+节目单是两部贝多芬：第九"克鲁采"小提琴奏鸣曲，和a小调弦乐四重奏。
+前者是他第一次直面生命，后者是他生命中最后一次用音乐直面生命。
+写那部四重奏的时候，他已经听不见任何声音了。
+音乐是用来听的，不是用来讲的。</div>
+<div class="brow">
+<div><div class="blabel">配乐</div><div class="bval m">贝多芬《A大调第九小提琴奏鸣曲》"克鲁采"作品47 / 《a小调弦乐四重奏》作品132</div></div>
+<div><div class="blabel">画面基调</div><div class="bval m">山脊·风·开阔的高地</div></div>
+</div>
+<div class="tags"><span class="tag">#贝多芬</span><span class="tag">#四重奏</span><span class="tag">#精神</span></div>
+</div>
+</article><article class="card" id="c41">
+<div class="chead">
+<div class="cno2">41</div>
+<div style="flex:1;min-width:0">
+<div class="ctitle">一个阳光下的贝多芬，注定不是贝多芬</div>
+<div class="cgroup">第41期｜贝多芬的第一次</div>
+</div>
+<button class="cbtn" data-cp="c41">复制全部</button>
+</div>
+<div class="cbody">
+<div class="blabel">发布标题</div>
+<div class="bval t">一个阳光下的贝多芬，注定不是贝多芬</div>
+<div class="blabel" style="margin-top:14px">简介（直接复制发布）</div>
+<div class="bval" id="d41">第一钢琴奏鸣曲、第一小提琴奏鸣曲、第一弦乐四重奏、第一交响曲——按写作年份排的四部"第一次"。
+写这些作品的时候，贝多芬的耳朵还没有构成他生命的压力，命运对他展现的都是阳光。
+这些作品和海顿、莫扎特的距离不大，但里面已经有了贝多芬的影子。
+一个命运阳光下的贝多芬，注定不是贝多芬。
+你能看到一个音乐巨人是如何生长出来的。</div>
+<div class="brow">
+<div><div class="blabel">配乐</div><div class="bval m">贝多芬《F大调第一钢琴奏鸣曲》作品2之1 / 《C大调第一弦乐四重奏》作品18之1 / 《C大调第一交响曲》作品21</div></div>
+<div><div class="blabel">画面基调</div><div class="bval m">原野·第一缕光·未名湖畔</div></div>
+</div>
+<div class="tags"><span class="tag">#贝多芬</span><span class="tag">#第一</span><span class="tag">#成长</span></div>
+</div>
+</article><article class="card" id="c42">
+<div class="chead">
+<div class="cno2">42</div>
+<div style="flex:1;min-width:0">
+<div class="ctitle">风，依然是风；山，依然是山</div>
+<div class="cgroup">第42期｜生与死的拷问</div>
+</div>
+<button class="cbtn" data-cp="c42">复制全部</button>
+</div>
+<div class="cbody">
+<div class="blabel">发布标题</div>
+<div class="bval t">风，依然是风；山，依然是山</div>
+<div class="blabel" style="margin-top:14px">简介（直接复制发布）</div>
+<div class="bval" id="d42">生与死，问题是人生的终极，不管你是否意识到，这问题终极地横亘在任何一个人面前。
+音乐会开始了，葬礼开始了。横躺着的，可能是英雄，可能是混蛋。
+突然，一切破裂，坠入火与泥土的世界。
+死而不可复生，世界幽灵地歌唱。
+绽破星空的不是星空，绽破死亡的正是死亡。死亡，从未死亡。
+风，依然是风；山，依然是山；世界，不再世界。
+——这是四十二场音乐会里的最后一场。</div>
+<div class="brow">
+<div><div class="blabel">配乐</div><div class="bval m">马勒《D小调第二交响曲》"复活" 第五乐章 / 巴赫《无伴奏大提琴组曲》前奏曲</div></div>
+<div><div class="blabel">画面基调</div><div class="bval m">夜·星轨·远山剪影</div></div>
+</div>
+<div class="tags"><span class="tag">#马勒</span><span class="tag">#生与死</span><span class="tag">#复活</span></div>
+</div>
+</article><article class="card" id="c43">
+<div class="chead">
+<div class="cno2">43</div>
+<div style="flex:1;min-width:0">
+<div class="ctitle">他先送了一首最少人听过的舒伯特</div>
+<div class="cgroup">番外1｜音乐会之前的那次承诺</div>
+</div>
+<button class="cbtn" data-cp="c43">复制全部</button>
+</div>
+<div class="cbody">
+<div class="blabel">发布标题</div>
+<div class="bval t">他先送了一首最少人听过的舒伯特</div>
+<div class="blabel" style="margin-top:14px">简介（直接复制发布）</div>
+<div class="bval" id="d43">2006年3月，他发了一条公告，标题里带着四个字：一诺千金。
+他说家里有大量CD想分享，但遇到了法律和技术障碍——当时个人博客没有任何版权授权机制，一部交响乐几十兆，家用宽带传不动。
+问题解决后，他先送的是舒伯特《第十交响曲》。
+因为最有名的是第八和第九，而第七和第十，知道的人少多了。</div>
+<div class="brow">
+<div><div class="blabel">配乐</div><div class="bval m">舒伯特《C大调第十交响曲》D.944</div></div>
+<div><div class="blabel">画面基调</div><div class="bval m">旧电脑·窗外天光·磁盘转动</div></div>
+</div>
+<div class="tags"><span class="tag">#舒伯特</span><span class="tag">#互联网考古</span><span class="tag">#音乐</span></div>
+</div>
+</article><article class="card" id="c44">
+<div class="chead">
+<div class="cno2">44</div>
+<div style="flex:1;min-width:0">
+<div class="ctitle">可以点播，但有一个条件</div>
+<div class="cgroup">番外2｜可以点播，但有个条件</div>
+</div>
+<button class="cbtn" data-cp="c44">复制全部</button>
+</div>
+<div class="cbody">
+<div class="blabel">发布标题</div>
+<div class="bval t">可以点播，但有一个条件</div>
+<div class="blabel" style="margin-top:14px">简介（直接复制发布）</div>
+<div class="bval" id="d44">他说家里有CD，"没有一万都有八千，都是原版"，放在屋里独听有点浪费，要和大家分享。
+条件是：流行除外，因为没有。
+他请网友在留言或评论里写下曲目，最好写明作品编号或准确名字，方便查找。
+那个年代的网络还不像今天这样渗透到生活各处，所以他专门划了一条线：保证虚拟和现实的完全分开。</div>
+<div class="brow">
+<div><div class="blabel">配乐</div><div class="bval m">莫扎特 / 贝多芬 / 舒伯特 / 勃拉姆斯 全集选段</div></div>
+<div><div class="blabel">画面基调</div><div class="bval m">留言板·屏幕光·深夜的桌面</div></div>
+</div>
+<div class="tags"><span class="tag">#音乐</span><span class="tag">#互联网考古</span><span class="tag">#互动</span></div>
+</div>
+</article><article class="card" id="c45">
+<div class="chead">
+<div class="cno2">45</div>
+<div style="flex:1;min-width:0">
+<div class="ctitle">2006年，网页可以自带背景音乐</div>
+<div class="cgroup">番外3｜2006年的网页背景音乐</div>
+</div>
+<button class="cbtn" data-cp="c45">复制全部</button>
+</div>
+<div class="cbody">
+<div class="blabel">发布标题</div>
+<div class="bval t">2006年，网页可以自带背景音乐</div>
+<div class="blabel" style="margin-top:14px">简介（直接复制发布）</div>
+<div class="bval" id="d45">那时候的博客功能还在互相抄，播放器经常报错，文件还传不上去。
+他在博客里教人怎么用播放器：可以安放200段音乐，用法"和家里CD机一样选择曲目"。
+还因为技术问题不能直接放本地上传的文件，只能走网络地址。
+四十二期音乐会，就是靠这一套东西跑起来的。</div>
+<div class="brow">
+<div><div class="blabel">配乐</div><div class="bval m">巴赫《哥德堡变奏曲》/ 任意古典器乐长段</div></div>
+<div><div class="blabel">画面基调</div><div class="bval m">CRT屏幕·老式鼠标·窗外雨</div></div>
+</div>
+<div class="tags"><span class="tag">#互联网考古</span><span class="tag">#音乐</span><span class="tag">#网页</span></div>
+</div>
+</article><article class="card" id="c46">
+<div class="chead">
+<div class="cno2">46</div>
+<div style="flex:1;min-width:0">
+<div class="ctitle">一切从一句求助开始</div>
+<div class="cgroup">番外4｜一切从一句求助开始</div>
+</div>
+<button class="cbtn" data-cp="c46">复制全部</button>
+</div>
+<div class="cbody">
+<div class="blabel">发布标题</div>
+<div class="bval t">一切从一句求助开始</div>
+<div class="blabel" style="margin-top:14px">简介（直接复制发布）</div>
+<div class="bval" id="d46">2006年2月8日，他连发两帖，标题是"如何把音乐上传到网上"。
+那时候带宽不够、个人网站空间只有百MB、流量费还按MB算、音频格式还在打架。
+五个月后，他的第一场网络音乐会开办了。
+从天涯的杂谈到新浪的音乐会，中间隔了四年——但他一直没有停过一件事：写。</div>
+<div class="brow">
+<div><div class="blabel">配乐</div><div class="bval m">莫扎特《C大调第四十一交响曲》/ 任意开场曲</div></div>
+<div><div class="blabel">画面基调</div><div class="bval m">拨号上网·老式房间·拨号音</div></div>
+</div>
+<div class="tags"><span class="tag">#互联网考古</span><span class="tag">#音乐</span><span class="tag">#2006</span></div>
+</div>
+</article><article class="card" id="c47">
+<div class="chead">
+<div class="cno2">47</div>
+<div style="flex:1;min-width:0">
+<div class="ctitle">他的第一段音乐，只有1分钟</div>
+<div class="cgroup">番外5｜一分钟的小回旋曲</div>
+</div>
+<button class="cbtn" data-cp="c47">复制全部</button>
+</div>
+<div class="cbody">
+<div class="blabel">发布标题</div>
+<div class="bval t">他的第一段音乐，只有1分钟</div>
+<div class="blabel" style="margin-top:14px">简介（直接复制发布）</div>
+<div class="bval" id="d47">2006年3月，他把一段一分多钟的钢琴小回旋曲传上了网，管它叫"网上处女录音"。
+那是中学时为应付老师作业写的，主部用了《横山里来了些游击队》几个小节。
+他说：网上剽窃抄袭成风，重要的东西是不能上网的——所以他挑了这段"大概没人会洗唰唰了"的。</div>
+<div class="brow">
+<div><div class="blabel">配乐</div><div class="bval m">钢琴小回旋曲（中学时期作品）</div></div>
+<div><div class="blabel">画面基调</div><div class="bval m">书桌·旧谱纸·窗边阳光</div></div>
+</div>
+<div class="tags"><span class="tag">#钢琴</span><span class="tag">#互联网考古</span><span class="tag">#原创</span></div>
+</div>
+</article><article class="card" id="c48">
+<div class="chead">
+<div class="cno2">48</div>
+<div style="flex:1;min-width:0">
+<div class="ctitle">青春期的朦胧，被他留在了琴里</div>
+<div class="cgroup">番外6｜淡远的游思</div>
+</div>
+<button class="cbtn" data-cp="c48">复制全部</button>
+</div>
+<div class="cbody">
+<div class="blabel">发布标题</div>
+<div class="bval t">青春期的朦胧，被他留在了琴里</div>
+<div class="blabel" style="margin-top:14px">简介（直接复制发布）</div>
+<div class="bval" id="d48">他说这首曲子随手写的，也没太费工夫。但音乐很多时候和工夫的花费无关。
+他形容这首曲子的音乐形象是"青春期的朦胧、无名"。
+还讲了一段复三部曲式的结构：ABA，A是重复，B是对比。
+他说这只是最标准的形式——他懂规则，也知道规则之外还有东西。</div>
+<div class="brow">
+<div><div class="blabel">配乐</div><div class="bval m">钢琴小品《淡远的游思》（中学时期作品）</div></div>
+<div><div class="blabel">画面基调</div><div class="bval m">黄昏·旧琴房·单车经过</div></div>
+</div>
+<div class="tags"><span class="tag">#钢琴</span><span class="tag">#青春</span><span class="tag">#原创</span></div>
+</div>
+</article><article class="card" id="c49">
+<div class="chead">
+<div class="cno2">49</div>
+<div style="flex:1;min-width:0">
+<div class="ctitle">人大概对第一次都有特殊感情</div>
+<div class="cgroup">番外7｜他的第一首奏鸣曲</div>
+</div>
+<button class="cbtn" data-cp="c49">复制全部</button>
+</div>
+<div class="cbody">
+<div class="blabel">发布标题</div>
+<div class="bval t">人大概对第一次都有特殊感情</div>
+<div class="blabel" style="margin-top:14px">简介（直接复制发布）</div>
+<div class="bval" id="d49">他说，这是第一部钢琴奏鸣曲，还有第一部交响乐、第一部歌剧——不过那些都太大了，没法上传。
+这部奏鸣曲出自他中学时那位一对一授课的教授：每周按某种曲式写一个东西，每个小节每个乐句都要按曲式来。
+他一辈子在写"第一部"——第一部奏鸣曲，第一部交响曲，第一部无调性作品。</div>
+<div class="brow">
+<div><div class="blabel">配乐</div><div class="bval m">第一钢琴奏鸣曲（中学时期作品）</div></div>
+<div><div class="blabel">画面基调</div><div class="bval m">崭新·未竟·第一束光</div></div>
+</div>
+<div class="tags"><span class="tag">#钢琴</span><span class="tag">#原创</span><span class="tag">#第一次</span></div>
+</div>
+</article><article class="card" id="c50">
+<div class="chead">
+<div class="cno2">50</div>
+<div style="flex:1;min-width:0">
+<div class="ctitle">他给自己的评价，一点都不谦虚</div>
+<div class="cgroup">番外8｜十八岁前的最佳奏鸣曲</div>
+</div>
+<button class="cbtn" data-cp="c50">复制全部</button>
+</div>
+<div class="cbody">
+<div class="blabel">发布标题</div>
+<div class="bval t">他给自己的评价，一点都不谦虚</div>
+<div class="blabel" style="margin-top:14px">简介（直接复制发布）</div>
+<div class="bval" id="d50">第三钢琴奏鸣曲，标题后面跟着七个字：中国人18岁前所写最佳钢琴奏鸣曲。
+他说要演奏20多分钟，有兴趣的可多听两遍，"一遍大概是听不出"。
+他讲作曲教学的那段话很硬：业余和专业的一个很大不同，是对曲式或格律的把握；所谓带着枷锁跳舞。
+业余的人总说格律太束缚思想，那是水平太低的表现。</div>
+<div class="brow">
+<div><div class="blabel">配乐</div><div class="bval m">第三钢琴奏鸣曲（中学时期作品）</div></div>
+<div><div class="blabel">画面基调</div><div class="bval m">长夜·长镜头·未完成的一夜</div></div>
+</div>
+<div class="tags"><span class="tag">#钢琴</span><span class="tag">#曲式</span><span class="tag">#原创</span></div>
+</div>
+</article><article class="card" id="c51">
+<div class="chead">
+<div class="cno2">51</div>
+<div style="flex:1;min-width:0">
+<div class="ctitle">十八岁，他写了第一首没有调的音乐</div>
+<div class="cgroup">番外9｜十八岁的《寂》</div>
+</div>
+<button class="cbtn" data-cp="c51">复制全部</button>
+</div>
+<div class="cbody">
+<div class="blabel">发布标题</div>
+<div class="bval t">十八岁，他写了第一首没有调的音乐</div>
+<div class="blabel" style="margin-top:14px">简介（直接复制发布）</div>
+<div class="bval" id="d51">他上传这首无调性作品时，正在为一首马勒交响曲传不上去而犯愁，只好拿自己十八岁写的第一首无调性音乐"滥竽充数"。
+他提前打了预防针：由于是无调性的，各位可能听着不习惯，就当听个闹，反正也就3分钟。
+无调性取消的是音乐里那个"回到家"的感觉。但一首十八岁的无调性作品，名字叫《寂》。</div>
+<div class="brow">
+<div><div class="blabel">配乐</div><div class="bval m">第一首无调性作品《寂》（十八岁创作）</div></div>
+<div><div class="blabel">画面基调</div><div class="bval m">静止·空旷·无声</div></div>
+</div>
+<div class="tags"><span class="tag">#现代音乐</span><span class="tag">#无调性</span><span class="tag">#原创</span></div>
+</div>
+</article><article class="card" id="c52">
+<div class="chead">
+<div class="cno2">52</div>
+<div style="flex:1;min-width:0">
+<div class="ctitle">他说业余和专业，差在对规则的把握</div>
+<div class="cgroup">番外10｜带着枷锁跳舞</div>
+</div>
+<button class="cbtn" data-cp="c52">复制全部</button>
+</div>
+<div class="cbody">
+<div class="blabel">发布标题</div>
+<div class="bval t">他说业余和专业，差在对规则的把握</div>
+<div class="blabel" style="margin-top:14px">简介（直接复制发布）</div>
+<div class="bval" id="d52">三首中学时的曲式小作业。他请读者把背景音乐先停了，否则声音会重叠。
+他说：业余和专业的一个很大不同，是对曲式或格律的把握；对业余来说是束缚，对专业来说不是，所谓带着枷锁跳舞。
+业余的人总是叫嚣曲式太束缚思想，其实都是些水平太低的表现。
+他还说，留言越多，上传空间就越大。</div>
+<div class="brow">
+<div><div class="blabel">配乐</div><div class="bval m">三首曲式小作业（中学时期作品）</div></div>
+<div><div class="blabel">画面基调</div><div class="bval m">案头·谱纸·灯光下的桌面</div></div>
+</div>
+<div class="tags"><span class="tag">#曲式</span><span class="tag">#作曲</span><span class="tag">#原创</span></div>
+</div>
+</article><article class="card" id="c53">
+<div class="chead">
+<div class="cno2">53</div>
+<div style="flex:1;min-width:0">
+<div class="ctitle">当唱歌变成了一种声音</div>
+<div class="cgroup">番外11｜当唱歌变成了喊叫</div>
+</div>
+<button class="cbtn" data-cp="c53">复制全部</button>
+</div>
+<div class="cbody">
+<div class="blabel">发布标题</div>
+<div class="bval t">当唱歌变成了一种声音</div>
+<div class="blabel" style="margin-top:14px">简介（直接复制发布）</div>
+<div class="bval" id="d53">他讨论一个现象：当所有歌唱都被往同一个方向拉，流行也就失去了歌唱。
+在一个全民狂欢的年代，唱歌是无须区别的，一切都电声化、工业化、全球化了。
+又有哪个人在这样的忙碌中，能有时间与精力去区别这一首与那一首的区别？
+他说：同一化归根结底是生产方式的同一化，这就是它在音乐领域的必然结果。</div>
+<div class="brow">
+<div><div class="blabel">配乐</div><div class="bval m">歌剧二重唱选段 / 意大利民歌</div></div>
+<div><div class="blabel">画面基调</div><div class="bval m">工业感的都市·霓虹·被规整的节奏</div></div>
+</div>
+<div class="tags"><span class="tag">#声乐</span><span class="tag">#音乐评论</span><span class="tag">#流行音乐</span></div>
+</div>
+</article><article class="card" id="c54">
+<div class="chead">
+<div class="cno2">54</div>
+<div style="flex:1;min-width:0">
+<div class="ctitle">一个人，怎么做一场现场</div>
+<div class="cgroup">番外12｜一个人的现场</div>
+</div>
+<button class="cbtn" data-cp="c54">复制全部</button>
+</div>
+<div class="cbody">
+<div class="blabel">发布标题</div>
+<div class="bval t">一个人，怎么做一场现场</div>
+<div class="blabel" style="margin-top:14px">简介（直接复制发布）</div>
+<div class="bval" id="d54">那场音乐会号称跨界，开场晚点，序曲被演奏得无限缩水。
+但他最喜欢的那段采珠人男声二重唱，他给的标准是：必须是两个伟大的声音。
+最后让他觉得值的，是下半场那位香港男高音的十四首咏叹调。
+写音乐现场最怕两种：全程捧，或全程骂。他这种是第三种——前面按实际体验说，后面按实际水平说。</div>
+<div class="brow">
+<div><div class="blabel">配乐</div><div class="bval m">普契尼《图兰朵》"柳"二重唱 / 男高音咏叹调十四首精选</div></div>
+<div><div class="blabel">画面基调</div><div class="bval m">剧院后台·幕布缝隙·灯光</div></div>
+</div>
+<div class="tags"><span class="tag">#男高音</span><span class="tag">#歌剧</span><span class="tag">#现场</span></div>
+</div>
+</article><article class="card" id="c55">
+<div class="chead">
+<div class="cno2">55</div>
+<div style="flex:1;min-width:0">
+<div class="ctitle">一堂硬核的声乐科普课</div>
+<div class="cgroup">番外13｜一堂硬核的声乐科普课</div>
+</div>
+<button class="cbtn" data-cp="c55">复制全部</button>
+</div>
+<div class="cbody">
+<div class="blabel">发布标题</div>
+<div class="bval t">一堂硬核的声乐科普课</div>
+<div class="blabel" style="margin-top:14px">简介（直接复制发布）</div>
+<div class="bval" id="d55">海豚发出三种声音，频率从0.25千赫兹到220千赫兹；20千赫兹以上人耳听不见，某些频率甚至能把猎物击昏。
+所以人类的"海豚音"实际在5到15千赫兹。
+他还纠正了一个普遍流行的错误：认为咽音就是海豚音，这其实不对——咽音在所有人声里都存在。
+顺便一句：只要训练得当，任何一个女高音达到五个八度的音域是可以的。</div>
+<div class="brow">
+<div><div class="blabel">配乐</div><div class="bval m">女高音花腔/华彩段落 / 海豚音与咽音对比</div></div>
+<div><div class="blabel">画面基调</div><div class="bval m">高塔·仰视·穿透的频率</div></div>
+</div>
+<div class="tags"><span class="tag">#声乐</span><span class="tag">#科普</span><span class="tag">#海豚音</span></div>
+</div>
+</article><article class="card" id="c56">
+<div class="chead">
+<div class="cno2">56</div>
+<div style="flex:1;min-width:0">
+<div class="ctitle">上传失败那天，他聊了数学</div>
+<div class="cgroup">番外14｜上传失败那天，他聊了数学</div>
+</div>
+<button class="cbtn" data-cp="c56">复制全部</button>
+</div>
+<div class="cbody">
+<div class="blabel">发布标题</div>
+<div class="bval t">上传失败那天，他聊了数学</div>
+<div class="blabel" style="margin-top:14px">简介（直接复制发布）</div>
+<div class="bval" id="d56">他本来要开音乐会，结果网站上传总是失败，只好说说数学，说说哥德巴赫猜想。
+他说这个猜想在中国家喻户晓，但在数学里并没有太大的位置，与黎曼猜想、朗兰兹纲领根本无法相比。
+在娱乐化的中国，能证明哥德巴赫的肯定是大明星，而搞掂朗兰兹纲领的，没几个人知道。
+这就是业余与专业的区别。</div>
+<div class="brow">
+<div><div class="blabel">配乐</div><div class="bval m">哥德巴赫相关 / 巴赫《数学的圣经》选段</div></div>
+<div><div class="blabel">画面基调</div><div class="bval m">草稿纸·公式·深夜台灯</div></div>
+</div>
+<div class="tags"><span class="tag">#哥德巴赫猜想</span><span class="tag">#数学</span><span class="tag">#音乐</span></div>
+</div>
+</article><article class="card" id="c57">
+<div class="chead">
+<div class="cno2">57</div>
+<div style="flex:1;min-width:0">
+<div class="ctitle">他写下的最后一段文字</div>
+<div class="cgroup">番外15｜2008年，他写的最后一篇音乐文章</div>
+</div>
+<button class="cbtn" data-cp="c57">复制全部</button>
+</div>
+<div class="cbody">
+<div class="blabel">发布标题</div>
+<div class="bval t">他写下的最后一段文字</div>
+<div class="blabel" style="margin-top:14px">简介（直接复制发布）</div>
+<div class="bval" id="d57">2008年7月7日，博客里有一篇《唱歌其实是很简单的事情》。
+写这篇的时候，作者已经做了两年多治疗。
+文章开门见山：光有感情是不行的，一些最基本的技术是必须的。
+真正美妙的声音，用最通俗的说法，就是既能发出流行音乐中口语化的声音，又能发出戏剧性的歌剧之声。
+这是他生命最后一年的文章，也是他音乐文章的最后一篇。</div>
+<div class="brow">
+<div><div class="blabel">配乐</div><div class="bval m">人声自然状态 / 歌剧人声对照</div></div>
+<div><div class="blabel">画面基调</div><div class="bval m">晨光·窗·第一声啼哭</div></div>
+</div>
+<div class="tags"><span class="tag">#声乐</span><span class="tag">#唱歌</span><span class="tag">#美声</span></div>
+</div>
+</article><article class="card" id="c58">
+<div class="chead">
+<div class="cno2">58</div>
+<div style="flex:1;min-width:0">
+<div class="ctitle">他也写诗</div>
+<div class="cgroup">番外16｜他也写诗</div>
+</div>
+<button class="cbtn" data-cp="c58">复制全部</button>
+</div>
+<div class="cbody">
+<div class="blabel">发布标题</div>
+<div class="bval t">他也写诗</div>
+<div class="blabel" style="margin-top:14px">简介（直接复制发布）</div>
+<div class="bval" id="d58">他换ID不久的时候写过三首诗，题目是：死亡、地铁、坟墓。
+《地铁》那首写的是——尸体，一车车，沿着肠壁蠕动，城市的地平线上，尸体烟雾般聚散。
+他用"肠壁"写隧道，用"罐头"写车厢，是一个数学和工程的眼睛在看世界。
+那一年他还在同时写：点播公告、讨论摇滚、上传自己十七岁的小回旋曲。</div>
+<div class="brow">
+<div><div class="blabel">配乐</div><div class="bval m">默读 / 城市环境音 / 极简打击乐</div></div>
+<div><div class="blabel">画面基调</div><div class="bval m">地铁·长隧道·冷光</div></div>
+</div>
+<div class="tags"><span class="tag">#诗歌</span><span class="tag">#城市</span><span class="tag">#互联网考古</span></div>
+</div>
+</article><article class="card" id="c59">
+<div class="chead">
+<div class="cno2">59</div>
+<div style="flex:1;min-width:0">
+<div class="ctitle">五个小片段，和一个手机铃声</div>
+<div class="cgroup">番外17｜五个小片段</div>
+</div>
+<button class="cbtn" data-cp="c59">复制全部</button>
+</div>
+<div class="cbody">
+<div class="blabel">发布标题</div>
+<div class="bval t">五个小片段，和一个手机铃声</div>
+<div class="blabel" style="margin-top:14px">简介（直接复制发布）</div>
+<div class="bval" id="d59">他说这些是学作曲时写的一些简单的乐句——当时从写乐句、乐段开始练。
+其中一个片段，他用作了自己的手机铃声。他说如果哪天在茫茫人海中听到这个铃声，可能是一个很小说的情节。
+不过这种可能性只存在于小说之中，因为他的铃声经常换。
+一个谈资本、音乐和哲学的人，在手机里存着自己十七岁写的五个小节。</div>
+<div class="brow">
+<div><div class="blabel">配乐</div><div class="bval m">五个小片段（中学时期习作）</div></div>
+<div><div class="blabel">画面基调</div><div class="bval m">街边·耳机·走路的节奏</div></div>
+</div>
+<div class="tags"><span class="tag">#钢琴</span><span class="tag">#原创</span><span class="tag">#日常</span></div>
+</div>
+</article><article class="card" id="c60">
+<div class="chead">
+<div class="cno2">60</div>
+<div style="flex:1;min-width:0">
+<div class="ctitle">2003年，一个女孩在谈戏剧男高音</div>
+<div class="cgroup">番外18｜那个2003年的美声长文</div>
+</div>
+<button class="cbtn" data-cp="c60">复制全部</button>
+</div>
+<div class="cbody">
+<div class="blabel">发布标题</div>
+<div class="bval t">2003年，一个女孩在谈戏剧男高音</div>
+<div class="blabel" style="margin-top:14px">简介（直接复制发布）</div>
+<div class="bval" id="d60">2003年6月，一个叫「喜欢数学的女孩」的网友，在国家级论坛发了一篇长文。
+题目是《对建立美声唱法中国流派的一些意见以及戏剧男高音训练中的一些建议》。
+两个主张：建立美声唱法的中国流派；戏剧男高音训练的具体建议。
+彼时他还没用"缠中说禅"这个名字，也还没办音乐会——但这件事已经在他心里了。</div>
+<div class="brow">
+<div><div class="blabel">配乐</div><div class="bval m">意大利歌剧咏叹调 / 德语艺术歌曲</div></div>
+<div><div class="blabel">画面基调</div><div class="bval m">旧论坛·荧光屏·深夜</div></div>
+</div>
+<div class="tags"><span class="tag">#美声</span><span class="tag">#音乐史</span><span class="tag">#互联网考古</span></div>
+</div>
+</article><article class="card" id="c61">
+<div class="chead">
+<div class="cno2">61</div>
+<div style="flex:1;min-width:0">
+<div class="ctitle">他怎么看流行音乐</div>
+<div class="cgroup">番外18｜他是怎么谈论流行音乐的</div>
+</div>
+<button class="cbtn" data-cp="c61">复制全部</button>
+</div>
+<div class="cbody">
+<div class="blabel">发布标题</div>
+<div class="bval t">他怎么看流行音乐</div>
+<div class="blabel" style="margin-top:14px">简介（直接复制发布）</div>
+<div class="bval" id="d61">一个受过正统古典训练的人，认真分析了一首当年的热门流行歌。
+他把"音乐"和"宣泄"分开：每个年代都有每个年代的宣泄，但音乐与宣泄无关。
+他的结论是：如果音乐本身无所谓表里，那它当然也可以动人。
+这不是捧场，也不是贬低，是把它当成一门艺术来讨论它能走多远。</div>
+<div class="brow">
+<div><div class="blabel">配乐</div><div class="bval m">早期摇滚 / 摇滚乐队现场 / 摇滚人声</div></div>
+<div><div class="blabel">画面基调</div><div class="bval m">六七十年代·旧城·立麦</div></div>
+</div>
+<div class="tags"><span class="tag">#流行音乐</span><span class="tag">#摇滚</span><span class="tag">#音乐评论</span></div>
+</div>
+</article><article class="card" id="c62">
+<div class="chead">
+<div class="cno2">62</div>
+<div style="flex:1;min-width:0">
+<div class="ctitle">同一首歌，二十种唱法</div>
+<div class="cgroup">番外19｜一首被唱了二十遍的老歌</div>
+</div>
+<button class="cbtn" data-cp="c62">复制全部</button>
+</div>
+<div class="cbody">
+<div class="blabel">发布标题</div>
+<div class="bval t">同一首歌，二十种唱法</div>
+<div class="blabel" style="margin-top:14px">简介（直接复制发布）</div>
+<div class="bval" id="d62">2006年7月，他在博客上贴了两首自己写的摇滚词。
+这在他的博客里是个巨大的反差——一个谈古典音乐史的人，写了两首摇滚词，还认真做了排版。
+从选题到语气到自我嘲弄的劲头，摇滚的底子都在里面。
+在他后来的博客里，这类看似不搭的尝试还会有很多。</div>
+<div class="brow">
+<div><div class="blabel">配乐</div><div class="bval m">摇滚编制 / 失真吉他 / 独立摇滚现场</div></div>
+<div><div class="blabel">画面基调</div><div class="bval m">旧厂房·排练室·烟味</div></div>
+</div>
+<div class="tags"><span class="tag">#摇滚</span><span class="tag">#互联网考古</span><span class="tag">#音乐评论</span></div>
+</div>
+</article><article class="card" id="c63">
+<div class="chead">
+<div class="cno2">63</div>
+<div style="flex:1;min-width:0">
+<div class="ctitle">2005年，舆论场的另一面</div>
+<div class="cgroup">番外20｜2005年的那场网络争论</div>
+</div>
+<button class="cbtn" data-cp="c63">复制全部</button>
+</div>
+<div class="cbody">
+<div class="blabel">发布标题</div>
+<div class="bval t">2005年，舆论场的另一面</div>
+<div class="blabel" style="margin-top:14px">简介（直接复制发布）</div>
+<div class="bval" id="d63">2005年夏天的中文互联网上，有过一场挺火的争论。
+起因是某位歌手的一个纪念日，媒体大量回顾，论坛上出现各种声音，有人提议搞一场"全体华人、全亚洲共同祭祀"的活动。
+一篇博客文章对这件事提出质疑，作者认为把这样大的资源投给这样一件事本身就不值得。
+文章里有一句话：
+一个时代的流行符号就是该时代本身。
+他还甩出了柳如是的一首词——"有恨寒潮，无情残照，正是萧萧南浦"。</div>
+<div class="brow">
+<div><div class="blabel">配乐</div><div class="bval m">古琴 / 昆曲 / 江南丝竹</div></div>
+<div><div class="blabel">画面基调</div><div class="bval m">江南·烟雨·旧宅</div></div>
+</div>
+<div class="tags"><span class="tag">#音乐评论</span><span class="tag">#流行文化</span><span class="tag">#互联网考古</span></div>
+</div>
+</article><article class="card" id="c64">
+<div class="chead">
+<div class="cno2">64</div>
+<div style="flex:1;min-width:0">
+<div class="ctitle">2007年，一场失败的跨界音乐会</div>
+<div class="cgroup">番外21｜2007年那场不太成功的跨界</div>
+</div>
+<button class="cbtn" data-cp="c64">复制全部</button>
+</div>
+<div class="cbody">
+<div class="blabel">发布标题</div>
+<div class="bval t">2007年，一场失败的跨界音乐会</div>
+<div class="blabel" style="margin-top:14px">简介（直接复制发布）</div>
+<div class="bval" id="d64">他去了，评价很直接。开场晚点，序曲被演奏得无限缩水，三位四十来岁的歌手声音都太窄。
+但他最喜欢的那段男声二重唱，他给的标准是"必须是两个伟大的声音"——当晚他"没有听到"。
+真正让他觉得值的，是下半场那位香港男高音的十四首咏叹调。
+一个写了半小时差评的人，最后还是给出了一个明确的赞美。</div>
+<div class="brow">
+<div><div class="blabel">配乐</div><div class="bval m">普契尼《图兰朵》/ 男高音咏叹调精选</div></div>
+<div><div class="blabel">画面基调</div><div class="bval m">剧场·空座·谢幕</div></div>
+</div>
+<div class="tags"><span class="tag">#男高音</span><span class="tag">#歌剧</span><span class="tag">#现场</span></div>
+</div>
+</article><article class="card" id="c65">
+<div class="chead">
+<div class="cno2">65</div>
+<div style="flex:1;min-width:0">
+<div class="ctitle">一个人怎么练出好嗓子</div>
+<div class="cgroup">番外22｜他是怎么练嗓子的</div>
+</div>
+<button class="cbtn" data-cp="c65">复制全部</button>
+</div>
+<div class="cbody">
+<div class="blabel">发布标题</div>
+<div class="bval t">一个人怎么练出好嗓子</div>
+<div class="blabel" style="margin-top:14px">简介（直接复制发布）</div>
+<div class="bval" id="d65">2006年7月，一个人在自己的博客上发了一条公告。
+他说，既然不是每个人都有时间、有钱去听现场的音乐会，那就用网络把这件事办了。
+每周五一场，一场一小时半到两小时，按最标准的音乐会形式，有上下半场，有返场。
+从第一期的舒伯特，到最后一期的马勒。四十二期，他把古典音乐史的主干完整走了一遍。
+这个系列在他生命的最后一年停下。
+但它讲过的话，还在。</div>
+<div class="brow">
+<div><div class="blabel">配乐</div><div class="bval m">舒伯特 / 莫扎特 / 贝多芬 / 马勒 各选一段</div></div>
+<div><div class="blabel">画面基调</div><div class="bval m">片头·同一片风景·新的季节</div></div>
+</div>
+<div class="tags"><span class="tag">#古典音乐</span><span class="tag">#缠中说禅</span><span class="tag">#风景</span></div>
+</div>
+</article><article class="card" id="c66">
+<div class="chead">
+<div class="cno2">66</div>
+<div style="flex:1;min-width:0">
+<div class="ctitle">先做诗人，再开口</div>
+<div class="cgroup">番外23｜先做诗人，再开口</div>
+</div>
+<button class="cbtn" data-cp="c66">复制全部</button>
+</div>
+<div class="cbody">
+<div class="blabel">发布标题</div>
+<div class="bval t">先做诗人，再开口</div>
+<div class="blabel" style="margin-top:14px">简介（直接复制发布）</div>
+<div class="bval" id="d66">他说过一个听起来很奇怪的要求：
+一个完美的歌者，必须首先是一个诗人，必须首先能洞悉一切诗句后面的秘密，并当下地用完美的技术把这个洞悉完全地呈现。
+一般人以为唱歌是技术活，先练好嗓子再理解词。他的顺序是反过来的：先读懂，再开口。
+他还说：很多人唱歌，嘴里像含着个什么玩意——咬字清楚，才是最基础的发声技术。</div>
+<div class="brow">
+<div><div class="blabel">配乐</div><div class="bval m">艺术歌曲 / 意大利语歌剧咏叹调</div></div>
+<div><div class="blabel">画面基调</div><div class="bval m">旧图书馆·诗页·烛光</div></div>
+</div>
+<div class="tags"><span class="tag">#声乐</span><span class="tag">#艺术歌曲</span><span class="tag">#咬字</span></div>
+</div>
+</article><article class="card" id="c67">
+<div class="chead">
+<div class="cno2">67</div>
+<div style="flex:1;min-width:0">
+<div class="ctitle">他写的最后一篇音乐文章</div>
+<div class="cgroup">番外24｜唱歌其实是很简单的事情</div>
+</div>
+<button class="cbtn" data-cp="c67">复制全部</button>
+</div>
+<div class="cbody">
+<div class="blabel">发布标题</div>
+<div class="bval t">他写的最后一篇音乐文章</div>
+<div class="blabel" style="margin-top:14px">简介（直接复制发布）</div>
+<div class="bval" id="d67">文章开门见山：光有感情是不行的，一些最基本的技术是必须的。
+人刚生下来时，发声位置都是对的——你看看那些婴孩，一哭一整天，依然声音嘹亮。
+真正美妙的声音，用最通俗的说法，就是既能发出流行音乐中口语化的声音，又能发出戏剧性的歌剧之声。
+这是他生命最后一年的文章，也是他音乐文章的最后一篇。</div>
+<div class="brow">
+<div><div class="blabel">配乐</div><div class="bval m">人声自然状态 / 婴儿啼哭与歌剧人声对照</div></div>
+<div><div class="blabel">画面基调</div><div class="bval m">晨光·窗·第一声啼哭</div></div>
+</div>
+<div class="tags"><span class="tag">#声乐</span><span class="tag">#唱歌</span><span class="tag">#美声</span></div>
+</div>
+</article><article class="card" id="c68">
+<div class="chead">
+<div class="cno2">68</div>
+<div style="flex:1;min-width:0">
+<div class="ctitle">他写的最后一篇杂谈</div>
+<div class="cgroup">番外25｜2008年的最后一次杂谈</div>
+</div>
+<button class="cbtn" data-cp="c68">复制全部</button>
+</div>
+<div class="cbody">
+<div class="blabel">发布标题</div>
+<div class="bval t">他写的最后一篇杂谈</div>
+<div class="blabel" style="margin-top:14px">简介（直接复制发布）</div>
+<div class="bval" id="d68">2008年7月9日，标题里列了四件事：股票、音乐、房价、病情。
+他先写股票，然后聊银行，再聊中医——他说会十九路的高手世上就没有了，连会十路的都没找到。
+然后他提到自己的音乐播客：原来那个地方估计是彻底倒闭了，上传的音乐全部被洗劫。
+他说想把这音乐播客"投胎再来"，问大家有什么建议。
+那年他正在生病。文章的最后，他在向读者求助：怎么重新办一个音乐网站。</div>
+<div class="brow">
+<div><div class="blabel">配乐</div><div class="bval m">任选其一段他最熟悉的长段 / 歌剧与弦乐</div></div>
+<div><div class="blabel">画面基调</div><div class="bval m">旧电脑·窗外雪·最后一页</div></div>
+</div>
+<div class="tags"><span class="tag">#音乐</span><span class="tag">#2008</span><span class="tag">#互联网考古</span></div>
+</div>
+</article><article class="card" id="c69">
+<div class="chead">
+<div class="cno2">69</div>
+<div style="flex:1;min-width:0">
+<div class="ctitle">他最后一次完整地讲了一遍音乐</div>
+<div class="cgroup">番外26｜2003年，一个女孩在谈戏剧男高音</div>
+</div>
+<button class="cbtn" data-cp="c69">复制全部</button>
+</div>
+<div class="cbody">
+<div class="blabel">发布标题</div>
+<div class="bval t">他最后一次完整地讲了一遍音乐</div>
+<div class="blabel" style="margin-top:14px">简介（直接复制发布）</div>
+<div class="bval" id="d69">2007年8月25日，最后一期音乐会。
+他选的是马勒《第二交响曲》，就是《复活》。
+马勒写这部作品断断续续花了七年，中间经历了双亲的去世、婚姻破裂、孩子的夭折。
+他说：马勒是为那些能理解他的人写的。
+写完这一期九天之后，他在博客上说了"先下，再见"。
+然后是《歌唱技术（二）》，是《唱歌其实是很简单的事情》。</div>
+<div class="brow">
+<div><div class="blabel">配乐</div><div class="bval m">马勒《D小调第二交响曲》"复活" 第五乐章</div></div>
+<div><div class="blabel">画面基调</div><div class="bval m">长镜头·夜·四十二次日出</div></div>
+</div>
+<div class="tags"><span class="tag">#马勒</span><span class="tag">#收官</span><span class="tag">#音乐</span></div>
+</div>
+</article><article class="card" id="c70">
+<div class="chead">
+<div class="cno2">70</div>
+<div style="flex:1;min-width:0">
+<div class="ctitle">一场关于美声的深夜对话</div>
+<div class="cgroup">番外27｜2005年，和音乐学院教授的一夜对话</div>
+</div>
+<button class="cbtn" data-cp="c70">复制全部</button>
+</div>
+<div class="cbody">
+<div class="blabel">发布标题</div>
+<div class="bval t">一场关于美声的深夜对话</div>
+<div class="blabel" style="margin-top:14px">简介（直接复制发布）</div>
+<div class="bval" id="d70">2005年10月的一个晚上，有人和一位中央音乐学院的教授通了电话，谈的是声乐。
+第二天他把部分对话记录整理出来发到了网上。
+回复里有人问：美声在中国，师资、课时、语言习惯、教材体系，哪一样不都缺吗？
+有人答：不是不适合，是投入不够、方法不对。
+两年多以后，他会在博客上写《歌唱技术》，讲头腔共鸣、胸腔支撑、咬字清楚。</div>
+<div class="brow">
+<div><div class="blabel">配乐</div><div class="bval m">美声与戏剧男高音 / 意大利语咏叹调</div></div>
+<div><div class="blabel">画面基调</div><div class="bval m">深夜·电话线·窗外的城市</div></div>
+</div>
+<div class="tags"><span class="tag">#声乐</span><span class="tag">#美声</span><span class="tag">#互联网考古</span></div>
+</div>
+</article><article class="card" id="c71">
+<div class="chead">
+<div class="cno2">71</div>
+<div style="flex:1;min-width:0">
+<div class="ctitle">你今天听到的音乐，是从这样的地方来的</div>
+<div class="cgroup">番外28｜一个古典训练者怎么看流行音乐</div>
+</div>
+<button class="cbtn" data-cp="c71">复制全部</button>
+</div>
+<div class="cbody">
+<div class="blabel">发布标题</div>
+<div class="bval t">你今天听到的音乐，是从这样的地方来的</div>
+<div class="blabel" style="margin-top:14px">简介（直接复制发布）</div>
+<div class="bval" id="d71">2006年，中国的网络上还没有"打赏"、没有"知识付费"，也没有"IP"这个词。
+一个人要办一场音乐会，需要：自己装播放器、按音乐会顺序排曲、做成可调用的地址、一篇一篇写导赏、再一篇一篇回留言。
+而当时的带宽是512K，一个交响乐几十兆，家用拨号根本传不动。
+这一切，是四十二期音乐会的全部基础设施。</div>
+<div class="brow">
+<div><div class="blabel">配乐</div><div class="bval m">任意器乐长段（建议用慢板）</div></div>
+<div><div class="blabel">画面基调</div><div class="bval m">旧电脑·风扇转动·窗外天光</div></div>
+</div>
+<div class="tags"><span class="tag">#互联网考古</span><span class="tag">#音乐</span><span class="tag">#2006</span></div>
+</div>
+</article><article class="card" id="c72">
+<div class="chead">
+<div class="cno2">72</div>
+<div style="flex:1;min-width:0">
+<div class="ctitle">2005年，一个名字引发的喧哗</div>
+<div class="cgroup">番外29｜2005年，一个名字引发的喧哗</div>
+</div>
+<button class="cbtn" data-cp="c72">复制全部</button>
+</div>
+<div class="cbody">
+<div class="blabel">发布标题</div>
+<div class="bval t">2005年，一个名字引发的喧哗</div>
+<div class="blabel" style="margin-top:14px">简介（直接复制发布）</div>
+<div class="bval" id="d72">2005年夏天的中文互联网上，有过一场挺火的争论。
+文章里有一句话：
+一个时代的流行符号就是该时代本身。
+作者接着说：时代本身没有错误，错误的只是构成时代的人。
+他还甩出了柳如是的一首词——"有恨寒潮，无情残照，正是萧萧南浦"。
+他没说你该去听什么，他直接把一首词放在你面前。</div>
+<div class="brow">
+<div><div class="blabel">配乐</div><div class="bval m">古琴 / 昆曲 / 江南丝竹</div></div>
+<div><div class="blabel">画面基调</div><div class="bval m">江南·烟雨·旧宅</div></div>
+</div>
+<div class="tags"><span class="tag">#音乐评论</span><span class="tag">#流行文化</span><span class="tag">#互联网考古</span></div>
+</div>
+</article><article class="card" id="c73">
+<div class="chead">
+<div class="cno2">73</div>
+<div style="flex:1;min-width:0">
+<div class="ctitle">他最后说的一句话</div>
+<div class="cgroup">番外30｜一夜关于美声的对话</div>
+</div>
+<button class="cbtn" data-cp="c73">复制全部</button>
+</div>
+<div class="cbody">
+<div class="blabel">发布标题</div>
+<div class="bval t">他最后说的一句话</div>
+<div class="blabel" style="margin-top:14px">简介（直接复制发布）</div>
+<div class="bval" id="d73">2007年8月25日，第42期《生与死的拷问》。
+他说：音乐会开始了，葬礼开始了。横躺着的，可能是英雄，可能是混蛋。
+突然，一切破裂，坠入火与泥土的世界。
+死而不可复生，世界幽灵地歌唱。
+绽破星空的不是星空，绽破死亡的正是死亡。死亡，从未死亡。
+风，依然是风；山，依然是山；世界，不再世界。</div>
+<div class="brow">
+<div><div class="blabel">配乐</div><div class="bval m">马勒《D小调第二交响曲》"复活" 第五乐章 / 巴赫《G弦上的咏叹调》</div></div>
+<div><div class="blabel">画面基调</div><div class="bval m">极夜·静止·山的轮廓</div></div>
+</div>
+<div class="tags"><span class="tag">#马勒</span><span class="tag">#生与死</span><span class="tag">#收官</span></div>
+</div>
+</article><article class="card" id="c74">
+<div class="chead">
+<div class="cno2">74</div>
+<div style="flex:1;min-width:0">
+<div class="ctitle">把四十二场音乐会，一次听完</div>
+<div class="cgroup">收官｜四十二期，一句告别</div>
+</div>
+<button class="cbtn" data-cp="c74">复制全部</button>
+</div>
+<div class="cbody">
+<div class="blabel">发布标题</div>
+<div class="bval t">把四十二场音乐会，一次听完</div>
+<div class="blabel" style="margin-top:14px">简介（直接复制发布）</div>
+<div class="bval" id="d74">从2006年7月到2007年8月，一年零一个月，四十二个周五。
+他把家里八千张原版CD搬上网，每周五办一场音乐会，每场一个主题、有导赏、有曲序、有返场。
+七千多条留言，十几万人订阅。
+在2006年，一个人用一台电脑和一堆愿意听的人，把音乐史上被时间和场地隔开的东西，重新摆到了一起。
+这个系列，我们用四十二期视频，陪你走完。</div>
+<div class="brow">
+<div><div class="blabel">配乐</div><div class="bval m">四十二期主题曲连缀 / 舒伯特《冬之旅》终曲收尾</div></div>
+<div><div class="blabel">画面基调</div><div class="bval m">四季·同一机位·四十二次</div></div>
+</div>
+<div class="tags"><span class="tag">#古典音乐</span><span class="tag">#缠中说禅</span><span class="tag">#系列</span></div>
+</div>
+</article>
+</div></section>
+
+<footer><div class="wrap">
+缠师周末音乐会 · 风景+音乐 短视频选题库 · 75 期<br>
+文案来源：GitHub 镜像 alsotang/chzhshch（1130 篇）、本地离线镜像（3411 篇截图存档）、缠师讲坛论坛（7149 条回复）。<br>
+全部标题与简介已通过抖音红线自检（无股票术语、政治人物、宗教布道、粗俗双关、真实人物批评）。
+</div></footer>
+<script>
+document.querySelectorAll('[data-cp]').forEach(b=>b.addEventListener('click',async()=>{
+ const n=b.dataset.cp.replace('c','');
+ const t=document.querySelector('#c'+n+' .bval.t').textContent;
+ const d=document.getElementById('d'+n).textContent;
+ const m=document.querySelector('#c'+n+' .bval.m').textContent;
+ const g=document.querySelector('#c'+n+' .cgroup').textContent;
+ const tags=[...document.querySelectorAll('#c'+n+' .tag')].map(x=>x.textContent).join(' ');
+ const txt='【'+g+'】\n标题：'+t+'\n\n简介：\n'+d+'\n\n配乐：'+m+'\n标签：'+tags;
+ try{await navigator.clipboard.writeText(txt);b.textContent='已复制 ✓';setTimeout(()=>b.textContent='复制全部',1600);}
+ catch(e){b.textContent='复制失败';}
+}));
+const tabs=document.querySelectorAll('.tabs button');
+const secs={table:document.getElementById('table'),cards:document.getElementById('cards')};
+tabs.forEach(b=>b.addEventListener('click',()=>{
+ tabs.forEach(x=>x.classList.remove('on'));b.classList.add('on');
+ Object.keys(secs).forEach(k=>secs[k].classList.toggle('hidden',k!==b.dataset.t));
+}));
+</script></body></html>

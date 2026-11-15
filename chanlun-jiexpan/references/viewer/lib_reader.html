@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>缠中说禅 · 大盘解读文献全集</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:"PingFang SC","Microsoft YaHei","Hiragino Sans GB",sans-serif;background:#f7f6f3;color:#2b2f36;line-height:1.7;-webkit-font-smoothing:antialiased}
+.wrap{max-width:1180px;margin:0 auto;padding:0 20px 60px}
+header{background:linear-gradient(180deg,#fff 0%,#faf9f7 100%);border-bottom:1px solid #e6e3dd;padding:38px 0 30px;margin-bottom:24px}
+.kicker{font-size:12px;letter-spacing:.16em;color:#9a8f7e;text-transform:uppercase;margin-bottom:10px}
+h1{font-size:29px;font-weight:700;letter-spacing:-.01em;color:#1f2329}
+.sub{font-size:15px;color:#6b7280;margin-top:10px;max-width:860px}
+.kpis{display:flex;gap:30px;flex-wrap:wrap;margin-top:22px;padding-top:20px;border-top:1px solid #eceae5}
+.kpi b{display:block;font-size:23px;font-weight:700;color:#8c2f39;letter-spacing:-.01em}
+.kpi span{font-size:12.5px;color:#8b95a1}
+.panel{background:#fff;border:1px solid #e6e3dd;border-radius:10px;padding:18px 20px;margin-bottom:18px;box-shadow:0 1px 2px rgba(0,0,0,.03)}
+.filters{display:flex;gap:12px;flex-wrap:wrap;align-items:center}
+.fgroup{display:flex;align-items:center;gap:7px}
+.fgroup label{font-size:12.5px;color:#6b7280;white-space:nowrap}
+select,input[type=text]{font-family:inherit;font-size:13.5px;padding:6px 10px;border:1px solid #dcd8d1;border-radius:6px;background:#fff;color:#2b2f36;outline:none}
+select:focus,input[type=text]:focus{border-color:#8c2f39}
+input[type=text]{min-width:230px}
+button{font-family:inherit;font-size:13.5px;padding:7px 16px;border:1px solid #8c2f39;background:#8c2f39;color:#fff;border-radius:6px;cursor:pointer;transition:.15s}
+button:hover{background:#75262f}
+button.ghost{background:#fff;color:#8c2f39}
+button.ghost:hover{background:#fdf6f5}
+.chips{display:flex;gap:7px;flex-wrap:wrap;margin-top:14px}
+.chip{font-size:12.5px;padding:5px 12px;border-radius:20px;background:#f4f2ee;border:1px solid #e6e3dd;color:#4b5563;cursor:pointer;transition:.15s;user-select:none}
+.chip:hover{background:#8c2f39;color:#fff;border-color:#8c2f39}
+#modebar{margin-top:12px;font-size:12.5px;line-height:1.8;padding:9px 13px;border-radius:7px;display:none}
+#modebar.show{display:block}
+#modebar.local{background:#fdf7ea;border:1px solid #efe0bd;color:#8a6a22}
+#modebar.live{background:#eef5ef;border:1px solid #d5e6d8;color:#2e6b4f}
+#modebar b{font-weight:600}
+#modebar code{background:rgba(255,255,255,.75);padding:1px 6px;border-radius:3px;font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:11.5px}
+.bar{display:flex;justify-content:space-between;align-items:center;margin-bottom:14px;flex-wrap:wrap;gap:10px}
+.count{font-size:13.5px;color:#6b7280}
+.count b{color:#8c2f39;font-weight:700}
+.list{display:flex;flex-direction:column;gap:11px}
+.item{background:#fff;border:1px solid #e6e3dd;border-left:3px solid #d9d4cb;border-radius:8px;padding:14px 16px;transition:.15s}
+.item.hi{border-left-color:#8c2f39;background:#fffdfd}
+.ihead{display:flex;justify-content:space-between;gap:12px;align-items:flex-start}
+.title{font-size:15.5px;font-weight:600;color:#1f2329;margin-bottom:6px;line-height:1.5}
+.meta{display:flex;gap:8px;flex-wrap:wrap;align-items:center;font-size:12px;color:#8b95a1}
+.tag{display:inline-block;padding:2px 8px;border-radius:4px;background:#f0eee9;color:#6b7280;font-size:11.5px}
+.tag.rel{background:#f0f5f9;color:#3b6ea5}
+.tag.rel.hi{background:#fdf1f1;color:#8c2f39}
+.tags{display:inline-flex;gap:6px;flex-wrap:wrap}
+.exc{font-size:13.5px;color:#4b5563;margin-top:9px;padding-left:11px;border-left:2px solid #e8e4dd;line-height:1.75}
+.link{display:inline-flex;align-items:center;gap:4px;font-size:12.5px;color:#8c2f39;text-decoration:none;margin-top:9px;font-weight:500}
+.link:hover{text-decoration:underline}
+.empty{text-align:center;padding:60px 20px;color:#8b95a1;font-size:14px}
+.loadbar{height:3px;background:#eceae5;border-radius:2px;overflow:hidden;margin-bottom:14px}
+.loadbar i{display:block;height:100%;width:35%;background:#8c2f39;animation:ld 1.1s ease-in-out infinite}
+@keyframes ld{0%{transform:translateX(-100%)}100%{transform:translateX(320%)}}
+.note{font-size:12px;color:#8b95a1;margin-top:14px;padding-top:13px;border-top:1px solid #eceae5;line-height:1.85}
+@media(max-width:760px){h1{font-size:22px}.kpis{gap:18px}.wrap{padding:0 14px 40px}input[type=text]{min-width:150px}}
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <div class="kicker">Chanlun Archive · 缠中说禅原文</div>
+    <h1>缠中说禅 · 大盘解读文献全集</h1>
+    <p class="sub">收录缠师（缠中说禅）2006–2008 年对上证综指大盘走势的实时解盘与中线判断文献。可按关键词、年份、主题、大盘相关度筛选，点击「查阅原文」直达原站全文。</p>
+    <div class="kpis">
+      <div class="kpi"><b data-sp-bindable="database" data-sp-database-id="bQfYzqoxplMRO9RTKcZwPp" id="kTotal">—</b><span>收录文献</span></div>
+      <div class="kpi"><b data-sp-bindable="database" data-sp-database-id="bQfYzqoxplMRO9RTKcZwPp" id="kHi">—</b><span>高度相关</span></div>
+      <div class="kpi"><b data-sp-bindable="database" data-sp-database-id="bQfYzqoxplMRO9RTKcZwPp" id="kYears">—</b><span>覆盖年份</span></div>
+      <div class="kpi"><b data-sp-bindable="database" data-sp-database-id="bQfYzqoxplMRO9RTKcZwPp" id="kChars">—</b><span>收录正文总字数</span></div>
+    </div>
+  </div>
+</header>
+
+<div class="wrap">
+  <div class="panel">
+    <div class="filters">
+      <div class="fgroup">
+        <label for="q">关键词</label>
+        <input type="text" id="q" placeholder="标题或摘录中检索，如 6124、比例线、中枢">
+      </div>
+      <div class="fgroup">
+        <label for="yearSel">年份</label>
+        <select id="yearSel"><option value="">全部</option></select>
+      </div>
+      <div class="fgroup">
+        <label for="topicSel">主题</label>
+        <select id="topicSel"><option value="">全部</option></select>
+      </div>
+      <div class="fgroup">
+        <label for="relSel">相关度</label>
+        <select id="relSel"><option value="">全部</option></select>
+      </div>
+      <button id="btnSearch">检索</button>
+      <button id="btnReset" class="ghost">重置</button>
+    </div>
+    <div class="chips" id="chips"></div>
+    <div id="modebar"></div>
+  </div>
+
+  <div class="panel">
+    <div class="bar">
+      <div class="count">共 <b id="cNum">加载中…</b> 篇文献（全集 <span id="cAll">—</span> 篇）</div>
+      <div style="font-size:12.5px;color:#8b95a1" id="hint"></div>
+    </div>
+    <div class="loadbar" id="loadbar"><i></i></div>
+    <div class="list" id="list"></div>
+  </div>
+
+  <div class="note">
+    <b>数据来源</b>：chanshi.vip（缠中说禅博客原文归档）与 chzhshch.blog（缠师官方镜像）双源抓取，去重后收录 1,100 篇。<br>
+    <b>需说明</b>：缠师原文从未出现 1664 点——其最后一篇大盘文章为 2008-10-05《美国救市，闹剧一场。》，1664.93 实际低点发生于 2008-10-28。<br>
+    <b>免责声明</b>：本页为历史文献整理与查阅工具，所载观点为缠师 2006–2008 年原文表述，不构成任何投资建议。市场有风险，投资需谨慎。
+  </div>
+</div>
+
+<template id="rowTpl">
+  <div class="item">
+    <div class="ihead">
+      <div class="title" data-sp-bindable="database" data-sp-database-id="bQfYzqoxplMRO9RTKcZwPp"></div>
+      <div class="meta">
+        <span class="date" data-sp-bindable="database" data-sp-database-id="bQfYzqoxplMRO9RTKcZwPp"></span>
+        <span class="year" data-sp-bindable="database" data-sp-database-id="bQfYzqoxplMRO9RTKcZwPp"></span>
+        <span class="tag rel" data-sp-bindable="database" data-sp-database-id="bQfYzqoxplMRO9RTKcZwPp"></span>
+        <span class="tags" data-sp-bindable="database" data-sp-database-id="bQfYzqoxplMRO9RTKcZwPp"></span>
+        <span class="site" data-sp-bindable="database" data-sp-database-id="bQfYzqoxplMRO9RTKcZwPp"></span>
+        <span class="wcount" data-sp-bindable="database" data-sp-database-id="bQfYzqoxplMRO9RTKcZwPp"></span>
+      </div>
+    </div>
+    <div class="exc" data-sp-bindable="database" data-sp-database-id="bQfYzqoxplMRO9RTKcZwPp"></div>
+    <a class="link" data-sp-bindable="database" data-sp-database-id="bQfYzqoxplMRO9RTKcZwPp" target="_blank" rel="noopener">查阅原文 →</a>
+  </div>
+</template>
+
+<script>
+(function () {
+  var DATABASE_ID = 'bQfYzqoxplMRO9RTKcZwPp';
+  var SCHEMA_OPTIONS = {};
+  var ALL = [];
+  var VIEW = [];
+  var TPL = null;
+  var db = null;
+  var LOAD_ERROR = '';
+  var USE_LOCAL = false;
+
+  var $ = function (s) { return document.querySelector(s); };
+
+  function setText(node, s) {
+    if (!node) { return; }
+    node.textContent = (s === null || s === undefined) ? '' : String(s);
+  }
+
+  function safeUrl(u) {
+    u = (u === null || u === undefined) ? '' : String(u).trim();
+    var lower = u.toLowerCase();
+    if (lower.indexOf('https://') === 0 || lower.indexOf('http://') === 0) { return u; }
+    return '';
+  }
+
+  function linkOf(rec) {
+    var v = rec['原文链接'];
+    if (!v) { return ''; }
+    if (typeof v === 'string') { return safeUrl(v); }
+    if (v.length) {
+      var first = v[0] || {};
+      return safeUrl(first.link || first.url || first.text);
+    }
+    return safeUrl(v.link || v.url);
+  }
+
+  var CHIPS = [
+    { label: '6124 大顶', q: '6124' },
+    { label: '6100 泡沫', q: '6100' },
+    { label: '比例线', q: '比例线' },
+    { label: '中枢', q: '中枢' },
+    { label: '背驰', q: '背驰' },
+    { label: '买点', q: '买点' },
+    { label: '均线', q: '均线' },
+    { label: '底分型', q: '底分型' },
+    { label: '月线', q: '月线' },
+    { label: '日线', q: '日线' },
+    { label: '政策', q: '政策' },
+    { label: '印花税', q: '印花税' }
+  ];
+
+  function optionTexts(field) {
+    var raw = SCHEMA_OPTIONS[field] || [];
+    var out = [];
+    for (var i = 0; i < raw.length; i++) {
+      out.push(raw[i].text);
+    }
+    return out;
+  }
+
+  function fillSelect(el, values) {
+    while (el.firstChild) { el.removeChild(el.firstChild); }
+    var all = document.createElement('option');
+    all.value = '';
+    setText(all, '全部');
+    el.appendChild(all);
+    for (var i = 0; i < values.length; i++) {
+      var o = document.createElement('option');
+      o.value = values[i];
+      setText(o, values[i]);
+      el.appendChild(o);
+    }
+  }
+
+  function renderChips() {
+    var box = $('#chips');
+    while (box.firstChild) { box.removeChild(box.firstChild); }
+    for (var i = 0; i < CHIPS.length; i++) {
+      var c = CHIPS[i];
+      var s = document.createElement('span');
+      s.className = 'chip';
+      s.setAttribute('data-q', c.q);
+      setText(s, c.label);
+      s.onclick = function (q) {
+        return function () { $('#q').value = q; apply(); };
+      }(c.q);
+      box.appendChild(s);
+    }
+  }
+
+  function renderList(rows) {
+    var list = $('#list');
+    while (list.firstChild) { list.removeChild(list.firstChild); }
+
+    if (!rows.length) {
+      var em = document.createElement('div');
+      em.className = 'empty';
+      setText(em, '暂无匹配的文献，请调整关键词或清除筛选条件');
+      list.appendChild(em);
+      return;
+    }
+    var frag = document.createDocumentFragment();
+    for (var i = 0; i < rows.length; i++) {
+      var r = rows[i];
+      var node = TPL.content.cloneNode(true);
+      var rel = r['大盘相关度'] || '';
+      var topics = r['主题'] || [];
+
+      setText(node.querySelector('.title'), r['标题'] || '（无标题）');
+      setText(node.querySelector('.date'), String(r['发布时间'] || '').slice(0, 10));
+      setText(node.querySelector('.year'), r['年份'] ? (r['年份'] + ' 年') : '');
+
+      var relEl = node.querySelector('.rel');
+      setText(relEl, rel);
+      if (rel === '高度相关') {
+        relEl.className = 'tag rel hi';
+        node.querySelector('.item').className = 'item hi';
+      }
+
+      var tagsEl = node.querySelector('.tags');
+      for (var j = 0; j < topics.length; j++) {
+        var t = document.createElement('span');
+        t.className = 'tag';
+        setText(t, topics[j]);
+        tagsEl.appendChild(t);
+      }
+
+      setText(node.querySelector('.site'), r['来源站点'] || '');
+      setText(node.querySelector('.wcount'), r['正文字数'] ? (r['正文字数'] + ' 字') : '');
+
+      var exc = node.querySelector('.exc');
+      if (r['原文摘录']) {
+        setText(exc, r['原文摘录']);
+      } else {
+        exc.parentNode.removeChild(exc);
+      }
+
+      var a = node.querySelector('.link');
+      var href = linkOf(r);
+      if (href) {
+        a.setAttribute('href', href);
+        setText(a, '查阅原文 →');
+      } else {
+        a.parentNode.removeChild(a);
+      }
+
+      frag.appendChild(node);
+    }
+    list.appendChild(frag);
+  }
+
+  function apply() {
+    if (LOAD_ERROR) { return; }
+    var kw = $('#q').value.trim().toLowerCase();
+    var yr = $('#yearSel').value;
+    var tp = $('#topicSel').value;
+    var rl = $('#relSel').value;
+
+    var out = [];
+    for (var i = 0; i < ALL.length; i++) {
+      var r = ALL[i];
+      if (yr && String(r['年份']) !== yr) { continue; }
+      if (rl && r['大盘相关度'] !== rl) { continue; }
+      if (tp) {
+        var ts = r['主题'] || [];
+        var hit = false;
+        for (var j = 0; j < ts.length; j++) {
+          if (ts[j] === tp) { hit = true; break; }
+        }
+        if (!hit) { continue; }
+      }
+      if (kw) {
+        var hay = (r['标题'] || '') + ' ' + (r['原文摘录'] || '');
+        if (hay.toLowerCase().indexOf(kw) < 0) { continue; }
+      }
+      out.push(r);
+    }
+    VIEW = out;
+    renderList(VIEW);
+    setText($('#cNum'), VIEW.length);
+    setText($('#cAll'), ALL.length);
+    setText($('#hint'), kw ? ('关键词：' + kw) : '');
+  }
+
+  function renderStats() {
+    var years = {};
+    var hi = 0;
+    var chars = 0;
+    for (var i = 0; i < ALL.length; i++) {
+      var r = ALL[i];
+      var y = String(r['年份']);
+      years[y] = (years[y] || 0) + 1;
+      if (r['大盘相关度'] === '高度相关') { hi++; }
+      chars += (r['正文字数'] || 0);
+    }
+    var ys = [];
+    for (var k in years) {
+      if (Object.prototype.hasOwnProperty.call(years, k)) { ys.push(k); }
+    }
+    ys.sort();
+
+    setText($('#kTotal'), ALL.length);
+    setText($('#kHi'), hi);
+    setText($('#kYears'), ys.length ? (ys[0] + '–' + ys[ys.length - 1]) : '—');
+    setText($('#kChars'), (chars / 10000).toFixed(1) + ' 万');
+
+    fillSelect($('#yearSel'), ys);
+    fillSelect($('#topicSel'), optionTexts('主题'));
+    fillSelect($('#relSel'), optionTexts('大盘相关度'));
+  }
+
+  function setStatus(msg) {
+    setText($('#hint'), msg || '');
+  }
+
+  function setMode(kind, msg) {
+    var bar = $('#modebar');
+    if (!bar) { return; }
+    bar.className = 'show ' + (kind === 'live' ? 'live' : 'local');
+    setText(bar, msg);
+  }
+
+  // 加载本地数据快照（file:// 直接打开时使用；与线上文献库数据同源）
+  function loadLocalSnapshot() {
+    return new Promise(function (resolve, reject) {
+      var s = document.createElement('script');
+      s.src = 'data/lib_snapshot.js';
+      s.async = false;
+      s.onload = function () { resolve(window.__CL_LIB__ || null); };
+      s.onerror = function () { reject(new Error('未找到本地数据快照 data/lib_snapshot.js')); };
+      document.head.appendChild(s);
+    });
+  }
+
+  function applyLocal(snap) {
+    if (!snap || !snap.records || !snap.records.length) {
+      rejectLocal();
+      return;
+    }
+    USE_LOCAL = true;
+    var opts = snap.options || {};
+    SCHEMA_OPTIONS['主题'] = opts['主题'] || [];
+    SCHEMA_OPTIONS['大盘相关度'] = opts['大盘相关度'] || [];
+    SCHEMA_OPTIONS['来源站点'] = opts['来源站点'] || [];
+    // 本地快照里「原文链接」已是纯字符串，linkOf() 兼容该形态
+    setMode('local', '当前为本地离线模式，数据读取自与文献库同源的本地快照（共 ' +
+      snap.records.length + ' 条，导出于 ' + (snap.generatedAt || '') +
+      '）。点击每条的「查阅原文 →」可直达原站全文；如需实时同步，请在资料库（Library）中打开本页。');
+    finish(snap.records);
+  }
+
+  function rejectLocal() {
+    showError('未能读取到本地数据快照。请确认 data/lib_snapshot.js 与本页面在同一文件夹内，' +
+      '或在资料库（Library）页面中打开本页以直连文献库数据表。');
+  }
+
+  function showError(msg) {
+    LOAD_ERROR = msg;
+    $('#loadbar').style.display = 'none';
+    setText($('#cNum'), '加载失败');
+    setText($('#cAll'), '—');
+    setStatus(msg);
+    var list = $('#list');
+    while (list.firstChild) { list.removeChild(list.firstChild); }
+    var em = document.createElement('div');
+    em.className = 'empty';
+    setText(em, msg);
+    list.appendChild(em);
+  }
+
+  function showEmpty(msg) {
+    var list = $('#list');
+    while (list.firstChild) { list.removeChild(list.firstChild); }
+    var em = document.createElement('div');
+    em.className = 'empty';
+    setText(em, msg);
+    list.appendChild(em);
+  }
+
+  function finish(rows) {
+    LOAD_ERROR = '';
+    ALL = rows;
+    $('#loadbar').style.display = 'none';
+    renderStats();
+    apply();
+    if (!rows.length) {
+      showEmpty('数据表中暂无记录，请确认文献库数据表已成功写入。');
+    }
+  }
+
+  function loadData(startCursor, acc, guard) {
+    acc = acc || [];
+    guard = guard || 0;
+    if (guard > 100) { finish(acc); return; }
+    db.query({
+      databaseId: DATABASE_ID,
+      sorts: [{ property: '发布时间', direction: 'ascending' }],
+      pageSize: 200,
+      startCursor: startCursor
+    }).then(function (result) {
+      var batch = (result && result.results) || [];
+      acc = acc.concat(batch);
+      var next = result && result.nextCursor;
+      if (result && result.hasMore && next && next !== startCursor && batch.length) {
+        loadData(next, acc, guard + 1);
+      } else {
+        finish(acc);
+      }
+    }).catch(function (err) {
+      console.error('[database] 数据加载失败:', err);
+      var msg = '数据表读取失败：' + ((err && err.message) ? err.message : '未知错误');
+      showError(msg);
+    });
+  }
+
+  // 平台的 database SDK 由宿主 useEffect 异步注入，必然晚于 DOMContentLoaded。
+  // 关键：loader 会先创建一个 Proxy 冒充 window.__SMART_PAGE__，其上的 database.query
+  // 永远是个「会挂起的函数」，无法用 typeof 判定就绪。
+  // loader 同时暴露 __realImpls__（真实实现表）——只有 SDK 真正注入后，
+  // real.database 才存在，用它才能准确区分真 SDK 与假 SDK。
+  function sdkReady() {
+    if (typeof window.__SMART_PAGE__ === 'undefined') { return null; }
+    var sp = window.__SMART_PAGE__;
+    var real = sp.__realImpls__;
+    if (real && real.database && typeof real.database.query === 'function') {
+      return real.database;
+    }
+    // 非 loader 环境（理论上不会走到）直接用 database 命名空间
+    if (!sp.__queues__ && sp.database && typeof sp.database.query === 'function') {
+      return sp.database;
+    }
+    return null;
+  }
+
+  function waitForSdk(onReady, onTimeout) {
+    var tries = 0;
+    var maxTries = 200;   // 200 * 100ms ≈ 20s，覆盖宿主 useEffect + loader 注入的延迟
+    function probe() {
+      var real = sdkReady();
+      if (real) { onReady(real); return; }
+      tries++;
+      if (tries >= maxTries) { onTimeout(); return; }
+      window.setTimeout(probe, 100);
+    }
+    probe();
+  }
+
+  function init() {
+    TPL = $('#rowTpl');
+    renderChips();
+
+    $('#btnSearch').onclick = apply;
+    $('#btnReset').onclick = function () {
+      $('#q').value = '';
+      $('#yearSel').value = '';
+      $('#topicSel').value = '';
+      $('#relSel').value = '';
+      apply();
+    };
+    $('#q').onkeydown = function (e) { if (e.key === 'Enter') { apply(); } };
+    $('#yearSel').onchange = apply;
+    $('#topicSel').onchange = apply;
+    $('#relSel').onchange = apply;
+
+    setStatus('正在连接文献库数据表…');
+
+    // 本地直接打开（file://）时没有宿主环境，也不会有平台 loader 注入 SDK，
+    // 此时直接改读与文献库同源的本地快照，不必等待 SDK 超时。
+    if (location.protocol === 'file:') {
+      loadLocalSnapshot().then(applyLocal).catch(function (err) {
+        console.error('[local] 本地快照加载失败:', err);
+        rejectLocal();
+      });
+      return;
+    }
+
+    waitForSdk(function (realDb) {
+      db = realDb;
+      setMode('live', '已连接文献库（Library）数据表，数据为实时读取。');
+      setStatus('正在读取数据表…');
+      db.getSchema({ databaseId: DATABASE_ID }).then(function (schema) {
+        var fields = (schema && schema.properties) || [];
+        for (var i = 0; i < fields.length; i++) {
+          var f = fields[i];
+          if ((f.type === 'select' || f.type === 'multi_select') && f.config && f.config.options) {
+            SCHEMA_OPTIONS[f.name] = f.config.options;
+          }
+        }
+        loadData();
+      }).catch(function (err) {
+        console.error('[database] schema 加载失败:', err);
+        loadData();
+      });
+    }, function () {
+      showError('未能接入文献库数据表。请在资料库（Library）页面中打开本页，或刷新后重试。');
+    });
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', init);
+  } else {
+    init();
+  }
+})();
+</script>
+</body>
+</html>

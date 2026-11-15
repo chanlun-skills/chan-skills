@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>缠中说禅当年大盘解读汇总 · 2006–2008</title>
+<script src="data/echarts.min.js"></script>
+<style>
+:root{--bg:#f7f6f3;--card:#fff;--ink:#1f2328;--ink2:#4b5563;--ink3:#8b95a1;--line:#e4e2dd;
+--accent:#8c2f39;--accent-soft:#f7ebec;--gold:#a67c2e;--blue:#2c5f8d;--green:#2e6b4f;
+--sh:0 1px 2px rgba(31,35,40,.05),0 4px 16px rgba(31,35,40,.05)}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:"Songti SC","STSong","Source Han Serif SC","Noto Serif CJK SC",Georgia,serif;
+background:var(--bg);color:var(--ink);line-height:1.8;font-size:15px;-webkit-font-smoothing:antialiased}
+.wrap{max-width:1200px;margin:0 auto;padding:0 24px 70px}
+header{background:var(--card);border-bottom:1px solid var(--line)}
+.hd{max-width:1200px;margin:0 auto;padding:34px 24px 26px}
+.kicker{font-size:11.5px;letter-spacing:.24em;color:var(--gold);margin-bottom:9px}
+h1{font-size:28px;font-weight:600;letter-spacing:.01em;line-height:1.4}
+.lede{color:var(--ink2);font-size:14.5px;margin-top:12px;max-width:840px;line-height:1.95}
+.kpi{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px;margin-top:22px}
+.kpi div{background:var(--bg);border:1px solid var(--line);border-radius:7px;padding:13px 16px}
+.kpi b{display:block;font-size:23px;font-weight:600;line-height:1.35}
+.kpi span{font-size:11.5px;color:var(--ink3);letter-spacing:.04em}
+main{padding-top:26px}
+section{margin-bottom:34px}
+h2.sec{font-size:19px;font-weight:600;margin-bottom:6px;display:flex;align-items:baseline;gap:10px}
+h2.sec em{font-style:normal;font-size:12.5px;color:var(--ink3);font-weight:400}
+.rule{height:2px;background:var(--accent);width:52px;margin:9px 0 18px}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.grid3{display:grid;grid-template-columns:repeat(auto-fit,minmax(310px,1fr));gap:14px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:8px;padding:18px 20px;box-shadow:var(--sh)}
+.card h3{font-size:15.5px;font-weight:600;margin-bottom:10px;color:var(--accent);line-height:1.55}
+.card p,.card li{font-size:14px;color:#33383f;line-height:1.95}
+.card ul{padding-left:19px}
+.chart{width:100%;height:330px}
+.tbl{width:100%;border-collapse:collapse;font-size:13.5px}
+.tbl th{background:var(--bg);text-align:left;padding:9px 11px;font-weight:600;border-bottom:1.5px solid var(--line);
+color:var(--ink2);white-space:nowrap;font-size:12.5px}
+.tbl td{padding:9px 11px;border-bottom:1px solid var(--line);vertical-align:top;line-height:1.75}
+.tbl tr:last-child td{border-bottom:0}
+.tbl a{color:var(--accent);text-decoration:none}
+.tbl a:hover{text-decoration:underline}
+.num{font-family:ui-monospace,Menlo,monospace;color:var(--gold);white-space:nowrap;font-size:12.5px}
+.pill{display:inline-block;font-size:11px;padding:1.5px 8px;border-radius:3px;background:var(--accent-soft);
+color:var(--accent);margin-right:5px;white-space:nowrap}
+.pill.b{background:#eaf1f7;color:var(--blue)}.pill.g{background:#f0efe9;color:var(--gold)}.pill.gr{background:#e9f2ed;color:var(--green)}
+blockquote{border-left:3px solid var(--accent);background:var(--bg);padding:12px 16px;margin:12px 0;
+border-radius:0 5px 5px 0;font-size:14px;color:var(--ink2);line-height:1.9}
+blockquote cite{display:block;font-size:12px;color:var(--ink3);font-style:normal;margin-top:7px}
+.qa{background:var(--card);border:1px solid var(--line);border-radius:8px;padding:0;overflow:hidden;box-shadow:var(--sh);margin-bottom:12px}
+.qa .q{padding:14px 20px;border-bottom:1px solid var(--line);font-weight:600;font-size:15px;background:var(--bg)}
+.qa .a{padding:15px 20px;font-size:14px;color:#33383f;line-height:2}
+.qa .a b{color:var(--accent)}
+.tl{position:relative;padding-left:24px}
+.tl:before{content:'';position:absolute;left:5px;top:6px;bottom:6px;width:2px;background:var(--line)}
+.tl-item{position:relative;margin-bottom:18px}
+.tl-item:before{content:'';position:absolute;left:-23px;top:7px;width:9px;height:9px;border-radius:50%;
+background:var(--accent);border:2px solid var(--bg)}
+.tl-item .dt{font-size:12px;color:var(--gold);font-family:ui-monospace,Menlo,monospace;margin-bottom:3px}
+.tl-item .tt{font-size:15px;font-weight:600;line-height:1.5}
+.tl-item .bd{font-size:13.5px;color:var(--ink2);margin-top:5px;line-height:1.9}
+.tl-item .lk{font-size:12.5px;margin-top:5px}
+.tl-item .lk a{color:var(--blue);text-decoration:none}
+.tl-item .lk a:hover{text-decoration:underline}
+.note{background:#fdfaf2;border:1px solid #eee2c8;border-radius:7px;padding:14px 18px;font-size:13.5px;
+color:#6b5b38;line-height:1.9;margin-top:16px}
+.note b{color:#8a6d22}
+footer{margin-top:44px;padding-top:18px;border-top:1px solid var(--line);font-size:12px;color:var(--ink3);line-height:2}
+.src{font-size:11.5px;color:var(--ink3)}
+@media(max-width:860px){.grid2{grid-template-columns:1fr}.hd{padding:24px 16px 20px}.wrap{padding:0 16px 50px}h1{font-size:22px}}
+</style>
+</head>
+<body>
+<header>
+  <div class="hd">
+    <div class="kicker">Chanlun Archive · 缠中说禅原文汇编</div>
+    <h1>缠中说禅当年大盘解读汇总<br><span style="font-size:19px;color:var(--ink2);font-weight:400">2006–2008 牛市、见顶与熊市全周期原文</span></h1>
+    <p class="lede">本报告基于从互联网抓取并清洗的缠师（缠中说禅）博客原始语料，系统汇总其对上证综指大盘走势的实时解盘与中线判断。
+    语料覆盖 2006 年 2 月至 2008 年 10 月缠师停更前的完整牛熊周期，含每日解盘、《教你炒股票》108 课体系文章、以及 6124 点见顶的完整预判原文。
+    <b>需说明：缠师原文从未出现 1664 点</b>——其最后一篇大盘文章为 2008-10-05《美国救市，闹剧一场。》，1664.93 实际低点发生于 2008-10-28。</p>
+    <div class="kpi">
+      <div><b>1,679</b><span>原文篇数</span></div>
+      <div><b>273.8 万</b><span>正文字数</span></div>
+      <div><b>16.1 万</b><span>可检索词条</span></div>
+      <div><b>34,520</b><span>段落级片段</span></div>
+      <div><b>946</b><span>大盘相关文献</span></div>
+    </div>
+  </div>
+</header>
+
+<div class="wrap">
+<main>
+
+<section>
+  <h2 class="sec">一、核心结论<em>缠师如何看当时的A股大盘</em></h2>
+  <div class="rule"></div>
+  <div class="grid2">
+    <div class="card">
+      <h3>① 大级别判断：调整不超过季级别</h3>
+      <p>2007 年 1 月 9 日《教你炒股票 21 课》，缠师在年线级别上给出当时最完整的定调：
+      「站在年线的级别看，目前还在第一段的次级别上扬中，要出现第二段的季级别调整，
+      首先要出现月线级别的中枢，目前连这个中枢都没出现」——「这第一段，完全可以走到6000点才结束」。
+      同文并称「即使出现调整，最多就是季级别的，其后反而构成第三类买点」。</p>
+      <blockquote>「目前中国的股市没有任何可担心的地方，即使出现调整，最多就是季级别的，其后反而构成第三类买点。」
+      <cite>《教你炒股票21：缠中说禅买卖点分析的完备性》2007-01-09</cite></blockquote>
+    </div>
+    <div class="card">
+      <h3>② 比例线：1992 年 1429 点起算的黄金分割体系</h3>
+      <p>缠师以 1992 年 1429 点为基准，建立 184×30 = 5520 点的比例线序列。原文明确：「在3000点下，震荡确认的是1/4线，
+      也留下了227暴跌印记；而在4000点上，震荡确认的是1/2线，恰好在5月的180月大周期中，以530暴跌来继续印证这些比例线对大盘走势控制的有效性」。
+      2007 年 9 月 17 日的长文是这一框架最完整的表述，2/3 线在 5109 点、3/4 线在 5569 点，
+      而 911 则是「对2/3线突破后的回抽」。</p>
+      <blockquote>「由于本月是第三季度K线的收盘月，因此，只要本月收盘不能收到3/4线之上，那么可以肯定地说，
+      2007年的最终收盘，将受制于3/4线」<cite>《2007年末，资金与政策博弈下的走势分析》2007-09-17</cite></blockquote>
+    </div>
+    <div class="card">
+      <h3>③ 均线系统：5 日 / 5 周 / 5 月线</h3>
+      <p>「最简单的经常是最便利且最有力的」——缠师反复以均线作为最终裁判。原文原话：「在技术分析中，
+      没有比均线系统更简单的，但在中长周期的分析中，一条5月或5周均线，就比绝大多数的复杂系统都有效了」。
+      <b>5 日线</b>控制超短线，<b>5 周线</b>是中线分界，<b>5 月线</b>是大级别转折的生死线。
+      「从2005年中行情发动以来，大盘从未有效跌破过5月均线，甚至在530大跌中，也没有发生过」。</p>
+      <blockquote>「任何在5月均线下的走势，最终都被证明是空头陷阱。但这样一个模式，最终必定会被打破，
+      而打破之时，就是行情进入大级别调整的确立之日。」<cite>《2007年末，资金与政策博弈下的走势分析》2007-09-17</cite></blockquote>
+    </div>
+    <div class="card">
+      <h3>④ 见顶：6124 点当天即定「赶顶游戏」节奏</h3>
+      <p>2007 年 9 月 17 日《2007 年末，资金与政策博弈下的走势分析》以比例线推出 6100 点为关键位，
+      并称「6165 点成为今年一个标杆式的点位」，警示「6100 点附近是后者行情一个特别值得留意的位置」。
+      10 月 16 日沪指见顶 6124.04 点当天，缠师发《6100 点终破，无憾矣！》
+      给出剧本：「现在个股并不重要，重要的是这个赶顶游戏的节奏」；次日《确实存在全面泡沫化的潜在风险》
+      断言「一旦全面泡沫破裂，那调整的时间将极为长」；10 月 18 日《不费吹灰之力，空头完胜》明确 6124.04 为最佳顶位。
+      12 月《2008 年行情展望》给出全年节奏：「先小扬再抑接着大扬后大抑」。</p>
+      <blockquote>「明年，至少有两个顶部是必须注意的，第一个就是6124点大调整的第二段上升所构造的顶部，这是一个小顶」
+      <cite>《2008年行情展望》2007-12-20</cite></blockquote>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2 class="sec">二、语料分布：解盘密度即关注度<em>发文密度与大盘转折高度同步</em></h2>
+  <div class="rule"></div>
+  <div class="card" style="padding:18px 14px 10px">
+    <div id="c1" class="chart" style="height:340px"></div>
+  </div>
+  <div class="note"><b>读法：</b>蓝柱为当月全部发文数，红柱为其中「大盘高相关」文章数（正文出现 12 处以上市场关键词）。
+  红柱自 2006 年 12 月起显著抬升，2007 年 8 月达到峰值 58 篇——正是 6124 见顶前后；
+  2008 年 1 月仍有 43 篇，对应熊市开年；2008 年 5 月红柱归零，对应熊市最恐慌、市场无话可说的阶段；
+  2008 年 8 月随 108 课与底部构造讨论重回 23 篇。</div>
+</section>
+
+<section>
+  <h2 class="sec">三、六阶段原文献索引<em>按大盘周期切分，可点击回溯原文</em></h2>
+  <div class="rule"></div>
+  <div id="keydocs"></div>
+</section>
+
+<section>
+  <h2 class="sec">四、关键点位与判断对照<em>缠师原文中的具体数字</em></h2>
+  <div class="rule"></div>
+  <table class="tbl">
+    <thead><tr><th>点位</th><th>时间/性质</th><th>缠师原文判断</th><th>出处</th></tr></thead>
+    <tbody>
+      <tr><td class="num">6124.04</td><td>2007-10-16 历史大顶</td><td>见顶当日《6100点终破，无憾矣！》给出「赶顶游戏」剧本；次日《确实存在全面泡沫化的潜在风险》；10-18 明确「最好不过的点位就是6124.04点」</td><td><a href="https://chanshi.vip/archiver/?tid-941.html" target="_blank" rel="noopener">6100点终破，无憾矣！</a></td></tr>
+      <tr><td class="num">5522</td><td>2008-01 跨年高点</td><td>6124 点下来第二段上升构造的小顶，「大盘有很大可能今年创不了新高」</td><td><a href="https://chanshi.vip/archiver/?tid-1124.html" target="_blank" rel="noopener">下周初决定大盘中线形态</a></td></tr>
+      <tr><td class="num">4814</td><td>2007-11 回调低点</td><td>行情数据：6124 见顶后首轮回调低点，跌幅约 21%，属牛市内正常调整（<b>缠师原文中未出现 4814 这一数字</b>，此处为行情对照）</td><td><a href="https://chanshi.vip/archiver/?tid-1038.html" target="_blank" rel="noopener">2008年行情展望</a></td></tr>
+      <tr><td class="num">5569</td><td>3/4 比例线</td><td>「那么可以肯定地说，2007年的最终收盘，将受制于3/4线」，即年内必现一次如 530 般的剧烈调整</td><td><a href="https://chanshi.vip/archiver/?tid-900.html" target="_blank" rel="noopener">2007年末，资金与政策博弈</a></td></tr>
+      <tr><td class="num">5109</td><td>2/3 比例线</td><td>911 大跌是对 2/3 线突破后的回抽，确认需 3 个月以上</td><td><a href="https://chanshi.vip/archiver/?tid-900.html" target="_blank" rel="noopener">2007年末，资金与政策博弈</a></td></tr>
+      <tr><td class="num">4144</td><td>2007-06 关键位</td><td>「只要大盘能保持围绕4144点的震荡，这种个股轮动会继续」（《论语》详解 66 附录解盘）</td><td><a href="https://chanshi.vip/archiver/?tid-755.html" target="_blank" rel="noopener">附录解盘（2007-06-13）</a></td></tr>
+      <tr><td class="num">3919</td><td>2007-07 颈线</td><td>「大盘就是在这N天反复强调的3919颈线下进行的蓄势」，突破不了则头肩底白搞</td><td><a href="https://chanshi.vip/archiver/?tid-776.html" target="_blank" rel="noopener">今日解盘：3919颈线折磨你</a></td></tr>
+      <tr><td class="num">3305</td><td>2008-04 超级熊市</td><td>4-23 印花税由 3‰ 降至 1‰，大盘如期在 3305 点受考验；反弹仅 20%</td><td><a href="https://chzhshch.blog/3305points" target="_blank" rel="noopener">纯技术化的走势如期遭受3305点考验</a></td></tr>
+      <tr><td class="num">2284 / 2952</td><td>2008-08 月线区间</td><td>月线底分型需守住 (2284,2952)，「2284点是绝对不能破的，一旦破了，就马上宣告月底分型至少要到10月后才有戏」；周线需确认 (2284,2601)，日线看 (2284,2455) 演化</td><td><a href="https://chzhshch.blog/stocks/108" target="_blank" rel="noopener">教你炒股票108：何谓底部</a></td></tr>
+      <tr><td class="num">2403</td><td>2008-08 超短线</td><td>「超短线就看周一能否站住2403点，能就极大机会延伸出日线图上的向上笔」</td><td><a href="https://chzhshch.blog/stocks/108" target="_blank" rel="noopener">教你炒股票108：何谓底部</a></td></tr>
+      <tr><td class="num">2329</td><td>2008-09 反弹压力</td><td>「2329点是短线关键压力，站不上去将继续弱势」；破底后反弹有技术基础但属短跑型</td><td><a href="https://chzhshch.blog/economics/rebounceinprospect" target="_blank" rel="noopener">不破不立，反弹可期</a></td></tr>
+      <tr><td class="num">2220</td><td>2008-09 反弹定级</td><td>《2220点决定最终反弹级别高度》——以 2220 点作为反弹级别的分界</td><td><a href="https://chanshi.vip/archiver/?tid-1325.html" target="_blank" rel="noopener">2220点决定最终反弹级别高度</a></td></tr>
+      <tr><td class="num">1664.93</td><td>2008-10-28 实际最低点</td><td><b>缠师从未在文中提及 1664 点</b>：其最后一篇大盘文章为 2008-10-05《美国救市，闹剧一场。》，此后停更至 2008-11。此行仅作事后事实对照，非缠师判断</td><td><a href="https://chzhshch.blog/3305points" target="_blank" rel="noopener">行情数据对照</a></td></tr>
+    </tbody>
+  </table>
+  <div class="src" style="margin-top:10px">点位数据：上证综指 2006-12-29 收 2675.47；2007-10-16 高 6124.04；2008-10-28 盘中低 1664.93；2008-12-31 收 1820.81（来源：结构化行情库）。
+  缠师判断为原文引述；1664 行为事后事实核对，非缠师原文观点。</div>
+</section>
+
+<section>
+  <h2 class="sec">五、三套分析框架的分工<em>缠师原文中并行使用的三套工具</em></h2>
+  <div class="rule"></div>
+  <div class="grid3">
+    <div class="card">
+      <h3>比例线框架</h3>
+      <ul>
+        <li>基准：1992 年 1429 点，总幅度 184×30 = 5520 点（原文表述）</li>
+        <li>原文给出：2/3 线 = 1429+184×30×2/3 = <b>5109</b>；3/4 线 = <b>5569</b></li>
+        <li>1/4 线 ≈ 2809、1/2 线 ≈ 3975（按同一公式推算，原文未直接列出数值）</li>
+        <li>227 暴跌印 1/4 线、530 暴跌印 1/2 线；911 是对 2/3 线突破后的回抽</li>
+        <li>用于中长线判定牛熊分界与年线空间</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3>均线框架</h3>
+      <ul>
+        <li>5 日线：超短线多空分界（「站不住，这轮杀跌就没完」）</li>
+        <li>5 周线：中线强弱，跌破即意味着调整级别升级</li>
+        <li>5 月线：大级别转折生死线——「这两年多，这5月线被有效跌破过吗？显然没有」（2007-08-21《教你炒股票72》）</li>
+        <li>教炒股票 106 课给出 5/13/21/34/55/89/144/233 斐波那契均线组与「板块强弱指标」</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3>中枢框架</h3>
+      <ul>
+        <li>每篇解盘标注中枢区间与第三类买卖点位置</li>
+        <li>108 课定义底部：第一类买点后至中枢首次走出第三类买卖点前，为底部构造过程</li>
+        <li>背驰段定性：「日线上可以先以背驰段看待，然后根据后面的走势去确认」</li>
+        <li>反弹定级：以第一中枢后是否出现第三类买点且非背驰向上为准则</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2 class="sec">六、缠师的操作纪律<em>大盘解读始终绑定仓位与心态</em></h2>
+  <div class="rule"></div>
+  <div class="qa"><div class="q">震荡行情怎么办？</div><div class="a">
+    「这种震荡行情，没什么基础的，最好就观望，半仓、空仓都无所谓，没这本事，就不一定玩这游戏」；
+    「对于初学者，震荡的原则就是<b>宁愿卖早，一定不卖晚</b>，有钱，还怕买不到股票？」
+    （2007-07-02《解盘：今天看不明白的都请严重补课》）
+  </div></div>
+  <div class="qa"><div class="q">大盘与个股的配合？</div><div class="a">
+    「一旦大盘不配合，本ID依然如前面那些，砸起来比谁都凶」（2007-07-03 解盘）；
+    「本ID说了只坐轿子，但没有任何地方，本ID曾经说要看空」——
+    底部之后只做轿子，是其在整个牛熊周期中未变的仓位原则。（2007-08-09《顶住明天，第四拨人才可能解脱。》）
+  </div></div>
+  <div class="qa"><div class="q">底部区间如何操作？</div><div class="a">
+    「现在不要一边思维，有能力的要多活动，<b>大盘在大的底部构造中，机会多多，来回几次，比来一次大的都好玩</b>，
+    最后再在大的上面狠咬一口，那又够一年半载消费了。」（2008-08-29《教你炒股票108》附录）
+  </div></div>
+  <div class="qa"><div class="q">预测观</div><div class="a">
+    「任何所谓的预测，都是闲谈，活动一下唾液的分泌功能」；「在本ID这里，只有当下的走势」。
+    所谓 6124 与 1664 的「预言」，实为走势结构的自然推论——上涨走势与下跌走势各有其「完美」的完成点，
+    他只是识别市场正在走向哪种完美，然后执行交易纪律。（2008-08-29《超短线就看周一及2403点》）
+  </div></div>
+</section>
+
+</main>
+<footer id="foot"></footer>
+</div>
+
+<script>
+const esc = s => String(s==null?'':s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const LABELS=["2006-02","2006-03","2006-04","2006-05","2006-06","2006-07","2006-08","2006-09","2006-10","2006-11","2006-12","2007-01","2007-02","2007-03","2007-04","2007-05","2007-06","2007-07","2007-08","2007-09","2007-10","2007-11","2007-12","2008-01","2008-02","2008-03","2008-04","2008-05","2008-06","2008-07","2008-08","2008-09","2008-10"];
+const TOTAL=[64,70,47,28,46,52,39,41,33,40,48,46,32,41,40,44,47,78,91,88,81,70,83,83,49,58,47,21,44,34,58,32,2];
+const MARKET=[4,3,1,1,0,0,0,4,0,14,30,32,23,33,29,36,31,31,58,43,39,42,43,43,29,29,10,0,7,6,23,11,0];
+
+const chartEl=document.getElementById('c1');
+if (typeof echarts !== 'undefined' && chartEl) {
+  echarts.init(chartEl).setOption({
+  tooltip:{trigger:'axis',axisPointer:{type:'shadow'}},
+  legend:{data:['当月全部发文','大盘高相关文章'],top:4,itemGap:18},
+  grid:{left:52,right:20,top:42,bottom:56},
+  xAxis:{type:'category',data:LABELS,axisLabel:{rotate:52,fontSize:10,color:'#8b95a1'},axisLine:{lineStyle:{color:'#e4e2dd'}},axisTick:{show:false}},
+  yAxis:{type:'value',name:'篇',nameTextStyle:{color:'#8b95a1',fontSize:11},splitLine:{lineStyle:{color:'#eeece8'}},axisLabel:{fontSize:11,color:'#8b95a1'}},
+  series:[
+    {name:'当月全部发文',type:'bar',data:TOTAL,itemStyle:{color:'#b8c6d4',borderRadius:[2,2,0,0]},barMaxWidth:20},
+    {name:'大盘高相关文章',type:'bar',data:MARKET,itemStyle:{color:'#8c2f39',borderRadius:[2,2,0,0]},barMaxWidth:20}
+  ]
+  });
+} else if (chartEl) {
+  // ECharts 未加载时退化为纯 HTML 表格，保证离线环境信息不丢失
+  chartEl.style.height='auto';
+  chartEl.innerHTML='<table style="width:100%;border-collapse:collapse;font-size:13px">'+
+    '<thead><tr><th style="text-align:left;padding:5px 8px;border-bottom:1px solid #e4e2dd">月份</th>'+
+    '<th style="text-align:right;padding:5px 8px;border-bottom:1px solid #e4e2dd">当月全部发文</th>'+
+    '<th style="text-align:right;padding:5px 8px;border-bottom:1px solid #e4e2dd">大盘高相关文章</th></tr></thead><tbody>'+
+    LABELS.map((l,i)=>'<tr><td style="padding:4px 8px;border-bottom:1px solid #f0eeea">'+l+'</td>'+
+      '<td style="padding:4px 8px;border-bottom:1px solid #f0eeea;text-align:right">'+TOTAL[i]+'</td>'+
+      '<td style="padding:4px 8px;border-bottom:1px solid #f0eeea;text-align:right;color:#8c2f39;font-weight:600">'+MARKET[i]+'</td></tr>').join('')+
+    '</tbody></table>';
+}
+
+document.getElementById('foot').innerHTML =
+  '原文来源：chanshi.vip（缠中说禅博客原文归档，1,137 篇列表 / 1,005 篇正文解析）· chzhshch.blog（缠师官方镜像站 1,432 篇，用于交叉校验与补全，两源去重后共 1,679 篇）　|　' +
+  '行情数据：结构化行情库（000001.SH 上证综指，2006-12-29 至 2008-12-31）　|　' +
+  '检索索引：16.1 万词条 / 34,520 段落片段，中文双字切分 + TF-IDF 加权　<br>' +
+  '<b>本报告为历史文献整理与研究工具，所载观点为缠师 2006–2008 年原文表述，不构成任何投资建议。市场有风险，投资需谨慎。</b>';
+</script>
+<script>
+// 阶段精选：优先用本地服务，失败则回落到本地打包文件（保证 file:// 直接打开也可用）
+function renderKeyPhases(d){
+  const box=document.getElementById('keydocs');
+  box.innerHTML = d.phases.map(ph=>`
+    <div class="tl">
+      <div class="tl-item">
+        <div class="dt">${esc(ph.span)}</div>
+        <div class="tt">${esc(ph.name)}　<span class="pill g">${ph.count} 篇</span></div>
+      </div>
+      ${ph.docs.map(x=>`<div class="tl-item" style="margin-left:16px">
+        <div class="dt">${esc((x.dt||'').slice(0,16))}</div>
+        <div class="tt" style="font-weight:500;font-size:14.5px">${esc(x.title||'（无标题）')}</div>
+        <div class="bd">${esc((x.excerpt||'').slice(0,190).replace(/attach:\/\/\d+\.\w+\s*/g,''))}…</div>
+        <div class="lk"><a href="${esc(x.url)}" target="_blank" rel="noopener">查看原文 ↗</a></div>
+      </div>`).join('')}
+    </div>`).join('');
+}
+function loadKeyLocal(){
+  const s=document.createElement('script');
+  s.src='data/key_snapshot.js';
+  s.onload=()=>{ if(window.__CL_KEY__) renderKeyPhases(window.__CL_KEY__); };
+  s.onerror=()=>{ document.getElementById('keydocs').innerHTML='<div style="padding:16px;color:#8b95a1;font-size:13px">阶段精选数据不可用：未找到 data/key_snapshot.js</div>'; };
+  document.head.appendChild(s);
+}
+if (location.protocol === 'file:') {
+  loadKeyLocal();
+} else {
+  fetch('/api/key').then(r=>{ if(!r.ok) throw new Error('HTTP '+r.status); return r.json(); })
+    .then(renderKeyPhases)
+    .catch(()=>loadKeyLocal());
+}
+</script>
+</body>
+</html>

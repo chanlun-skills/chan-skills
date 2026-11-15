@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>缠中说禅 · 大盘解读文献库 · 入口</title>
+<style>
+:root{
+  --bg:#f7f6f3; --card:#fff; --ink:#1f2328; --ink2:#4b5563; --ink3:#8b95a1;
+  --line:#e4e2dd; --accent:#8c2f39; --accent-soft:#f7ebec; --gold:#a67c2e; --blue:#2c5f8d;
+  --shadow:0 1px 2px rgba(31,35,40,.05),0 4px 16px rgba(31,35,40,.05);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{
+  font-family:"Songti SC","STSong","Source Han Serif SC","Noto Serif CJK SC",Georgia,serif;
+  background:var(--bg);color:var(--ink);line-height:1.75;font-size:15px;-webkit-font-smoothing:antialiased;
+}
+.wrap{max-width:1080px;margin:0 auto;padding:0 24px 70px}
+header{background:linear-gradient(180deg,#fff 0%,#faf9f7 100%);border-bottom:1px solid var(--line);padding:40px 0 30px;margin-bottom:28px}
+.hd{max-width:1080px;margin:0 auto;padding:0 24px}
+.kicker{font-size:12px;letter-spacing:.2em;color:var(--gold);text-transform:uppercase;margin-bottom:9px}
+h1{font-size:29px;font-weight:600;letter-spacing:.01em;color:#1f2329}
+.sub{color:var(--ink2);font-size:14.5px;margin-top:9px;max-width:820px}
+.kpis{display:flex;gap:12px;flex-wrap:wrap;margin-top:20px;padding-top:18px;border-top:1px solid #eceae5}
+.kpi{background:var(--bg);border:1px solid var(--line);border-radius:7px;padding:9px 15px;min-width:104px}
+.kpi b{display:block;font-size:20px;font-weight:600;color:var(--accent);line-height:1.35}
+.kpi span{font-size:11.5px;color:var(--ink3)}
+h2{font-size:18px;font-weight:600;margin:30px 0 14px;padding-left:11px;border-left:3px solid var(--accent)}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(310px,1fr));gap:15px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:19px 21px;
+  box-shadow:var(--shadow);transition:.16s;display:flex;flex-direction:column}
+.card:hover{border-color:#cfcac0;transform:translateY(-2px)}
+.card .tagline{font-size:11.5px;color:var(--gold);letter-spacing:.1em;text-transform:uppercase;margin-bottom:7px}
+.card h3{font-size:16.5px;font-weight:600;margin-bottom:8px;color:#1f2329;line-height:1.5}
+.card p{font-size:13.5px;color:var(--ink2);line-height:1.85;flex:1}
+.card .feats{margin:12px 0 15px;font-size:12.5px;color:var(--ink3);line-height:1.95}
+.card .feats li{list-style:none;padding-left:15px;position:relative}
+.card .feats li:before{content:"·";position:absolute;left:3px;color:var(--accent);font-weight:700}
+.go{display:block;text-align:center;padding:9px 18px;border-radius:7px;background:var(--accent);color:#fff;
+  text-decoration:none;font-size:14px;font-weight:500;font-family:inherit;transition:.15s}
+.go:hover{background:#75262f}
+.go.ghost{background:#fff;color:var(--accent);border:1px solid var(--accent)}
+.go.ghost:hover{background:var(--accent-soft)}
+.rownote{background:var(--card);border:1px solid var(--line);border-left:3px solid var(--gold);
+  border-radius:8px;padding:15px 19px;margin-top:26px;font-size:13.5px;color:var(--ink2);line-height:1.95}
+.rownote b{color:var(--ink);font-weight:600}
+.rownote code{background:var(--bg);padding:1px 7px;border-radius:3px;font-size:12px;
+  font-family:ui-monospace,SFMono-Regular,Menlo,monospace;color:var(--accent)}
+.rownote ul{margin:8px 0 0 18px}
+.rownote li{margin-bottom:5px}
+footer{margin-top:36px;padding-top:18px;border-top:1px solid var(--line);font-size:12px;color:var(--ink3);line-height:2}
+a{color:var(--accent)}
+@media(max-width:640px){
+  .hd,.wrap{padding-left:16px;padding-right:16px}
+  h1{font-size:22px}
+}
+</style>
+</head>
+<body>
+<header>
+  <div class="hd">
+    <div class="kicker">Chanlun Archive · 缠中说禅原文库</div>
+    <h1>缠中说禅 · 当年大盘解读文献库</h1>
+    <p class="sub">收录缠师（缠中说禅）2006–2008 年对上证综指大盘走势的实时解盘与中线判断原文，覆盖牛、见顶与熊市全周期。以下三个入口均可直接双击打开，无需联网、无需启动服务。</p>
+    <div class="kpis" id="kpis"></div>
+  </div>
+</header>
+
+<div class="wrap">
+  <h2>三个入口</h2>
+  <div class="cards">
+
+    <div class="card">
+      <div class="tagline">入口一 · 主用</div>
+      <h3>文献库查阅页</h3>
+      <p>按关键词、年份、主题、大盘相关度四维筛选已入库的 <b>1,100</b> 篇大盘解读文献，每条可一键直达原站全文。</p>
+      <ul class="feats">
+        <li>数据与线上文献库完全同源（服务端权威快照）</li>
+        <li>12 个快捷主题 chip：6124 大顶 / 比例线 / 中枢 / 背驰…</li>
+        <li>每条含原文摘录、字数、来源站点与「查阅原文 →」</li>
+      </ul>
+      <a class="go" href="lib_reader.html">打开查阅页 →</a>
+    </div>
+
+    <div class="card">
+      <div class="tagline">入口二 · 全文检索</div>
+      <h3>本地检索应用</h3>
+      <p>基于中文双字切分 + TF-IDF 加权的<b>全文检索</b>，覆盖 <b>1,679</b> 篇原文、273.8 万字，可定位到命中的具体段落。</p>
+      <ul class="feats">
+        <li>四个页签：检索结果 / 时间轴 / 阶段精选 / 方法论提要</li>
+        <li>支持「6124」「1664」「5月线」「第三类买点」等直查</li>
+        <li>检索引擎在浏览器内运行，完全离线可用</li>
+      </ul>
+      <a class="go" href="web/index.html">打开检索应用 →</a>
+    </div>
+
+    <div class="card">
+      <div class="tagline">入口三 · 研究综述</div>
+      <h3>汇总研报</h3>
+      <p>六章研究报告：核心结论、语料分布、六阶段文献索引、关键点位对照表、三套分析框架、操作纪律。</p>
+      <ul class="feats">
+        <li>逐条引文可回溯至原文标题与发布时间</li>
+        <li>含比例线 / 均线系统 / 中枢结构三套框架对照</li>
+        <li>已标注「缠师原文从未提及 1664 点」等事实边界</li>
+      </ul>
+      <a class="go" href="report.html">打开研报 →</a>
+    </div>
+
+  </div>
+
+  <div class="rownote">
+    <b>使用说明</b>
+    <ul>
+      <li>直接<b>双击</b>上述任一 HTML 即可打开，无需启动任何服务。</li>
+      <li>若把文件移动到别处，<b>请连同 <code>data/</code> 与 <code>web/</code> 目录一起移动</b>——里面是离线数据与索引。</li>
+      <li>本项目在资料库（Library）中亦有同步版本：数据表「缠中说禅 · 大盘解读文献全集」1,100 条，查阅页可直接读取数据表实时数据（<code>lib_reader.html</code> 在 Library 中打开即走实时路径）。</li>
+      <li>如需以服务方式运行（便于二次开发），在项目目录执行 <code>python server.py</code> 后访问 <code>http://127.0.0.1:8765</code>。</li>
+    </ul>
+  </div>
+
+  <footer>
+    原文来源：chanshi.vip（缠中说禅博客原文归档）· chzhshch.blog（缠师官方镜像），两源去重后共 1,679 篇　|　
+    检索索引：16.1 万词条 / 34,520 段落片段（中文 bigram + TF-IDF 加权）<br>
+    本页为历史文献整理与检索工具，所载观点为缠师 2006–2008 年原文，不构成任何投资建议。市场有风险，投资需谨慎。
+  </footer>
+</div>
+
+<script>
+// KPI 数值取自实际语料统计（data/docs.json 与数据表回读结果）
+const KPIS = [
+  ['1,679', '原文篇数'],
+  ['273.8 万', '正文字数'],
+  ['16.1 万', '可检索词条'],
+  ['34,520', '段落片段'],
+  ['1,100', '文献库已入库']
+];
+document.getElementById('kpis').innerHTML = KPIS
+  .map(x => '<div class="kpi"><b>' + x[0] + '</b><span>' + x[1] + '</span></div>').join('');
+
+// 预检：各入口文件是否就位，缺失则高亮提示
+const LINKS = [
+  { href: 'lib_reader.html', dep: 'data/lib_snapshot.js' },
+  { href: 'web/index.html', dep: 'web/data/manifest.js' },
+  { href: 'report.html', dep: 'data/echarts.min.js' }
+];
+LINKS.forEach(function (item) {
+  const a = document.querySelector('a[href="' + item.href + '"]');
+  if (!a) { return; }
+  const s = document.createElement('script');
+  s.src = item.dep;
+  s.onerror = function () {
+    a.style.background = '#a67c2e';
+    a.textContent = '数据文件缺失，请检查 data/ 目录 →';
+  };
+  document.head.appendChild(s);
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>缠中说禅 · 关于本库</title>
+<style>
+:root{--bg:#0e1014;--panel:#161920;--panel2:#1c202a;--text:#e7e9ee;--muted:#929cad;
+ --dim:#6b7482;--line:#262b36;--accent:#8b5cf6;--gold:#d9b06a;--green:#34d399}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--text);
+ font-family:"PingFang SC","Microsoft YaHei","Source Han Sans SC",sans-serif;line-height:1.85}
+header{position:sticky;top:0;z-index:20;background:rgba(14,16,20,.94);backdrop-filter:blur(12px);
+ border-bottom:1px solid var(--line);padding:16px 26px;display:flex;align-items:center;gap:18px}
+header h1{margin:0;font-size:17px;font-weight:600}
+header h1 em{font-style:normal;color:var(--gold)}
+header .back{margin-left:auto;font-size:13px;color:var(--accent2);text-decoration:none}
+header .back:hover{color:var(--gold)}
+.wrap{max-width:1000px;margin:0 auto;padding:30px 24px 80px}
+h2{font-size:19px;color:var(--gold);margin:34px 0 14px;padding-bottom:9px;border-bottom:1px solid var(--line)}
+h2:first-child{margin-top:0}
+h3{font-size:15.5px;margin:22px 0 9px;color:#e9d5ff}
+p{margin:11px 0;font-size:14px;color:#c4cad4}
+.lead{font-size:15px;color:var(--muted)}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:13px;margin:18px 0}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:11px;padding:16px 18px}
+.card .n{font-size:26px;font-weight:700;color:var(--gold);line-height:1.25}
+.card .l{font-size:12.5px;color:var(--muted);margin-top:5px}
+table{width:100%;border-collapse:collapse;font-size:13.5px;background:var(--panel);
+ border-radius:11px;overflow:hidden;margin:14px 0}
+th{background:#252a35;color:var(--gold);text-align:left;padding:10px 14px;font-weight:600;font-size:13px}
+td{padding:9px 14px;border-bottom:1px solid #1f232c;vertical-align:top}
+tr:last-child td{border-bottom:none}
+td code{background:var(--panel2);padding:1px 6px;border-radius:4px;font-size:12px;color:var(--green)}
+ul{margin:10px 0;padding-left:22px}
+li{margin:6px 0;font-size:14px;color:#c4cad4}
+.note{background:rgba(139,92,246,.08);border:1px solid rgba(139,92,246,.26);border-radius:10px;
+ padding:14px 18px;margin:18px 0;font-size:13.5px;color:#cfc7e8}
+.keys{display:flex;flex-wrap:wrap;gap:9px;margin:12px 0}
+.key{background:var(--panel2);border:1px solid var(--line);border-radius:8px;padding:8px 14px;font-size:13px}
+.key b{display:inline-block;background:var(--panel3);border:1px solid var(--line2);border-radius:4px;
+ padding:0 7px;margin-right:8px;font-family:ui-monospace,monospace;font-size:11.5px;color:var(--accent2);font-weight:600}
+a{color:var(--accent2)}
+.srclist{font-size:13px;color:var(--muted)}
+.srclist li{margin:5px 0}
+</style>
+</head>
+<body>
+<header>
+  <h1>缠中说禅 · <em>关于本库</em></h1>
+  <a class="back" href="index.html">← 返回检索库</a>
+</header>
+<div class="wrap">
+
+<h2>这是什么</h2>
+<p class="lead">这是对「缠中说禅」（李彪）博客及其论坛生态中<strong>佛学、禅宗相关材料</strong>的一次全网采集与结构化整理。全部内容来自公开的一手来源，未作改写，仅做分节、归类与检索索引。</p>
+
+<h2>数据规模</h2>
+<div class="cards" id="scale-cards">
+  <div class="card"><div class="n" id="c-total">—</div><div class="l">段落级记录</div></div>
+  <div class="card"><div class="n">83</div><div class="l">博客禅宗专栏篇目</div></div>
+  <div class="card"><div class="n">114</div><div class="l">《论语》详解含佛学篇目</div></div>
+  <div class="card"><div class="n">6,852</div><div class="l">论坛帖子</div></div>
+  <div class="card"><div class="n">68,685</div><div class="l">论坛跟帖楼层</div></div>
+  <div class="card"><div class="n">5,144</div><div class="l">博文回复区条目</div></div>
+</div>
+
+<table>
+<tr><th>分类</th><th>内容</th><th>数量</th></tr>
+<tr><td><code>博客·禅宗专栏</code></td><td>《缠非缠、禅非禅》28 篇、《教你打坐》30 篇、陈建民《禅宗辨微》辨微 3 篇、禅余随笔 22 篇</td><td><span data-cat="博客·禅宗专栏">—</span> 段</td></tr>
+<tr><td><code>博客·论语详解</code></td><td>《论语》详解给所有曲解孔子的人——含佛学义理辨析的段落</td><td><span data-cat="博客·论语详解">—</span> 段</td></tr>
+<tr><td><code>博客·兜率天连载</code></td><td>《兜率天》21 节，讲禅定与瑜伽解脱</td><td><span data-cat="博客·兜率天连载">—</span> 段</td></tr>
+<tr><td><code>博客·回复区</code></td><td>博文回复区：缠师本人答疑 + 网友跟帖</td><td><span data-cat="博客·回复区">—</span> 段</td></tr>
+<tr><td><code>论坛·跟帖</code></td><td>缠师讲坛（chanluntan.com）12 板块跟帖中的佛学楼层</td><td><span data-cat="论坛·跟帖">—</span> 段</td></tr>
+</table>
+
+<h2>数据来源</h2>
+<ul class="srclist">
+  <li><b>chzhshch.blog</b>（"全球第一博客"）— 缠师博客主站，含禅宗专栏、《教你打坐》、《论语》详解、《兜率天》等全部原文及博文回复区。Markdown 原文经由其 GitHub 源仓库获取（3,087 篇文档）。</li>
+  <li><b>chzhshch.org</b> — 博客存档站，用于交叉校验。</li>
+  <li><b>chanluntan.com</b>（缠师讲坛）— 论坛主站，12 个板块：缠师博客原文、缠迷港湾、木子文集、白云杂说、缠论汇编、缠论进阶、缠论启蒙、缠论精研、润之思想、缠海典库、缠界网摘、缠光拾贝。</li>
+  <li><b>chanshi.vip</b> — 同源镜像站，补充抓取 436 帖。</li>
+  <li><b>《缠中说禅文集·文史哲系列》PDF</b>（681 页）— 官方合集，含缠非缠禅非禅全 28 篇等。</li>
+</ul>
+
+<h2>怎么用</h2>
+<h3>浏览</h3>
+<p>左侧目录按「来源 · 子类」两级组织，点击分类即可进入；点击具体文章标题会展开该文的全部段落。目录中的分类计数即段落数。</p>
+<h3>搜索</h3>
+<p>顶部搜索框做全文检索，覆盖标题与正文。中文按二元组切分索引，命中后按相关度排序，关键词以高亮标出。输入时会给出主题词建议与标题匹配建议，可直接点击跳转。</p>
+<div class="keys">
+  <div class="key"><b>/</b>聚焦搜索框</div>
+  <div class="key"><b>Esc</b>清除焦点</div>
+  <div class="key"><b>?</b>显示快捷键</div>
+</div>
+<h3>筛选</h3>
+<p>主区顶部的筛选条显示当前生效的分类、子类与关键词条件，点击任一条件的 × 即可单独撤销。</p>
+<h3>分享与收藏</h3>
+<p>地址栏会实时反映当前状态：搜索用 <code>?q=</code>，分类用 <code>?cat=</code>，子类用 <code>?sub=</code>。直接复制地址即可把某次检索或某个目录位置分享给他人，也可作为书签留存。</p>
+
+<h3>关系图页</h3>
+<p>「思想关系图」页用另一条线索组织材料：不是按篇目，而是按论证链——从「一切概念皆自缠自绑」到「生死为枢」到「打坐的轨道模型」到「共业之网的封闭性」到「闻信即迷信」的推导路径，并附宗派辨析、儒释接点、流行话术证伪三组专题对照。</p>
+
+<div class="note">
+  <b>关于版权：</b>全部原文版权归缠中说禅（李彪）及相关作者所有。本库仅作研究、学习与检索之用，不作任何商业用途。若需引用，请回到原始出处（每条记录均附原文链接）。
+</div>
+
+<h2>技术说明</h2>
+<table>
+<tr><th>环节</th><th>做法</th></tr>
+<tr><td>博客正文</td><td>GitHub 源仓库 Markdown 直接读取，保留 <code>blog-comment</code> 回复区块</td></tr>
+<tr><td>回复拆分</td><td>回复区内嵌套「<code>[匿名] 用户名 / 时间 / 内容</code>」结构，二次正则拆分作者与正文</td></tr>
+<tr><td>论坛抓取</td><td>Discuz printable 版整帖获取；页面 GB18030 编码；楼层按「<code>用户名 2013/2/24 19:57:44</code>」独占行切分</td></tr>
+<tr><td>PDF</td><td>pypdf 提取 681 页全文，按篇章标题切分并按佛学关键词密度筛选</td></tr>
+<tr><td>内容甄别</td><td>三层判定：强佛学词表 → 禅语境词表（含「缠中说禅」笔名归一化）→ 股市技术分析噪音密度；专栏类按文章级判定，论坛/回复区按段落级严格判定</td></tr>
+<tr><td>搜索索引</td><td>中文二元组 + 英文单词倒排索引，索引标题全文与正文前 400 字</td></tr>
+<tr><td>前端加载</td><td>语料按分类与体积双重分片（单片 ≤1.5 MB），按需懒加载；深链接 <code>?q= / ?cat= / ?sub=</code> 可分享当前检索与浏览位置</td></tr>
+</table>
+
+</div>
+<script src="tree.js"></script>
+<script src="search_idx.js"></script>
+<script>
+// 统计数字直接读数据文件渲染，避免手写数字与实际语料脱节
+(function(){
+  var TREE=window.TREE||{};
+  var total=0;
+  Object.keys(TREE).forEach(function(c){
+    var n=TREE[c].count; total+=n;
+    document.querySelectorAll('[data-cat="'+c+'"]').forEach(function(el){ el.textContent=n.toLocaleString(); });
+  });
+  var t=document.getElementById('c-total');
+  if(t) t.textContent=total.toLocaleString();
+})();
+</script>
+</body>
+</html>

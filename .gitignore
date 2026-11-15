@@ -1,0 +1,48 @@
+# ---- 系统与编辑器 ----
+.DS_Store
+Thumbs.db
+desktop.ini
+.vscode/
+.idea/
+*.swp
+*~
+
+# ---- Python ----
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+.pytest_cache/
+
+# ---- Node ----
+node_modules/
+npm-debug.log*
+yarn-error.log*
+.pnpm-store/
+
+# ---- 大体积素材（走 GitHub Release / 网盘分发，不入库）----
+# 案例大全配图包 427MB
+docs/images/配图/
+*.zip
+*.7z
+*.rar
+*.tar.gz
+# 音频母版与视频工程（缠师音乐会自有生产资产）
+*.wav
+*.mp3
+*.m4a
+*.mp4
+*.mov
+*.prproj
+*.aep
+*.srt
+# 商业生产文稿（长版口播稿 / 选题分期 / 抖音文稿）
+*_长版文稿库.csv
+选题分期/
+抖音文稿/
+
+# ---- 本地临时 ----
+tmp_*.py
+*.log
+.DS_Store

@@ -1,0 +1,217 @@
+<div align="center">
+
+# 缠论 Skills 系列
+
+**让 AI 学会缠论：案例复盘 · 三买汇集 · 大盘解盘 · 佛学与禅宗 · 周末音乐会 · 妖股年鉴**
+
+![banner](docs/images/banner.png)
+
+[![Skills](https://img.shields.io/badge/skills-6-blueviolet)](./)
+[![License](https://img.shields.io/badge/license-CC%20BY--NC--SA%204.0-lightgrey)](./LICENSE)
+[![中文](https://img.shields.io/badge/语言-中文-orange)](./)
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen)](./CONTRIBUTING.md)
+
+Agent Skills（SKILL.md 开放标准）· 一次开发，Claude Code / Codex / Cursor / WorkBuddy 等多平台可用
+
+</div>
+
+---
+
+## 这是什么
+
+把缠中说禅（缠师）的技术分析教学、佛学禅宗专栏、周末音乐连载，以及 37 年 A 股妖股实算数据，整理成 **6 个可被 AI 直接调用的 Skill**。
+
+每个 Skill 都是一个标准目录，里面是：
+
+- `SKILL.md` —— 技能说明与触发场景（AI 靠它决定何时调用）
+- `references/` —— 结构化语料、索引、离线查阅器
+- `scripts/` —— 零依赖命令行检索工具（`python scripts/xxx.py --stats` 即可验证）
+
+**不是荐股工具。** 所有内容定位为技术理论学习与历史行情复盘，AI 遇到"现在该买什么"会明确拒绝。
+
+---
+
+## 📦 Skills 一览
+
+| Skill | 目录 | 内容 | 体量 |
+|---|---|---|---|
+| 缠论案例大全 | [`chanlun-case-library`](./chanlun-case-library) | 3,026 条历史案例、347 只个股、六大经典案例深度剖析 | 3.3MB |
+| 缠论三买汇集 | [`chanlun-sanmai`](./chanlun-sanmai) | 20 条日线三买案例（确认13/否认3/讨论4）、81 条原话库、五步判定链、三处流传资料纠错 | 1.3MB |
+| 缠论大盘解盘 | [`chanlun-jiexpan`](./chanlun-jiexpan) | 515 篇时间线解盘、946 条大盘主题帖、6 个关键时段复盘、约 1,100 条文库目录 | 12MB |
+| 缠论佛学与禅宗 | [`chanlun-chan-zen`](./chanlun-chan-zen) | 7,131 条语料约 134 万字、12 大争鸣议题、2,355 条概念索引、离线检索站点 | 18MB |
+| 缠师周末音乐会 | [`chanlun-music`](./chanlun-music) | 42 期古典音乐连载全文、7,149 条回复、77 篇声乐/作曲/流行专题、离线查看器 | 5.3MB |
+| 妖股年鉴 | [`chanlun-yaogu`](./chanlun-yaogu) | 1990—2026 共 37 年 444 条妖股明细、日线谷→峰实算、420 组日线、40 条修正榜 | 6.5MB |
+
+> 合计 158 个文件、约 46MB，全部离线可用，无任何运行时依赖。
+
+---
+
+## ✨ 效果演示
+
+<table>
+<tr>
+<td width="50%"><b>缠论案例大全</b></td>
+<td width="50%"><b>缠论三买汇集</b></td>
+</tr>
+<tr>
+<td><img src="docs/images/demo-case-library.gif" alt="案例大全演示"></td>
+<td><img src="docs/images/demo-sanmai.gif" alt="三买汇集演示"></td>
+</tr>
+<tr>
+<td><b>大盘解盘</b></td>
+<td><b>妖股年鉴</b></td>
+</tr>
+<tr>
+<td><img src="docs/images/demo-jiexpan.gif" alt="大盘解盘演示"></td>
+<td><img src="docs/images/demo-yaogu.gif" alt="妖股年鉴演示"></td>
+</tr>
+</table>
+
+*演示动图由使用者投稿补充，欢迎在 Issues 里提交你录制的版本。*
+
+---
+
+## 🚀 安装方式
+
+### 方式一：一键安装（推荐）
+
+```bash
+# 安装全部 6 个 Skill
+npx skills add 你的用户名/chan-skills
+
+# 只安装某一个
+npx skills add 你的用户名/chan-skills --skill chanlun-sanmai
+```
+
+### 方式二：手动克隆
+
+```bash
+git clone https://github.com/你的用户名/chan-skills.git
+cd chan-skills
+
+# Claude Code 全局安装
+cp -r chanlun-* ~/.claude/skills/
+
+# 或项目级安装
+cp -r chanlun-* ./.claude/skills/
+```
+
+### 方式三：各平台市场
+
+| 平台 | 位置 |
+|---|---|
+| SkillsMP | skillsmp.com（自动索引 GitHub 仓库） |
+| skills.sh | `npx skills add` 官方目录，装机量计入排行 |
+| 腾讯 SkillHub | skillhub.tencent.com（国内高速镜像） |
+| ClawHub | `npx clawhub install` |
+
+### 安装后验证
+
+```bash
+cd chan-skills/chanlun-case-library
+python scripts/search_cases.py --stats
+```
+
+有任何输出即安装成功。所有脚本仅用 Python 标准库，**无需 pip install**。
+
+---
+
+## 💬 加入交流
+
+<img src="docs/images/qun-qrcode.png" width="220" alt="微信群二维码">
+
+**微信群二维码 7 天过期** —— 二维码失效时请查看仓库置顶 Issue「📌 群二维码 & 常见问题」，那里会持续更新最新群码。
+
+Discussions 开放 Q&A 与案例讨论，欢迎把你的复盘结果发上来。
+
+---
+
+## ☕ 请作者喝杯茶
+
+<table>
+<tr>
+<td align="center"><img src="docs/images/donate-wechat.png" width="160" alt="微信收款码"></td>
+<td align="center"><img src="docs/images/donate-alipay.png" width="160" alt="支付宝收款码"></td>
+<td align="center"><b>爱发电</b><br><a href="https://afdian.com/a/你的ID">afdian.com/a/你的ID</a></td>
+</tr>
+<tr>
+<td align="center">微信</td>
+<td align="center">支付宝</td>
+<td align="center">海外 / 不方便扫码</td>
+</tr>
+</table>
+
+这些 Skill 是完全免费开源的。维护它们需要时间 —— 数据纠错、脚本维护、文档更新。如果对你有帮助，一杯咖啡就是最好的支持。
+
+---
+
+## 🧭 典型用法
+
+| 你问 | 用哪个 Skill |
+|---|---|
+| "缠师当年怎么分析中国联通的？" | 案例大全 → 247 条案例时间线 |
+| "这个位置算不算三买？五步怎么走？" | 三买汇集 → 判定链 + 确认/否认双案例 |
+| "2007 年 5 月 30 日缠师怎么判断大盘的？" | 大盘解盘 → 530 当日三来源交叉印证 |
+| "缠师说的'缘起'是什么意思，出处在哪？" | 佛学与禅宗 → 概念索引定位原文 |
+| "第 5 期音乐会放的什么曲子？缠师怎么评的？" | 周末音乐会 → 42 期节目单与乐评 |
+| "2015 年最猛的妖股是哪些，实算涨幅多少？" | 妖股年鉴 → 37 年年份卡 + 日线实算 |
+
+跨 Skill 组合示例：
+- **"2007 成都建投成妖的过程"** → 妖股年鉴给实算涨幅 → 案例大全给同期解盘原文
+- **"做一份缠师人物全景介绍"** → 佛学库给禅学一面 → 音乐库给审美一面 → 其余三库给交易教学一面
+
+---
+
+## 📁 仓库结构
+
+```
+chan-skills/
+├── README.md
+├── LICENSE                       CC BY-NC-SA 4.0
+├── .github/
+│   ├── FUNDING.yml               打赏入口
+│   └── ISSUE_TEMPLATE/           问题反馈 + 内容纠错
+├── docs/
+│   ├── disclaimer.md             完整免责声明
+│   └── images/                   banner / 演示动图 / 二维码
+├── chanlun-case-library/         Skill 1 · 缠论案例大全
+├── chanlun-sanmai/               Skill 2 · 缠论三买汇集
+├── chanlun-jiexpan/              Skill 3 · 缠论大盘解盘
+├── chanlun-chan-zen/             Skill 4 · 缠论佛学与禅宗
+├── chanlun-music/                Skill 5 · 缠师周末音乐会
+└── chanlun-yaogu/                Skill 6 · 妖股年鉴
+```
+
+---
+
+## ⚠️ 免责声明
+
+本仓库所有内容仅为**缠论技术理论学习与历史行情复盘**，不构成任何投资建议、证券投资咨询或买卖推荐。
+
+- 缠师原文时间窗口为 2002—2008 年，与当下市场制度环境存在根本差异，**历史结构不可直接映射到当前市场**
+- 妖股年鉴采用"日线谷→峰最大涨幅"口径，与其他口径不可直接比较
+- 音乐会的缠师回复正文在源存档中缺失，引用以 42 期原文为准
+
+**完整版声明见 [docs/disclaimer.md](./docs/disclaimer.md)。**
+
+市场有风险，决策需独立判断，风险自担。
+
+---
+
+## 📜 License
+
+| 内容 | 协议 |
+|---|---|
+| 数据整理、结构化摘要、检索脚本、文档 | [CC BY-NC-SA 4.0](./LICENSE) |
+| 缠中说禅（缠师）原始文本 | 版权归原权利人所有，本仓库仅作索引与学习研究用途 |
+| 音频、录音、影像 | 不收录 |
+
+---
+
+## 📮 参与贡献
+
+- **纠错**：缠论案例的结构划分、股票代码、年份、涨幅口径有错漏 → 提 Issue，用「内容纠错」模板
+- **补图**：录一段你使用 Skill 的演示动图 → PR 或 Issue
+- **提需求**：想要哪个主题的 Skill，告诉我们
+
+详细贡献指南见 [CONTRIBUTING.md](./CONTRIBUTING.md)。
