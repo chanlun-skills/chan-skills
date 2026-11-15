@@ -122,16 +122,19 @@ python scripts/search_cases.py --stats
 
 <table>
 <tr>
-<td align="center"><b>QQ 群（永久有效）</b><br>
-<img src="docs/images/qq-qrcode.png" width="200" alt="QQ群二维码" onerror="this.closest('td').innerHTML='<b>QQ 群</b><br><br><small>群号 1132948221</small>'"></td>
+<td align="center"><b>QQ 群（永久有效 · 推荐）</b><br>
+<img src="docs/images/qq-qrcode.png" width="210" alt="QQ群二维码" onerror="this.closest('td').innerHTML='<b>QQ 群</b><br><br><small>群号 1132948221</small>'"></td>
 <td align="center"><b>微信群（7 天有效）</b><br>
-<img src="docs/images/qun-qrcode.png" width="160" alt="微信群二维码" onerror="this.closest('td').innerHTML='<b>微信群</b><br><br><small>见加群页</small>'"></td>
+<img src="docs/images/qun-qrcode.png" width="150" alt="微信群二维码" onerror="this.closest('td').innerHTML='<b>微信群</b><br><br><small>见加群页</small>'"></td>
 </tr>
 <tr>
 <td align="center">群号 <code>1132948221</code></td>
 <td align="center">见加群页</td>
 </tr>
 </table>
+
+> **扫不出？直接用群号 <code>1132948221</code>** —— 在 QQ 里搜索群号或"添加群"即可，不用扫码。
+> QQ 群二维码是彩色点阵格式，个别手机相机可能识别不了，群号是永远有效的兜底。
 
 加群页是一个**永久地址**：微信群二维码 7 天过期，但你只需替换 `docs/images/qun-qrcode.png` 这一张图并推送，这个链接和 README 都不用改。
 
