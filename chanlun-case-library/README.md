@@ -39,10 +39,10 @@ chanlun-case-library/
 
 ```bash
 # skills.sh（支持 Claude Code / Codex / Cursor 等 20+ Agent）
-npx skills add 你的用户名/chan-skills
+npx skills add chanlun-skills/chan-skills
 
 # 或手动克隆
-git clone https://github.com/你的用户名/chan-skills.git
+git clone https://github.com/chanlun-skills/chan-skills.git
 cp -r chan-skills/chanlun-case-library ~/.claude/skills/
 ```
 

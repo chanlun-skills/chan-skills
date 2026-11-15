@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>加入交流 · 缠论 Skills 系列</title>
+<style>
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body {
+    font-family:"Microsoft YaHei","PingFang SC",-apple-system,sans-serif;
+    background:linear-gradient(160deg,#f5f6fa 0%,#eef0f7 100%);
+    color:#2c2c2a; min-height:100vh; padding:32px 16px; line-height:1.75;
+  }
+  .wrap { max-width:560px; margin:0 auto; }
+  .card {
+    background:#fff; border-radius:16px; padding:30px 28px;
+    box-shadow:0 2px 20px rgba(38,33,92,.07); border:1px solid rgba(0,0,0,.05);
+  }
+  header { text-align:center; margin-bottom:24px; }
+  header .logo { width:64px; height:64px; border-radius:16px; margin:0 auto 14px; display:block; }
+  h1 { font-size:21px; color:#26215c; font-weight:600; letter-spacing:.5px; }
+  .sub { font-size:13.5px; color:#6b6b66; margin-top:6px; }
+  .qrbox {
+    text-align:center; padding:22px; background:#fafaff;
+    border:1px dashed #c9c6e8; border-radius:12px; margin:22px 0;
+  }
+  .qrbox img { max-width:230px; width:100%; border-radius:8px; display:block; margin:0 auto 12px; }
+  .qrbox .placeholder {
+    width:230px; height:230px; margin:0 auto 12px; border-radius:8px;
+    background:linear-gradient(135deg,#eeedfe,#e0ddfb); display:flex;
+    align-items:center; justify-content:center; text-align:center;
+    color:#5a54a8; font-size:13px; padding:20px; border:1px solid #d4d1f0;
+  }
+  .qrbox .tip { font-size:12.5px; color:#8a8a84; }
+  .btn {
+    display:block; text-align:center; background:#3c3489; color:#fff;
+    padding:12px 20px; border-radius:10px; text-decoration:none;
+    font-size:14.5px; font-weight:500; margin:10px 0; transition:background .2s;
+  }
+  .btn:hover { background:#534ab7; }
+  .btn.ghost { background:#fff; color:#3c3489; border:1px solid #d4d1f0; }
+  .btn.ghost:hover { background:#f4f3fd; }
+  .divider { text-align:center; font-size:12px; color:#b0b0aa; margin:22px 0 16px; position:relative; }
+  .divider::before { content:""; position:absolute; left:0; right:0; top:50%; border-top:1px solid rgba(0,0,0,.08); }
+  .divider span { background:#fff; padding:0 12px; position:relative; }
+  .qr-row { display:flex; gap:16px; align-items:center; margin:16px 0; }
+  .qr-row img { width:96px; height:96px; border-radius:8px; object-fit:cover; border:1px solid rgba(0,0,0,.08); flex-shrink:0; }
+  .qr-row .info { flex:1; }
+  .qr-row .info b { display:block; font-size:14.5px; color:#26215c; margin-bottom:4px; }
+  .qr-row .info span { font-size:12.5px; color:#7a7a74; }
+  .note { background:#f0f6fd; border-left:4px solid #185fa5; padding:12px 15px; border-radius:0 8px 8px 0; font-size:13px; color:#0c447c; margin:20px 0 0; }
+  .warn { background:#fcebeb; border-left:4px solid #a32d2d; padding:12px 15px; border-radius:0 8px 8px 0; font-size:13px; color:#791f1f; margin:14px 0 0; }
+  .update { text-align:center; font-size:12px; color:#a8a8a2; margin-top:16px; }
+  footer { text-align:center; font-size:12px; color:#9a9a94; margin-top:26px; line-height:1.9; }
+  footer a { color:#5a54a8; text-decoration:none; }
+  .qq { display:flex; align-items:center; justify-content:center; gap:8px; font-size:14px; }
+  .qq code { background:#f0effb; padding:3px 10px; border-radius:6px; font-family:Consolas,monospace; color:#3c3489; font-size:14px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="card">
+
+    <header>
+      <img class="logo" src="images/banner-logo.png" alt="缠论 Skills">
+      <h1>加入缠论 Skills 交流群</h1>
+      <p class="sub">案例复盘 · 三买研讨 · 工具共创 · 疑难解答</p>
+    </header>
+
+    <!-- ======== 微信群 ======== -->
+    <div class="qrbox">
+      <!--
+        ▼▼▼ 群二维码过期时，只需要做这一件事 ▼▼▼
+        1. 重新生成群二维码，保存为 images/qun-qrcode.png 覆盖旧图
+        2. 提交推送： git commit -am "chore: 更新群二维码" && git push
+        3. 完成 —— 本页面与 README 中的链接永远不用改
+
+        图片不存在时自动显示下方提示框（onerror 切换），放了图就自动生效
+      -->
+      <img src="images/qun-qrcode.png" alt="微信群二维码"
+           onerror="this.style.display='none';document.getElementById('ph-wechat').style.display='flex';">
+      <div class="placeholder" id="ph-wechat" style="display:none">
+        微信群二维码<br>（7 天有效期）<br><br>图片位置：<br><code>docs/images/qun-qrcode.png</code>
+      </div>
+      <p class="tip">微信群二维码 7 天过期 —— 每次打开本页看到的是最新版本</p>
+    </div>
+
+    <a class="btn" href="https://github.com/chanlun-skills/chan-skills/issues" target="_blank">
+      二维码失效？点这里获取最新群码
+    </a>
+
+    <div class="divider"><span>或</span></div>
+
+    <!-- ======== QQ群（永久有效） ======== -->
+    <div class="qq" style="margin-bottom:8px">
+      <b>QQ 群（永久有效）</b>
+    </div>
+    <div class="qrbox" style="padding:18px">
+      <img src="images/qq-qrcode.png" alt="QQ 群二维码"
+           style="max-width:190px;width:190px;height:190px;border-radius:8px;object-fit:cover;border:1px solid rgba(0,0,0,.06)"
+           onerror="this.style.display='none';document.getElementById('ph-qq').style.display='flex';">
+      <div class="placeholder" id="ph-qq" style="display:none;width:190px;height:190px;font-size:12.5px">
+        QQ 群二维码<br>（永久不过期）<br><br><code>docs/images/qq-qrcode.png</code>
+      </div>
+      <p class="tip">QQ 群二维码不失效，是最省心的入口</p>
+    </div>
+
+    <div class="divider"><span>其他方式</span></div>
+
+    <a class="btn ghost" href="https://github.com/chanlun-skills/chan-skills/discussions" target="_blank">
+      💬 GitHub Discussions 提问与讨论
+    </a>
+    <a class="btn ghost" href="https://github.com/chanlun-skills/chan-skills/issues" target="_blank">
+      🐛 提交纠错与建议
+    </a>
+
+    <div class="note">
+      <b>为什么群码不用你手动改 README？</b><br>
+      本页面是一个<b>永久地址</b>，README 里只放这一个链接。群码过期时你只替换
+      <code>docs/images/qun-qrcode.png</code> 这一张图并推送，页面和 README 都不用动。<br><br>
+      <b>最省心方案：</b>直接用上面的 <b>QQ 群</b>——QQ 群二维码永久有效，
+      可以完全不管过期问题。
+    </div>
+
+    <div class="warn">
+      <b>请勿在群内发布荐股、买卖点或当前行情判断。</b>
+      本项目内容仅供缠论技术理论学习与历史行情复盘，不构成投资建议。
+      讨论聚焦方法论与历史案例。
+    </div>
+
+    <p class="update">本页由仓库文件直接生成 · 内容随仓库更新自动生效</p>
+  </div>
+
+  <footer>
+    <a href="https://github.com/chanlun-skills/chan-skills">← 返回 chan-skills 仓库</a><br>
+    内容仅供学习研究，不构成任何投资建议
+  </footer>
+</div>
+</body>
+</html>

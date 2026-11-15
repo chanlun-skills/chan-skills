@@ -1,10 +1,21 @@
-# 打赏入口配置：保存后仓库右侧会出现 "Sponsor" 按钮
-# 使用前请把下面的占位符替换为你的真实 ID
+# 打赏入口配置
+# 仓库：https://github.com/chanlun-skills/chan-skills
 #
-# github: 你的GitHub用户名        # 开通 GitHub Sponsors 后填 https://github.com/sponsors/你的用户名
-# afdian: 你的爱发电ID            # 在 https://afdian.com/a/你的ID
-# custom: ["https://你的收款链接"]
+# ─────────────────────────────────────────────────────────────
+# 怎么填（三选一或多选，取消注释即可）：
 #
-# 现阶段先填一个占位，用户可直接改为：
-#   github: [your-name]
-#   afdian: [your-afdian-id]
+# 1) GitHub Sponsors（面向海外用户）
+#    先到 https://github.com/sponsors/chanlun-skills 开通 Sponsors，
+#    然后把下面 github: 一行的 [] 去掉并填 chanlun-skills。
+#
+# 2) 爱发电（面向国内用户，微信/支付宝聚合收款）
+#    开通后主页地址形如 https://afdian.com/a/xxxxxx ，
+#    把下面 afdian: 一行的 [待填] 换成不含 https:// 的 ID。
+#
+# 3) 自定义链接（放你的收款页 / 社群主页）
+#    去掉 custom: 一行的注释并替换 URL。
+# ─────────────────────────────────────────────────────────────
+
+# github: [chanlun-skills]
+# afdian: [待填]
+# custom: ["https://github.com/chanlun-skills/chan-skills"]

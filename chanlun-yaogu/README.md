@@ -29,10 +29,10 @@
 ## 安装
 
 ```bash
-npx skills add <你的用户名>/chan-skills --skill chanlun-yaogu
+npx skills add chanlun-skills/chan-skills --skill chanlun-yaogu
 
 # 或手动
-git clone https://github.com/<你的用户名>/chan-skills.git
+git clone https://github.com/chanlun-skills/chan-skills.git
 cp -r chan-skills/chanlun-yaogu ~/.claude/skills/
 ```
 

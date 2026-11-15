@@ -40,7 +40,7 @@ chanlun-jiexpan/
 ## 安装
 
 ```bash
-npx skills add 你的用户名/chan-skills
+npx skills add chanlun-skills/chan-skills
 ```
 
 ## 命令行检索工具（独立于 AI 也能用）

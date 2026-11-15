@@ -21,10 +21,10 @@
 
 ```bash
 # skills.sh 一键安装
-npx skills add <你的用户名>/chan-skills --skill chanlun-music
+npx skills add chanlun-skills/chan-skills --skill chanlun-music
 
 # 或手动克隆
-git clone https://github.com/<你的用户名>/chan-skills.git
+git clone https://github.com/chanlun-skills/chan-skills.git
 cp -r chan-skills/chanlun-music ~/.claude/skills/
 ```
 

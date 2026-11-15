@@ -54,20 +54,20 @@ Agent Skills（SKILL.md 开放标准）· 一次开发，Claude Code / Codex / C
 <td width="50%"><b>缠论三买汇集</b></td>
 </tr>
 <tr>
-<td><img src="docs/images/demo-case-library.gif" alt="案例大全演示"></td>
-<td><img src="docs/images/demo-sanmai.gif" alt="三买汇集演示"></td>
+<td><img src="docs/images/demo-case-library.gif" alt="案例大全演示" onerror="this.closest('td').innerHTML='<small>演示动图待补充<br>docs/images/demo-case-library.gif</small>'"></td>
+<td><img src="docs/images/demo-sanmai.gif" alt="三买汇集演示" onerror="this.closest('td').innerHTML='<small>演示动图待补充<br>docs/images/demo-sanmai.gif</small>'"></td>
 </tr>
 <tr>
 <td><b>大盘解盘</b></td>
 <td><b>妖股年鉴</b></td>
 </tr>
 <tr>
-<td><img src="docs/images/demo-jiexpan.gif" alt="大盘解盘演示"></td>
-<td><img src="docs/images/demo-yaogu.gif" alt="妖股年鉴演示"></td>
+<td><img src="docs/images/demo-jiexpan.gif" alt="大盘解盘演示" onerror="this.closest('td').innerHTML='<small>演示动图待补充<br>docs/images/demo-jiexpan.gif</small>'"></td>
+<td><img src="docs/images/demo-yaogu.gif" alt="妖股年鉴演示" onerror="this.closest('td').innerHTML='<small>演示动图待补充<br>docs/images/demo-yaogu.gif</small>'"></td>
 </tr>
 </table>
 
-*演示动图由使用者投稿补充，欢迎在 Issues 里提交你录制的版本。*
+*演示动图待补充 —— 欢迎在 Issues 里提交你录制的版本。*
 
 ---
 
@@ -77,16 +77,16 @@ Agent Skills（SKILL.md 开放标准）· 一次开发，Claude Code / Codex / C
 
 ```bash
 # 安装全部 6 个 Skill
-npx skills add 你的用户名/chan-skills
+npx skills add chanlun-skills/chan-skills
 
 # 只安装某一个
-npx skills add 你的用户名/chan-skills --skill chanlun-sanmai
+npx skills add chanlun-skills/chan-skills --skill chanlun-sanmai
 ```
 
 ### 方式二：手动克隆
 
 ```bash
-git clone https://github.com/你的用户名/chan-skills.git
+git clone https://github.com/chanlun-skills/chan-skills.git
 cd chan-skills
 
 # Claude Code 全局安装
@@ -118,9 +118,11 @@ python scripts/search_cases.py --stats
 
 ## 💬 加入交流
 
-<img src="docs/images/qun-qrcode.png" width="220" alt="微信群二维码">
+**扫码进群** —— 👉 [**点此打开加群页**](./docs/join.html)
 
-**微信群二维码 7 天过期** —— 二维码失效时请查看仓库置顶 Issue「📌 群二维码 & 常见问题」，那里会持续更新最新群码。
+加群页是一个**永久地址**：微信群二维码 7 天过期，但你只需替换 `docs/images/qun-qrcode.png` 这一张图并推送，这个链接和 README 都不用改。
+
+> 💡 **最省心做法**：加群页里也放了 **QQ 群（永久不过期）**，用它可以完全绕开定期换码的麻烦。
 
 Discussions 开放 Q&A 与案例讨论，欢迎把你的复盘结果发上来。
 
@@ -130,9 +132,9 @@ Discussions 开放 Q&A 与案例讨论，欢迎把你的复盘结果发上来。
 
 <table>
 <tr>
-<td align="center"><img src="docs/images/donate-wechat.png" width="160" alt="微信收款码"></td>
-<td align="center"><img src="docs/images/donate-alipay.png" width="160" alt="支付宝收款码"></td>
-<td align="center"><b>爱发电</b><br><a href="https://afdian.com/a/你的ID">afdian.com/a/你的ID</a></td>
+<td align="center"><img src="docs/images/donate-wechat.png" width="160" alt="微信收款码" onerror="this.closest('td').innerHTML='<b>微信收款码</b><br><br><small>待上传<br>docs/images/donate-wechat.png</small>'"></td>
+<td align="center"><img src="docs/images/donate-alipay.png" width="160" alt="支付宝收款码" onerror="this.closest('td').innerHTML='<b>支付宝收款码</b><br><br><small>待上传<br>docs/images/donate-alipay.png</small>'"></td>
+<td align="center"><b>爱发电</b><br><a href="https://afdian.com/a/待填">afdian.com/a/待填</a></td>
 </tr>
 <tr>
 <td align="center">微信</td>
