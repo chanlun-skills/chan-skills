@@ -1,6 +1,12 @@
-<div align="center">
+<p align="center">
+  <img src="docs/images/banner.png" alt="缠论 Skills 系列" width="100%">
+</p>
 
-<img src="docs/images/banner-logo.png" width="120" alt="缠论 Skills">
+<p align="center">
+  <img src="docs/images/banner-logo.png" width="110" alt="缠论 Skills Logo">
+</p>
+
+<div align="center">
 
 # 缠论 Skills 系列
 
