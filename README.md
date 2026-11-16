@@ -124,22 +124,21 @@ python scripts/search_cases.py --stats
 <tr>
 <td align="center"><b>QQ 群（永久有效 · 推荐）</b><br>
 <img src="docs/images/qq-qrcode.png" width="210" alt="QQ群二维码" onerror="this.closest('td').innerHTML='<b>QQ 群</b><br><br><small>群号 1132948221</small>'"></td>
-<td align="center"><b>企业微信群（7 天有效）</b><br>
+<td align="center"><b>企业微信群（永久有效）</b><br>
 <img src="docs/images/qun-qrcode.png" width="150" alt="企业微信群二维码" onerror="this.closest('td').innerHTML='<b>企业微信群</b><br><br><small>见加群页</small>'"></td>
 </tr>
 <tr>
 <td align="center">群号 <code>1132948221</code></td>
-<td align="center">「缠论AI时代」· 见加群页</td>
+<td align="center">「缠论AI时代」· 永久活码</td>
 </tr>
 </table>
 
 > **扫不出？直接用群号 <code>1132948221</code>** —— 在 QQ 里搜索群号或"添加群"即可，不用扫码。
 > QQ 群二维码是彩色点阵格式，个别手机相机可能识别不了，群号是永远有效的兜底。
 
-加群页是一个**永久地址**：企业微信群二维码 7 天过期，但你只需替换 `docs/images/qun-qrcode.png` 这一张图并推送，这个链接和 README 都不用改。
+两个入口都是**永久有效**：QQ 群二维码本身不过期；企业微信群用的是「加入群聊」活码，群满 200 人会自动建新群，码不会失效。
 
-> 💡 **最省心做法**：直接用 **QQ 群**（二维码永久不过期），可以完全绕开定期换码的麻烦。
-> 企业微信侧也可以改用管理后台的「加入群聊」**永久活码**（客户联系 → 加客户 → 加入群聊），同样是永不过期，还能群满自动建新群。
+加群页 `docs/join.html` 是一个**永久地址**，README 只放这一个链接，群有变化时页面内容跟着仓库更新，链接永远不用改。
 
 Discussions 开放 Q&A 与案例讨论，欢迎把你的复盘结果发上来。
 
