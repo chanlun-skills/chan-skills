@@ -204,6 +204,16 @@ npx skills add chanlun-skills/chan-skills
 <span class="c"># 只安装某一个</span>
 npx skills add chanlun-skills/chan-skills --skill chanlun-sanmai</pre>
 
+    <div class="warn">
+      <b>⚠️ clone 失败怎么办（国内网络常见）</b><br>
+      <code>npx skills add</code> 底层是 <code>git clone https://github.com/...</code>。
+      部分国内网络或代理会拦截 GitHub 的 HTTPS 连接，报
+      <code>curl 7 CONNECT tunnel failed, response 502</code> 或 <code>RPC failed; expected 'packfile'</code>。<br><br>
+      <b>解决办法 —— 改用 Gitee 镜像</b>（内容与主仓实时同步，每 5 分钟自动同步一次）：
+      <br><br>
+      <code>npx skills add https://gitee.com/chanlun-skills/chan-skills.git</code>
+    </div>
+
     <h3>方式二 · 手动克隆</h3>
 <pre>git clone https://github.com/chanlun-skills/chan-skills.git
 cd chan-skills
@@ -213,15 +223,20 @@ cp -r chanlun-* ~/.claude/skills/
 
 <span class="c"># 或项目级安装</span>
 cp -r chanlun-* ./.claude/skills/</pre>
+    <p style="font-size:13.5px;color:#6b6b66">国内网络建议克隆 Gitee 镜像：<code>git clone https://gitee.com/chanlun-skills/chan-skills.git</code></p>
 
     <h3>方式三 · 各平台市场</h3>
     <table>
-      <tr><th style="width:26%">平台</th><th>位置</th></tr>
-      <tr><td>SkillsMP</td><td>skillsmp.com（自动索引 GitHub 仓库）</td></tr>
-      <tr><td>skills.sh</td><td><code>npx skills add</code> 官方目录，装机量计入排行</td></tr>
-      <tr><td>腾讯 SkillHub</td><td>skillhub.tencent.com（国内高速镜像）</td></tr>
-      <tr><td>ClawHub</td><td><code>npx clawhub install</code></td></tr>
+      <tr><th style="width:26%">平台</th><th>位置</th><th style="width:24%">收录状态</th></tr>
+      <tr><td>SkillsMP</td><td>skillsmp.com</td><td>⏳ 待收录（自动索引 GitHub）</td></tr>
+      <tr><td>skills.sh</td><td><code>npx skills add</code> 官方目录</td><td>⏳ 待收录（需首次安装上报）</td></tr>
+      <tr><td>腾讯 SkillHub</td><td>skillhub.cn</td><td>⏳ 待发布（需 GitHub 授权）</td></tr>
+      <tr><td>ClawHub</td><td>clawhub.ai</td><td>⏳ 待发布（<code>clawhub skill publish</code>）</td></tr>
     </table>
+    <div class="note">
+      四个平台目前都<b>尚未收录</b>本仓库，收录机制各不相同。
+      在那之前，<b>方式一 / 方式二（Gitee 镜像路径）</b>是最可靠的安装方式。
+    </div>
 
     <h3>安装后验证</h3>
 <pre>cd chan-skills/chanlun-case-library
