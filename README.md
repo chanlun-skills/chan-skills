@@ -15,6 +15,12 @@ Agent Skills（SKILL.md 开放标准）· 一次开发，Claude Code / Codex / C
 
 </div>
 
+<div align="center">
+
+**[GitHub 主仓库](https://github.com/chanlun-skills/chan-skills)** · [Gitee 镜像](https://gitee.com/chanlun-skills/chan-skills) · 国内访问建议走 Gitee
+
+</div>
+
 ---
 
 ## 这是什么
