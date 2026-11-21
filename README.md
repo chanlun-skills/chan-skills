@@ -159,6 +159,8 @@ cp -r chanlun-* ./.claude/skills/
 | 腾讯 SkillHub | skillhub.cn | ⏳ 待发布（需 GitHub 授权后主动发布） |
 | ClawHub | clawhub.ai | ⏳ 待发布（需 `clawhub skill publish`） |
 
+> 四个平台的收录机制各不相同（有的自动索引、有的需主动发布、有的靠安装量上报），
+> 目前都**尚未收录**本仓库。
 > **目前最可靠的安装方式就是上面的方式一 / 方式二**（Gitee 镜像路径国内可用）。
 
 ### 安装后验证
