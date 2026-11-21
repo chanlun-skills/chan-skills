@@ -1,0 +1,89 @@
+title: "[复盘展示] "
+labels: ["case-review"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        用这个分类**展示你的复盘结果** —— 自己做的缠论结构划分、买点判定、案例研读笔记。
+
+        ⚠️ **务必注意**
+        - 只贴**已发生的历史区间**复盘，**不要**用当前行情做实时预测
+        - 本项目内容**仅供学习研究，不构成投资建议**
+        - 请注明你的结论是「已验证」还是「待定」—— 缠论最诚实的方式就是先标不确定性
+
+  - type: input
+    id: subject
+    attributes:
+      label: 标的 / 标的名称
+      placeholder: 例：沪深300指数 / 某股票代码
+    validations:
+      required: true
+
+  - type: input
+    id: period
+    attributes:
+      label: 复盘区间
+      description: 起止时间，请写明是否为**已发生**的区间
+      placeholder: 例：2023-06-01 至 2024-03-15（已发生）
+    validations:
+      required: true
+
+  - type: dropdown
+    id: skill
+    attributes:
+      label: 使用了哪个 Skill
+      options:
+        - chanlun-case-library 案例大全
+        - chanlun-sanmai 三买汇集
+        - chanlun-jiexpan 大盘解盘
+        - chanlun-chan-zen 佛学与禅宗
+        - chanlun-music 周末音乐会
+        - chanlun-yaogu 妖股年鉴
+        - 未使用 Skill，纯手工复盘
+    validations:
+      required: false
+
+  - type: textarea
+    id: structure
+    attributes:
+      label: 你的结构划分
+      description: 笔/线段/中枢怎么划的，理由是什么
+      placeholder: |
+        例：
+        笔：2023-08 底 → 2023-11 高（含 2 个内部折点）
+        线段：2023-06 至 2023-11 为下跌线段
+        中枢：2023-09 至 2023-10 的重叠区间
+    validations:
+      required: true
+
+  - type: textarea
+    id: conclusion
+    attributes:
+      label: 你的结论
+      description: 买点/卖点判定，以及事后验证结果
+      placeholder: |
+        判定：X 处为二买（回调不破前低且中枢震荡）
+        事后：Y 处开始下跌，跌幅 Z%，判定成立
+    validations:
+      required: true
+
+  - type: dropdown
+    id: status
+    attributes:
+      label: 结论状态
+      options:
+        - 已验证（走势已走出，结果符合）
+        - 部分验证（走势已出但幅度/时间不符）
+        - 待定（区间未走完，仍需观察）
+        - 被证伪（结论错误，欢迎指正）
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: compliance
+    attributes:
+      label: 合规确认
+      options:
+        - label: 我确认以上为历史区间复盘，不含当前行情预测或投资建议
+    validations:
+      required: true

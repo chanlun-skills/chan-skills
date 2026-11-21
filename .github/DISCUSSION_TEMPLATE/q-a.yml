@@ -1,0 +1,61 @@
+title: "[提问] "
+labels: ["question"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        有具体问题请在这里发，问清楚才能得到有用的回答。
+
+        ⚠️ **提问前请注意**
+        - 本项目内容**仅供缠论技术理论学习与历史行情复盘，不构成投资建议**
+        - 请**不要**询问当前行情该买该卖、具体标的的买卖点、收益预期
+        - 问题越具体（标的 + 时间区间 + 结构特征 + 你卡在哪一步），回答越有用
+
+  - type: textarea
+    id: question
+    attributes:
+      label: 问题
+      description: 一句话说清你的核心疑问
+      placeholder: 例：中枢扩展后，原来的笔是否需要重新划分？
+    validations:
+      required: true
+
+  - type: dropdown
+    id: skill
+    attributes:
+      label: 涉及 Skill（选一个最接近的）
+      options:
+        - chanlun-case-library 案例大全
+        - chanlun-sanmai 三买汇集
+        - chanlun-jiexpan 大盘解盘
+        - chanlun-chan-zen 佛学与禅宗
+        - chanlun-music 周末音乐会
+        - chanlun-yaogu 妖股年鉴
+        - 通用方法论问题
+    validations:
+      required: true
+
+  - type: textarea
+    id: context
+    attributes:
+      label: 背景与上下文
+      description: |
+        标的 / 标的代码、起止时间区间、你观察到的结构、你已经尝试过的判断。
+        如果是 Skill 输出的问题，请贴出关键片段。
+      placeholder: |
+        例：
+        标的：某指数（代码）
+        区间：2024-01 至 2024-06
+        我看到的：一波下跌后出现底背驰，按一买处理
+        卡住的点：原文说「背驰」必须至少两段同向走势比较，我这里只有一段
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: compliance
+    attributes:
+      label: 合规确认
+      options:
+        - label: 我确认本帖为技术方法论提问，不含任何投资建议
+    validations:
+      required: true

@@ -1,0 +1,53 @@
+title: "[公告] "
+labels: ["announcement"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        这个分类用于**项目公告**：版本更新、新增 Skill、数据修订、重要说明。
+
+        ℹ️ 只有拥有写权限的维护者可以在这里发新讨论，但**任何人都可以回复**。
+
+  - type: dropdown
+    id: kind
+    attributes:
+      label: 公告类型
+      options:
+        - 版本更新
+        - 新增 Skill / 内容扩充
+        - 数据修订与勘误
+        - 已知问题
+        - 重要说明
+    validations:
+      required: true
+
+  - type: input
+    id: version
+    attributes:
+      label: 版本号 / 生效日期
+      placeholder: 例：v1.2.0 / 2024-03-15
+    validations:
+      required: false
+
+  - type: textarea
+    id: content
+    attributes:
+      label: 公告内容
+      description: |
+        写清：改了什么、为什么改、对使用者有什么影响、是否需要重新安装。
+      placeholder: |
+        本次更新：
+        - 新增 3 个案例（2023 年 Q4）
+        - 修正 1 处涨幅口径
+        - 影响：无需重新安装，pull 即可
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: compliance
+    attributes:
+      label: 合规确认
+    options:
+      - label: 我确认本公告不含任何投资建议
+    validations:
+      required: true

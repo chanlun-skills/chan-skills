@@ -1,0 +1,76 @@
+title: "[讨论] "
+labels: ["discussion"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        欢迎参与缠论方法论讨论。这个分类用于**方法论探讨**与**历史案例复盘**。
+
+        ⚠️ **发帖前请注意**
+        - 本项目内容**仅供缠论技术理论学习与历史行情复盘，不构成投资建议**
+        - 请**不要**发布当前行情判断、荐股、买卖点或收益承诺
+        - 讨论应聚焦**技术结构分析方法**与**已发生的历史案例**
+
+  - type: dropdown
+    id: topic
+    attributes:
+      label: 讨论主题
+      options:
+        - 买点判定（第一/二/三买）
+        - 卖点与背驰
+        - 中枢划分与走势类型
+        - 多级别联立与时间空间
+        - 案例复盘与原文研读
+        - Skill 使用与输出质量
+        - 其他
+    validations:
+      required: true
+
+  - type: dropdown
+    id: skill
+    attributes:
+      label: 涉及 Skill（可不涉及）
+      options:
+        - chanlun-case-library 案例大全
+        - chanlun-sanmai 三买汇集
+        - chanlun-jiexpan 大盘解盘
+        - chanlun-chan-zen 佛学与禅宗
+        - chanlun-music 周末音乐会
+        - chanlun-yaogu 妖股年鉴
+        - 不涉及具体 Skill
+    validations:
+      required: false
+
+  - type: textarea
+    id: content
+    attributes:
+      label: 讨论内容
+      description: |
+        请尽量给出**可复现的细节**：涉及的标的、起止时间区间、你看到的结构特征、你的判定依据。
+        如果是对已有内容的疑问，请指明案例编号或文件路径。
+      placeholder: |
+        例：2024 年某标的日线在 X 月出现一卖后回调至 Y 区间的中枢下沿，
+        我按「下跌趋势中继」处理，但用缠师原文的「三类买卖点」定义无法自洽，请帮我看看哪里理解偏了。
+    validations:
+      required: true
+
+  - type: textarea
+    id: basis
+    attributes:
+      label: 你的判定依据（选填）
+      description: 引用缠师原文段落、出处链接，或贴出你使用的检索命令与输出
+      placeholder: |
+        例：
+        原文出处：《教你炒股票》108 课「走势必完美」
+        检索命令：python scripts/retrieve.py chanlun-sanmai "2024-03"
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: compliance
+    attributes:
+      label: 合规确认
+      options:
+        - label: 我确认以上内容为技术方法论讨论与历史复盘，不含任何投资建议
+    validations:
+      required: true
