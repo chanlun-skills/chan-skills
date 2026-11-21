@@ -43,13 +43,15 @@ jobs:
           GH_TOKEN: ${{ secrets.META_TOKEN }}
         run: |
           # PUT /repos/{owner}/{repo}/topics 需要 JSON body
+          # 注意：topic 必须以小写字母或数字开头，中文字符会被 GitHub 拒绝
+          # （报错：Repository topics must start with a lowercase letter or number）
           gh api --method PUT "repos/${GITHUB_REPOSITORY}/topics" \
             --input - <<'JSON'
           {
             "names": [
               "chanlun",
               "chan-theory",
-              "缠论",
+              "chanlun-theory",
               "agent-skills",
               "claude-skills",
               "skill-md",
@@ -71,6 +73,7 @@ jobs:
             "description": "缠论 Skills 系列：案例复盘 · 三买汇集 · 大盘解盘 · 佛学禅宗 · 周末音乐会 · 妖股年鉴（AI 可直接调用的 Agent Skills）",
             "homepage": "https://chanlun-skills.github.io/chan-skills/",
             "has_issues": true,
+            "has_discussions": true,
             "has_projects": false,
             "has_wiki": false
           }
