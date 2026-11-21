@@ -1,0 +1,85 @@
+name: Sync Repository Metadata
+
+# 仓库级设置（Topics / Description / Homepage）必须用 PAT 或 GitHub App 写入，
+# Actions 内置的 GITHUB_TOKEN 没有该权限（GitHub App 的 metadata 权限是只读的）。
+#
+# 一次性配置：
+#   1. 生成 PAT（classic 即可）：https://github.com/settings/tokens/new
+#      勾选 repo 权限（用于改 repository description / homepage / topics）
+#   2. 仓库 → Settings → Secrets and variables → Actions → New repository secret
+#      Name: META_TOKEN      Value: 粘贴 PAT
+#   3. 本 workflow 会自动把仓库元信息同步成下面配置的内容
+#
+# secret 不存在时本 workflow 会直接跳过，不影响 Pages 部署。
+
+on:
+  workflow_dispatch:
+  schedule:
+    # 每月 1 号凌晨 3 点对齐一次，防止在网页上被误改
+    - cron: '17 3 1 * *'
+
+permissions:
+  contents: read
+
+jobs:
+  sync-meta:
+    runs-on: ubuntu-latest
+    steps:
+      - name: 检查 secret 是否已配置
+        id: check
+        env:
+          META_TOKEN: ${{ secrets.META_TOKEN }}
+        run: |
+          if [ -z "$META_TOKEN" ]; then
+            echo "ready=false" >> "$GITHUB_OUTPUT"
+            echo "未配置 META_TOKEN，跳过元信息同步。"
+          else
+            echo "ready=true" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: 同步 Topics / Description / Homepage
+        if: steps.check.outputs.ready == 'true'
+        env:
+          GH_TOKEN: ${{ secrets.META_TOKEN }}
+        run: |
+          # PUT /repos/{owner}/{repo}/topics 需要 JSON body
+          gh api --method PUT "repos/${GITHUB_REPOSITORY}/topics" \
+            --input - <<'JSON'
+          {
+            "names": [
+              "chanlun",
+              "chan-theory",
+              "缠论",
+              "agent-skills",
+              "claude-skills",
+              "skill-md",
+              "ai-skills",
+              "llm-tools",
+              "technical-analysis",
+              "stock-analysis",
+              "a-share",
+              "historical-data",
+              "knowledge-base",
+              "chinese"
+            ]
+          }
+          JSON
+
+          gh api --method PATCH "repos/${GITHUB_REPOSITORY}" \
+            --input - <<'JSON'
+          {
+            "description": "缠论 Skills 系列：案例复盘 · 三买汇集 · 大盘解盘 · 佛学禅宗 · 周末音乐会 · 妖股年鉴（AI 可直接调用的 Agent Skills）",
+            "homepage": "https://chanlun-skills.github.io/chan-skills/",
+            "has_issues": true,
+            "has_projects": false,
+            "has_wiki": false
+          }
+          JSON
+
+          echo "元信息同步完成。"
+
+      - name: 输出当前元信息
+        if: always()
+        run: |
+          gh api repos/${{ github.repository }} \
+            --jq '"description: \(.description)\nhomepage: \(.homepage)\ntopics: \(.topics|join(", "))"'

@@ -213,12 +213,19 @@ chan-skills/
 ├── LICENSE                       CC BY-NC-SA 4.0
 ├── .github/
 │   ├── FUNDING.yml               打赏入口
-│   └── ISSUE_TEMPLATE/           问题反馈 + 内容纠错
+│   ├── ISSUE_TEMPLATE/           问题反馈 + 内容纠错
+│   └── workflows/
+│       ├── pages.yml             GitHub Pages 自动部署
+│       └── repo-meta.yml         Topics / 描述自动同步
 ├── docs/
 │   ├── index.html                GitHub Pages 首页
 │   ├── join.html                 加群页（永久链接）
 │   ├── disclaimer.md             完整免责声明
+│   ├── disclaimer.html           同上（脚本生成，供 Pages 渲染）
 │   └── images/                   banner / 演示动图 / 二维码
+├── scripts/
+│   ├── make_demos.py             演示动图生成器
+│   └── md2html.py                Markdown → HTML（Pages 用）
 ├── chanlun-case-library/         Skill 1 · 缠论案例大全
 ├── chanlun-sanmai/               Skill 2 · 缠论三买汇集
 ├── chanlun-jiexpan/              Skill 3 · 缠论大盘解盘
@@ -226,6 +233,9 @@ chan-skills/
 ├── chanlun-music/                Skill 5 · 缠师周末音乐会
 └── chanlun-yaogu/                Skill 6 · 妖股年鉴
 ```
+
+> **网站版**：<https://chanlun-skills.github.io/chan-skills/> —— 由 `docs/` 目录经 GitHub Actions 自动发布，改完 `main` 分支即上线。
+> `docs/disclaimer.html` 由 `python scripts/md2html.py` 从 `disclaimer.md` 生成，改完 md 请重新运行该脚本。
 
 ---
 
