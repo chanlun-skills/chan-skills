@@ -17,6 +17,9 @@
 # Python 脚本保持 LF
 *.py text eol=lf
 
+# HTML 保持 LF（Python 生成的文件默认是 CRLF）
+*.html text eol=lf
+
 # Markdown / YAML / JSON / CSV 保持 LF
 *.md text eol=lf
 *.yml text eol=lf

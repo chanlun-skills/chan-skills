@@ -260,7 +260,7 @@ def main(argv):
 
         body = convert(md, skip_first_h1=True)
         dst = src[:-3] + ".html"
-        with open(dst, "w", encoding="utf-8") as f:
+        with open(dst, "w", encoding="utf-8", newline="\n") as f:
             f.write(build_page(title, body, desc))
 
         print(f"[md2html] {os.path.relpath(src, REPO)}  ->  "
