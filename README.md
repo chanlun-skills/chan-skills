@@ -23,6 +23,21 @@ Agent Skills（SKILL.md 开放标准）· 一次开发，Claude Code / Codex / C
 
 ---
 
+## 🌐 在线浏览
+
+**https://chanlun-skills.github.io/chan-skills/**
+
+网页版包含项目介绍、六个 Skill 详解、安装命令、真实运行演示、可直接扫码的加群入口。
+内容随仓库 `main` 分支自动更新（GitHub Actions 部署）。
+
+| 页面 | 地址 |
+|---|---|
+| 首页 | [chanlun-skills.github.io/chan-skills/](https://chanlun-skills.github.io/chan-skills/) |
+| 加群页 | […/join.html](https://chanlun-skills.github.io/chan-skills/join.html) |
+| 免责声明 | […/disclaimer.html](https://chanlun-skills.github.io/chan-skills/disclaimer.html) |
+
+---
+
 ## 这是什么
 
 把缠中说禅（缠师）的技术分析教学、佛学禅宗专栏、周末音乐连载，以及 37 年 A 股妖股实算数据，整理成 **6 个可被 AI 直接调用的 Skill**。
