@@ -215,6 +215,8 @@ chan-skills/
 │   ├── FUNDING.yml               打赏入口
 │   └── ISSUE_TEMPLATE/           问题反馈 + 内容纠错
 ├── docs/
+│   ├── index.html                GitHub Pages 首页
+│   ├── join.html                 加群页（永久链接）
 │   ├── disclaimer.md             完整免责声明
 │   └── images/                   banner / 演示动图 / 二维码
 ├── chanlun-case-library/         Skill 1 · 缠论案例大全

@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>缠论 Skills 系列 · 让 AI 学会缠论</title>
+<meta name="description" content="缠中说禅技术分析、佛学禅宗、周末音乐与 37 年 A 股妖股数据，整理成 6 个可被 AI 直接调用的 Agent Skills。仅供学习研究与历史复盘，不构成投资建议。">
+<link rel="icon" href="images/banner-logo.png">
+<style>
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body {
+    font-family:"Microsoft YaHei","PingFang SC",-apple-system,sans-serif;
+    background:linear-gradient(160deg,#f5f6fa 0%,#eef0f7 100%);
+    color:#2c2c2a; line-height:1.78; padding:0 16px 60px;
+  }
+  .wrap { max-width:960px; margin:0 auto; }
+
+  /* ===== 顶部 hero ===== */
+  .hero { padding:40px 0 28px; text-align:center; }
+  .hero img.banner { width:100%; border-radius:14px; box-shadow:0 4px 24px rgba(38,33,92,.12); display:block; }
+  .hero h1 { font-size:26px; color:#26215c; font-weight:600; letter-spacing:.5px; margin-top:26px; }
+  .hero .sub { font-size:15px; color:#5a54a8; margin-top:10px; font-weight:500; }
+  .hero .meta { font-size:13px; color:#8a8a84; margin-top:8px; }
+  .btns { display:flex; gap:12px; justify-content:center; flex-wrap:wrap; margin-top:22px; }
+  .btn {
+    display:inline-block; background:#3c3489; color:#fff; padding:11px 22px;
+    border-radius:10px; text-decoration:none; font-size:14.5px; font-weight:500; transition:background .2s;
+  }
+  .btn:hover { background:#534ab7; }
+  .btn.ghost { background:#fff; color:#3c3489; border:1px solid #d4d1f0; }
+  .btn.ghost:hover { background:#f4f3fd; }
+
+  /* ===== 区块 ===== */
+  section { background:#fff; border-radius:16px; padding:30px 32px; margin:22px 0; border:1px solid rgba(0,0,0,.06); box-shadow:0 2px 20px rgba(38,33,92,.05); }
+  h2 { font-size:19px; color:#26215c; font-weight:600; margin-bottom:6px; padding-left:12px; border-left:4px solid #534ab7; }
+  .sec-sub { font-size:13.5px; color:#7a7a74; margin:6px 0 20px 16px; }
+  h3 { font-size:15.5px; color:#3c3489; margin:22px 0 10px; }
+  p { font-size:14.5px; margin-bottom:10px; }
+
+  /* ===== skill 卡片 ===== */
+  .cards { display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:16px; }
+  .card {
+    border:1px solid #e4e2f2; border-radius:13px; padding:20px 20px 18px;
+    background:linear-gradient(180deg,#fdfdff 0%,#fafaff 100%); transition:box-shadow .2s,border-color .2s;
+  }
+  .card:hover { box-shadow:0 4px 18px rgba(83,74,183,.12); border-color:#c9c6e8; }
+  .card .no { display:inline-block; background:#eeedfe; color:#3c3489; font-size:11.5px; font-weight:700;
+              border-radius:999px; padding:2px 10px; margin-bottom:10px; }
+  .card h4 { font-size:15.5px; color:#26215c; margin-bottom:4px; font-weight:600; }
+  .card .dir { font-family:Consolas,monospace; font-size:11.5px; color:#9a9a94; margin-bottom:10px; }
+  .card p { font-size:13.5px; color:#5f5f59; margin-bottom:10px; }
+  .card .tags { font-size:12px; color:#8a8a84; }
+  .card .tags b { color:#3c3489; font-weight:600; }
+  .card a.dl { display:inline-block; margin-top:12px; font-size:13px; color:#3c3489; text-decoration:none;
+                border:1px solid #d4d1f0; border-radius:7px; padding:5px 12px; }
+  .card a.dl:hover { background:#f4f3fd; }
+
+  /* ===== 安装 ===== */
+  pre {
+    background:#1b1747; color:#e8e6f7; padding:16px 18px; border-radius:11px;
+    font-family:Consolas,"Courier New",monospace; font-size:13.5px; overflow-x:auto; line-height:1.75; margin:12px 0;
+  }
+  pre .c { color:#8f88c4; }
+  pre .g { color:#6fdf8f; }
+  pre .y { color:#f5d76e; }
+
+  /* ===== 演示 ===== */
+  .demo { display:grid; grid-template-columns:repeat(auto-fit,minmax(300px,1fr)); gap:18px; }
+  .demo figure { border:1px solid #e4e2f2; border-radius:12px; overflow:hidden; background:#fff; }
+  .demo figure img { width:100%; display:block; }
+  .demo figcaption { padding:10px 14px; font-size:13px; color:#5f5f59; border-top:1px solid #eeedfe; }
+  .demo figcaption b { color:#26215c; display:block; font-size:13.5px; margin-bottom:2px; }
+
+  /* ===== 表格 ===== */
+  table { width:100%; border-collapse:collapse; font-size:13.5px; margin:12px 0; }
+  th { background:#eeedfe; color:#3c3489; text-align:left; padding:10px 12px; font-weight:600; }
+  td { padding:10px 12px; border-bottom:1px solid rgba(0,0,0,.07); vertical-align:top; }
+  tr:last-child td { border-bottom:none; }
+  td code, p code, li code { background:#f0effb; padding:2px 7px; border-radius:5px; font-family:Consolas,monospace; font-size:13px; color:#3c3489; }
+
+  /* ===== 提示块 ===== */
+  .note { background:#e6f1fb; border-left:4px solid #185fa5; padding:13px 16px; border-radius:0 8px 8px 0; font-size:13.5px; color:#0c447c; margin:14px 0; }
+  .warn { background:#fcebeb; border-left:4px solid #a32d2d; padding:13px 16px; border-radius:0 8px 8px 0; font-size:13.5px; color:#791f1f; margin:14px 0; }
+  .ok   { background:#dff5e8; border-left:4px solid #1c6b3c; padding:13px 16px; border-radius:0 8px 8px 0; font-size:13.5px; color:#14532d; margin:14px 0; }
+
+  /* ===== 加群 ===== */
+  .join { display:flex; gap:24px; align-items:flex-start; flex-wrap:wrap; }
+  .join .qr { text-align:center; }
+  .join .qr img { max-width:180px; width:100%; border-radius:9px; border:1px solid rgba(0,0,0,.07); }
+  .join .qr .cap { font-size:12.5px; color:#8a8a84; margin-top:8px; }
+  .join .info { flex:1; min-width:250px; }
+  .join .info b { color:#26215c; }
+
+  ul, ol { padding-left:24px; font-size:14.5px; }
+  li { margin-bottom:8px; }
+  footer { text-align:center; font-size:12.5px; color:#9a9a94; margin-top:30px; line-height:2; }
+  footer a { color:#5a54a8; text-decoration:none; }
+  .foot-sep { margin:0 8px; color:#d0d0ca; }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <!-- ================= HERO ================= -->
+  <div class="hero">
+    <img class="banner" src="images/banner.png" alt="缠论 Skills 系列横幅">
+    <h1>让 AI 学会缠论</h1>
+    <p class="sub">案例复盘 · 三买汇集 · 大盘解盘 · 佛学与禅宗 · 周末音乐会 · 妖股年鉴</p>
+    <p class="meta">Agent Skills（SKILL.md 开放标准）· 一次开发，Claude Code / Codex / Cursor / WorkBuddy 等多平台可用</p>
+    <div class="btns">
+      <a class="btn" href="https://github.com/chanlun-skills/chan-skills">GitHub 主仓库</a>
+      <a class="btn ghost" href="https://gitee.com/chanlun-skills/chan-skills">Gitee 镜像</a>
+      <a class="btn ghost" href="join.html">加入交流</a>
+    </div>
+  </div>
+
+  <!-- ================= 这是什么 ================= -->
+  <section>
+    <h2>这是什么</h2>
+    <p class="sec-sub">把缠中说禅（缠师）的技术分析教学、佛学禅宗专栏、周末音乐连载，以及 37 年 A 股妖股实算数据，整理成 6 个可被 AI 直接调用的 Skill。</p>
+    <p>每个 Skill 都是一个标准目录：</p>
+    <ul>
+      <li><code>SKILL.md</code> —— 技能说明与触发场景（AI 靠它决定何时调用）</li>
+      <li><code>references/</code> —— 结构化语料、索引、离线查阅器</li>
+      <li><code>scripts/</code> —— 零依赖命令行检索工具，<code>python scripts/xxx.py --stats</code> 即可验证</li>
+    </ul>
+    <div class="warn">
+      <b>不是荐股工具。</b>所有内容定位为技术理论学习与历史行情复盘，AI 遇到「现在该买什么」会明确拒绝。
+    </div>
+  </section>
+
+  <!-- ================= Skills 一览 ================= -->
+  <section>
+    <h2>Skills 一览</h2>
+    <p class="sec-sub">6 个 Skill · 158 个文件 · 约 46MB · 全部离线可用，无任何运行时依赖</p>
+    <div class="cards">
+
+      <div class="card">
+        <span class="no">①</span>
+        <h4>缠论案例大全</h4>
+        <div class="dir">chanlun-case-library/</div>
+        <p>3,026 条历史案例、347 只个股、六大经典案例深度剖析、个股档案与年度时间线。</p>
+        <div class="tags"><b>3.3MB</b> · 2002—2008</div>
+        <a class="dl" href="https://github.com/chanlun-skills/chan-skills/tree/main/chanlun-case-library">查看目录 →</a>
+      </div>
+
+      <div class="card">
+        <span class="no">②</span>
+        <h4>缠论三买汇集</h4>
+        <div class="dir">chanlun-sanmai/</div>
+        <p>20 条日线三买案例（确认13 / 否认3 / 讨论4）、81 条原话库、五步判定链条、三处流传资料纠错。</p>
+        <div class="tags"><b>1.3MB</b> · 2006—2008</div>
+        <a class="dl" href="https://github.com/chanlun-skills/chan-skills/tree/main/chanlun-sanmai">查看目录 →</a>
+      </div>
+
+      <div class="card">
+        <span class="no">③</span>
+        <h4>缠论大盘解盘</h4>
+        <div class="dir">chanlun-jiexpan/</div>
+        <p>515 篇时间线解盘、946 条大盘主题帖、6 个关键时段复盘、约 1,100 条文库目录。</p>
+        <div class="tags"><b>12MB</b> · 2006—2008</div>
+        <a class="dl" href="https://github.com/chanlun-skills/chan-skills/tree/main/chanlun-jiexpan">查看目录 →</a>
+      </div>
+
+      <div class="card">
+        <span class="no">④</span>
+        <h4>缠论佛学与禅宗</h4>
+        <div class="dir">chanlun-chan-zen/</div>
+        <p>7,131 条语料约 134 万字、12 大争鸣议题、2,355 条佛学概念索引、离线检索站点。</p>
+        <div class="tags"><b>18MB</b> · 2006—2008</div>
+        <a class="dl" href="https://github.com/chanlun-skills/chan-skills/tree/main/chanlun-chan-zen">查看目录 →</a>
+      </div>
+
+      <div class="card">
+        <span class="no">⑤</span>
+        <h4>缠师周末音乐会</h4>
+        <div class="dir">chanlun-music/</div>
+        <p>42 期古典音乐连载全文、7,149 条博客回复、声乐与作曲专题、离线浏览查看器。</p>
+        <div class="tags"><b>5.3MB</b> · 2006—2007</div>
+        <a class="dl" href="https://github.com/chanlun-skills/chan-skills/tree/main/chanlun-music">查看目录 →</a>
+      </div>
+
+      <div class="card">
+        <span class="no">⑥</span>
+        <h4>妖股年鉴</h4>
+        <div class="dir">chanlun-yaogu/</div>
+        <p>1990—2026 共 37 年 444 条妖股明细、日线谷→峰实算、420 组日线序列、40 条修正幅度榜。</p>
+        <div class="tags"><b>6.5MB</b> · 1990—2026</div>
+        <a class="dl" href="https://github.com/chanlun-skills/chan-skills/tree/main/chanlun-yaogu">查看目录 →</a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ================= 安装 ================= -->
+  <section>
+    <h2>安装方式</h2>
+    <p class="sec-sub">三种方式任选其一，全部脚本仅用 Python 标准库，无需 pip install</p>
+
+    <h3>方式一 · 一键安装（推荐）</h3>
+<pre><span class="c"># 安装全部 6 个 Skill</span>
+npx skills add chanlun-skills/chan-skills
+
+<span class="c"># 只安装某一个</span>
+npx skills add chanlun-skills/chan-skills --skill chanlun-sanmai</pre>
+
+    <h3>方式二 · 手动克隆</h3>
+<pre>git clone https://github.com/chanlun-skills/chan-skills.git
+cd chan-skills
+
+<span class="c"># Claude Code 全局安装</span>
+cp -r chanlun-* ~/.claude/skills/
+
+<span class="c"># 或项目级安装</span>
+cp -r chanlun-* ./.claude/skills/</pre>
+
+    <h3>方式三 · 各平台市场</h3>
+    <table>
+      <tr><th style="width:26%">平台</th><th>位置</th></tr>
+      <tr><td>SkillsMP</td><td>skillsmp.com（自动索引 GitHub 仓库）</td></tr>
+      <tr><td>skills.sh</td><td><code>npx skills add</code> 官方目录，装机量计入排行</td></tr>
+      <tr><td>腾讯 SkillHub</td><td>skillhub.tencent.com（国内高速镜像）</td></tr>
+      <tr><td>ClawHub</td><td><code>npx clawhub install</code></td></tr>
+    </table>
+
+    <h3>安装后验证</h3>
+<pre>cd chan-skills/chanlun-case-library
+python scripts/search_cases.py --stats</pre>
+    <div class="ok">有任何输出即安装成功。</div>
+  </section>
+
+  <!-- ================= 效果演示 ================= -->
+  <section>
+    <h2>效果演示</h2>
+    <p class="sec-sub">以下动图均为<b>真实运行</b>各 Skill 附带的零依赖检索脚本所得，非示意图。</p>
+    <div class="demo">
+      <figure>
+        <img src="images/demo-case-library.gif" alt="缠论案例大全演示">
+        <figcaption><b>① 缠论案例大全</b>关键词检索 · 347 只个股 / 3,026 条案例</figcaption>
+      </figure>
+      <figure>
+        <img src="images/demo-sanmai.gif" alt="缠论三买汇集演示">
+        <figcaption><b>② 缠论三买汇集</b>原话库 · 20 案例 / 81 条原话</figcaption>
+      </figure>
+      <figure>
+        <img src="images/demo-jiexpan.gif" alt="缠论大盘解盘演示">
+        <figcaption><b>③ 缠论大盘解盘</b>515 篇时间线解盘 / 946 条主题帖</figcaption>
+      </figure>
+      <figure>
+        <img src="images/demo-chan-zen.gif" alt="缠论佛学与禅宗演示">
+        <figcaption><b>④ 缠论佛学与禅宗</b>7,131 条语料 / 约 134 万字</figcaption>
+      </figure>
+      <figure>
+        <img src="images/demo-music.gif" alt="缠师周末音乐会演示">
+        <figcaption><b>⑤ 缠师周末音乐会</b>42 期全文 / 7,149 条回复</figcaption>
+      </figure>
+      <figure>
+        <img src="images/demo-yaogu.gif" alt="妖股年鉴演示">
+        <figcaption><b>⑥ 妖股年鉴</b>37 年 444 条 / 日线谷→峰实算</figcaption>
+      </figure>
+    </div>
+    <div class="note">
+      每条命令都可以自己在本地复现 —— 装完 Skill 后进入对应目录执行即可：
+      <br><code>cd chanlun-case-library &amp;&amp; python scripts/search_cases.py --stats</code>
+    </div>
+  </section>
+
+  <!-- ================= 典型用法 ================= -->
+  <section>
+    <h2>典型用法</h2>
+    <p class="sec-sub">每个 Skill 都有明确的触发场景，AI 靠 SKILL.md 判断何时调用</p>
+    <table>
+      <tr><th style="width:56%">你问</th><th>用哪个 Skill</th></tr>
+      <tr><td>「缠师当年怎么分析中国联通的？」</td><td>案例大全 → 247 条案例时间线</td></tr>
+      <tr><td>「这个位置算不算三买？五步怎么走？」</td><td>三买汇集 → 判定链 + 确认/否认双案例</td></tr>
+      <tr><td>「2007 年 5 月 30 日缠师怎么判断大盘的？」</td><td>大盘解盘 → 530 当日三来源交叉印证</td></tr>
+      <tr><td>「缠师说的『缘起』是什么意思，出处在哪？」</td><td>佛学与禅宗 → 概念索引定位原文</td></tr>
+      <tr><td>「第 5 期音乐会放的什么曲子？缠师怎么评的？」</td><td>周末音乐会 → 42 期节目单与乐评</td></tr>
+      <tr><td>「2015 年最猛的妖股是哪些，实算涨幅多少？」</td><td>妖股年鉴 → 37 年年份卡 + 日线实算</td></tr>
+    </table>
+    <h3>跨 Skill 组合示例</h3>
+    <ul>
+      <li><b>「2007 成都建投成妖的过程」</b> → 妖股年鉴给实算涨幅 → 案例大全给同期解盘原文</li>
+      <li><b>「做一份缠师人物全景介绍」</b> → 佛学库给禅学一面 → 音乐库给审美一面 → 其余三库给交易教学一面</li>
+    </ul>
+  </section>
+
+  <!-- ================= 加入交流 ================= -->
+  <section>
+    <h2>加入交流</h2>
+    <p class="sec-sub">案例复盘 · 三买研讨 · 工具共创 · 疑难解答</p>
+    <div class="join">
+      <div class="qr">
+        <img src="images/qq-qrcode.png" alt="QQ 群二维码">
+        <div class="cap">QQ 群（永久有效）<br>群号 <b>1132948221</b></div>
+      </div>
+      <div class="qr">
+        <img src="images/qun-qrcode.png" alt="企业微信群二维码">
+        <div class="cap">企业微信群「缠论AI时代」<br>永久活码</div>
+      </div>
+      <div class="info">
+        <p>两个入口都是<b>永久有效</b>：QQ 群二维码本身不过期；企业微信群用的是「加入群聊」活码，群满 200 人会自动建新群，码不会失效。</p>
+        <p>扫不出？直接用群号 <code>1132948221</code> —— 在 QQ 里搜索群号或「添加群」即可。</p>
+        <div class="btns" style="justify-content:flex-start;margin-top:16px">
+          <a class="btn ghost" href="join.html">打开完整加群页 →</a>
+          <a class="btn ghost" href="https://github.com/chanlun-skills/chan-skills/discussions">GitHub Discussions</a>
+        </div>
+      </div>
+    </div>
+    <div class="warn" style="margin-top:20px">
+      <b>请勿在群内发布荐股、买卖点或当前行情判断。</b>本项目内容仅供缠论技术理论学习与历史行情复盘，不构成投资建议。讨论聚焦方法论与历史案例。
+    </div>
+  </section>
+
+  <!-- ================= 关于作者 ================= -->
+  <section>
+    <h2>关于作者 · 更多内容</h2>
+    <p class="sec-sub">缠论量化 —— 缠论内容整理者，长期做缠论体系的结构化与数据化</p>
+    <div class="join">
+      <div class="qr">
+        <img src="images/wechat-mp-qrcode.png" alt="公众号二维码" style="max-width:150px">
+        <div class="cap">公众号「缠论量化」</div>
+      </div>
+      <div class="info">
+        <p><b>知乎</b>：缠论量化<br>
+           <a href="https://www.zhihu.com/people/chanlunquant" style="color:#3c3489">zhihu.com/people/chanlunquant</a></p>
+        <p><b>缠论资料大全</b>（夸克网盘 · 免费分享）<br>
+           <a href="https://pan.quark.cn/s/f766d88b7331" style="color:#3c3489">pan.quark.cn/s/f766d88b7331</a></p>
+        <div class="btns" style="justify-content:flex-start;margin-top:12px">
+          <a class="btn" href="https://github.com/chanlun-skills/chan-skills">Star 主仓库</a>
+          <a class="btn ghost" href="https://github.com/chanlun-skills/chan-skills/issues">提交纠错与建议</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= 免责声明 ================= -->
+  <section>
+    <h2>免责声明</h2>
+    <p class="sec-sub">本仓库所有内容仅为缠论技术理论学习与历史行情复盘</p>
+    <ul>
+      <li>缠师原文时间窗口为 2002—2008 年，与当下市场制度环境存在根本差异，<b>历史结构不可直接映射到当前市场</b></li>
+      <li>妖股年鉴采用「日线谷→峰最大涨幅」口径，与其他口径不可直接比较</li>
+      <li>音乐会的缠师回复正文在源存档中缺失，引用以 42 期原文为准</li>
+      <li>市场有风险，决策需独立判断，风险自担</li>
+    </ul>
+    <div class="note">完整版声明见 <a href="disclaimer.md" style="color:#0c447c">docs/disclaimer.md</a>。</div>
+  </section>
+
+  <footer>
+    <a href="https://github.com/chanlun-skills/chan-skills">GitHub 主仓库</a>
+    <span class="foot-sep">·</span>
+    <a href="https://gitee.com/chanlun-skills/chan-skills">Gitee 镜像</a>
+    <span class="foot-sep">·</span>
+    <a href="join.html">加群页</a>
+    <span class="foot-sep">·</span>
+    <a href="disclaimer.md">免责声明</a>
+    <br>
+    内容仅供学习研究，不构成任何投资建议
+  </footer>
+
+</div>
+</body>
+</html>
