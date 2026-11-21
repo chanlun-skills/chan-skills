@@ -14,6 +14,15 @@
 | `qq-qrcode.png` | 700×927 | **QQ 群二维码**（已裁到完整三个定位圆点，含 Logo + 群名「缠论Skills」+ 群号 1132948221） |
 | `qun-qrcode.png` | 484×484 | **企业微信群「缠论AI时代」永久活码**（`work.weixin.qq.com/gm/...`，企业微信「加入群聊」生成，不会过期；已补 44px 白色静区并复验可解码） |
 | `wechat-mp-qrcode.png` | 510×510 | **公众号「缠论量化」二维码**（解码为 `weixin.qq.com/r/mp/dRMsND7E32OgrXpX90Zn`；已补 40px 白色静区并复验可解码） |
+| `demo-case-library.gif` | 820×400 | **缠论案例大全演示**（真实跑 `search_cases.py --keyword 中国联通`） |
+| `demo-sanmai.gif` | 820×400 | **缠论三买汇集演示**（真实跑 `search_sanmai.py --quotes`） |
+| `demo-jiexpan.gif` | 820×400 | **缠论大盘解盘演示**（真实跑 `search_jiexpan.py --stats`） |
+| `demo-chan-zen.gif` | 820×400 | **缠论佛学与禅宗演示**（真实跑 `search_chanzen.py --stats`） |
+| `demo-music.gif` | 820×400 | **缠师周末音乐会演示**（真实跑 `search_music.py --stats`） |
+| `demo-yaogu.gif` | 820×400 | **妖股年鉴演示**（真实跑 `search_yaogu.py --year 2015`） |
+
+> 六张动图由 `scripts/make_demos.py` 生成（Pillow 渲染终端帧 + ffmpeg 合成 GIF）。
+> **数据更新后重新生成**：`python scripts/make_demos.py`（需要 Pillow 与 ffmpeg）。
 
 ---
 
@@ -21,16 +30,18 @@
 
 ### 可选 · 6 张演示动图
 
+> ✅ **已就绪** —— 六张全部生成完毕，见上表。终端风格、内容为真实脚本输出。
+
 | 文件名 | 建议尺寸 | 演示内容 |
 |---|---|---|
-| `demo-case-library.gif` | 480p，≤10MB | AI 检索缠论案例库并输出结构拆解 |
-| `demo-sanmai.gif` | 480p，≤10MB | AI 走五步判定链输出三买分析 |
-| `demo-jiexpan.gif` | 480p，≤10MB | AI 检索历史解盘并给出当时语境 |
-| `demo-chan-zen.gif` | 480p，≤10MB | AI 检索佛学概念并注明出处 |
-| `demo-music.gif` | 480p，≤10MB | AI 查询某期音乐会节目单与乐评 |
-| `demo-yaogu.gif` | 480p，≤10MB | AI 复算某年妖股日线谷峰涨幅 |
+| `demo-case-library.gif` | 820×400 | AI 检索缠论案例库并输出结构拆解 |
+| `demo-sanmai.gif` | 820×400 | AI 走五步判定链输出三买分析 |
+| `demo-jiexpan.gif` | 820×400 | AI 检索历史解盘并给出当时语境 |
+| `demo-chan-zen.gif` | 820×400 | AI 检索佛学概念并注明出处 |
+| `demo-music.gif` | 820×400 | AI 查询某期音乐会节目单与乐评 |
+| `demo-yaogu.gif` | 820×400 | AI 复算某年妖股日线谷峰涨幅 |
 
-**制作**：ScreenToGif（Windows 免费）录屏 → 裁剪 15~30 秒 → 导出 GIF 控制在 10MB 内。
+**重新生成**：`python scripts/make_demos.py`（需 Pillow + ffmpeg）。
 
 ### 可选 · 微信群二维码
 

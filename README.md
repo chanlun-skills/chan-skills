@@ -48,26 +48,43 @@ Agent Skills（SKILL.md 开放标准）· 一次开发，Claude Code / Codex / C
 
 ## ✨ 效果演示
 
+以下动图均为**真实运行**各 Skill 附带的零依赖检索脚本所得，非示意图。
+
 <table>
 <tr>
-<td width="50%"><b>缠论案例大全</b></td>
-<td width="50%"><b>缠论三买汇集</b></td>
+<td width="50%" align="center"><b>① 缠论案例大全</b><br><sub>关键词检索 · 347 只个股 / 3,026 条案例</sub></td>
+<td width="50%" align="center"><b>② 缠论三买汇集</b><br><sub>原话库 · 20 案例 / 81 条原话</sub></td>
 </tr>
 <tr>
-<td><img src="docs/images/demo-case-library.gif" alt="案例大全演示" onerror="this.closest('td').innerHTML='<small>演示动图待补充<br>docs/images/demo-case-library.gif</small>'"></td>
-<td><img src="docs/images/demo-sanmai.gif" alt="三买汇集演示" onerror="this.closest('td').innerHTML='<small>演示动图待补充<br>docs/images/demo-sanmai.gif</small>'"></td>
+<td align="center"><img src="docs/images/demo-case-library.gif" width="100%" alt="缠论案例大全 · 关键词检索演示"></td>
+<td align="center"><img src="docs/images/demo-sanmai.gif" width="100%" alt="缠论三买汇集 · 原话库演示"></td>
 </tr>
 <tr>
-<td><b>大盘解盘</b></td>
-<td><b>妖股年鉴</b></td>
+<td align="center"><b>③ 缠论大盘解盘</b><br><sub>515 篇时间线解盘 / 946 条主题帖</sub></td>
+<td align="center"><b>④ 缠论佛学与禅宗</b><br><sub>7,131 条语料 / 约 134 万字</sub></td>
 </tr>
 <tr>
-<td><img src="docs/images/demo-jiexpan.gif" alt="大盘解盘演示" onerror="this.closest('td').innerHTML='<small>演示动图待补充<br>docs/images/demo-jiexpan.gif</small>'"></td>
-<td><img src="docs/images/demo-yaogu.gif" alt="妖股年鉴演示" onerror="this.closest('td').innerHTML='<small>演示动图待补充<br>docs/images/demo-yaogu.gif</small>'"></td>
+<td align="center"><img src="docs/images/demo-jiexpan.gif" width="100%" alt="缠论大盘解盘 · 库统计演示"></td>
+<td align="center"><img src="docs/images/demo-chan-zen.gif" width="100%" alt="缠论佛学与禅宗 · 语料统计演示"></td>
+</tr>
+<tr>
+<td align="center"><b>⑤ 缠师周末音乐会</b><br><sub>42 期全文 / 7,149 条回复</sub></td>
+<td align="center"><b>⑥ 妖股年鉴</b><br><sub>37 年 444 条 / 日线谷→峰实算</sub></td>
+</tr>
+<tr>
+<td align="center"><img src="docs/images/demo-music.gif" width="100%" alt="缠师周末音乐会 · 库统计演示"></td>
+<td align="center"><img src="docs/images/demo-yaogu.gif" width="100%" alt="妖股年鉴 · 2015 年实算演示"></td>
 </tr>
 </table>
 
-*演示动图待补充 —— 欢迎在 Issues 里提交你录制的版本。*
+**每条命令都可以自己在本地复现** —— 装完 Skill 后进入对应目录执行即可，脚本只用 Python 标准库：
+
+```bash
+cd chanlun-case-library && python scripts/search_cases.py --stats
+cd chanlun-yaogu       && python scripts/search_yaogu.py --year 2015
+```
+
+> 想看更复杂的用法（多条件检索、指定年份、主题分布、K 线复算），可以在 [Issues](https://github.com/chanlun-skills/chan-skills/issues) 里提需求，我来补演示。
 
 ---
 
