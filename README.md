@@ -222,7 +222,7 @@ Discussions 开放 Q&A 与案例讨论，欢迎把你的复盘结果发上来。
 <tr>
 <td align="center"><img src="docs/images/donate-wechat.png" width="160" alt="微信收款码" onerror="this.closest('td').innerHTML='<b>微信收款码</b><br><br><small>待上传<br>docs/images/donate-wechat.png</small>'"></td>
 <td align="center"><img src="docs/images/donate-alipay.png" width="160" alt="支付宝收款码" onerror="this.closest('td').innerHTML='<b>支付宝收款码</b><br><br><small>待上传<br>docs/images/donate-alipay.png</small>'"></td>
-<td align="center"><b>爱发电</b><br><a href="https://afdian.com/a/待填">afdian.com/a/待填</a></td>
+<td align="center"><b>爱发电</b><br><small style="color:#888">开通中</small><br><small style="color:#aaa">afdian.com/a/待填</small></td>
 </tr>
 <tr>
 <td align="center">微信</td>
@@ -234,6 +234,10 @@ Discussions 开放 Q&A 与案例讨论，欢迎把你的复盘结果发上来。
 这些 Skill 是完全免费开源的。维护它们需要时间 —— 数据纠错、脚本维护、文档更新。如果对你有帮助，一杯咖啡就是最好的支持。
 
 > 微信 / 支付宝扫码时备注里写个 **"缠论"** 或 **"咖啡"**，方便我认出来 ❤️
+
+**💬 暂时还没找到合适的支持方式？** 加群聊聊也行 ——
+[QQ 群 1132948221](https://github.com/chanlun-skills/chan-skills/discussions) ·
+[GitHub Discussions](https://github.com/chanlun-skills/chan-skills/discussions)
 
 ---
 
