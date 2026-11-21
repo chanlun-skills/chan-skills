@@ -28,6 +28,11 @@ jobs:
       - name: Setup Pages
         id: pages
         uses: actions/configure-pages@v6
+        with:
+          # 若仓库已配置 META_TOKEN（带 repo scope 的 PAT），自动开启 Pages；
+          # 未配置时退回到网页 Settings → Pages 手动选择「GitHub Actions」作为 Source。
+          enablement: ${{ secrets.META_TOKEN != '' }}
+          token: ${{ secrets.META_TOKEN || github.token }}
 
       - name: 生成 Markdown 对应的 HTML 页面
         run: python scripts/md2html.py
