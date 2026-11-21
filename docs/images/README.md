@@ -13,6 +13,7 @@
 | `donate-alipay.png` | 800×858 | **支付宝收款码**（已裁掉支付宝页头页脚，保留二维码 + 昵称「**风」） |
 | `qq-qrcode.png` | 700×927 | **QQ 群二维码**（已裁到完整三个定位圆点，含 Logo + 群名「缠论Skills」+ 群号 1132948221） |
 | `qun-qrcode.png` | 484×484 | **企业微信群「缠论AI时代」永久活码**（`work.weixin.qq.com/gm/...`，企业微信「加入群聊」生成，不会过期；已补 44px 白色静区并复验可解码） |
+| `wechat-mp-qrcode.png` | 510×510 | **公众号「缠论量化」二维码**（解码为 `weixin.qq.com/r/mp/dRMsND7E32OgrXpX90Zn`；已补 40px 白色静区并复验可解码） |
 
 ---
 

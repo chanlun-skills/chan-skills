@@ -250,10 +250,22 @@ chan-skills/
 
 ## 👤 关于作者 · 更多内容
 
-缠论内容整理者，长期做缠论体系的结构化与数据化（案例 / 解盘 / 佛学 / 音乐 / 妖股数据）。
+**缠论量化** —— 缠论内容整理者，长期做缠论体系的结构化与数据化（案例 / 解盘 / 佛学 / 音乐 / 妖股数据）。
 
-- **公众号**：待填
-- **知乎 / B 站 / 其他专栏**：待填
-- **其他项目**：待填
+<table>
+<tr>
+<td align="center" width="50%">
+<b>公众号「缠论量化」</b><br>
+<img src="docs/images/wechat-mp-qrcode.png" width="180" alt="公众号二维码" onerror="this.closest('td').innerHTML='<b>公众号</b><br><br><small>缠论量化</small>'">
+</td>
+<td align="center" width="50%">
+<b>其他入口</b><br><br>
+<b>知乎</b>：缠论量化<br>
+<a href="https://www.zhihu.com/people/chanlunquant">zhihu.com/people/chanlunquant</a><br><br>
+<b>缠论资料大全</b>（夸克网盘 · 免费分享）<br>
+<a href="https://pan.quark.cn/s/f766d88b7331">pan.quark.cn/s/f766d88b7331</a>
+</td>
+</tr>
+</table>
 
-> 这一节就是给你平时放"我的其他简介和内容"的位置：加链接、加二维码图片、加新项目介绍都可以，直接编辑本文件推送即可。
+> 想跟进公众号的缠论文章，或需要整理好的原始资料包，从上面任一入口进来即可。
