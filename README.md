@@ -121,6 +121,20 @@ npx skills add chanlun-skills/chan-skills
 npx skills add chanlun-skills/chan-skills --skill chanlun-sanmai
 ```
 
+> **⚠️ clone 失败怎么办（国内网络常见）**
+>
+> `npx skills add` 底层是 `git clone https://github.com/...`。部分国内网络/代理会拦截 GitHub 的 HTTPS 连接，
+> 报 `curl 7 CONNECT tunnel failed, response 502` 或 `RPC failed; expected 'packfile'`。
+> **解决办法：改用 Gitee 镜像**（内容与主仓实时同步，每 5 分钟自动同步一次）：
+>
+> ```bash
+> npx skills add https://gitee.com/chanlun-skills/chan-skills.git
+>
+> # 或手动克隆后本地安装
+> git clone https://gitee.com/chanlun-skills/chan-skills.git
+> cd chan-skills && cp -r chanlun-* ~/.claude/skills/
+> ```
+
 ### 方式二：手动克隆
 
 ```bash
@@ -134,14 +148,18 @@ cp -r chanlun-* ~/.claude/skills/
 cp -r chanlun-* ./.claude/skills/
 ```
 
+> 国内网络建议克隆 Gitee 镜像：`git clone https://gitee.com/chanlun-skills/chan-skills.git`
+
 ### 方式三：各平台市场
 
-| 平台 | 位置 |
-|---|---|
-| SkillsMP | skillsmp.com（自动索引 GitHub 仓库） |
-| skills.sh | `npx skills add` 官方目录，装机量计入排行 |
-| 腾讯 SkillHub | skillhub.tencent.com（国内高速镜像） |
-| ClawHub | `npx clawhub install` |
+| 平台 | 位置 | 收录状态 |
+|---|---|---|
+| SkillsMP | skillsmp.com | ⏳ 待收录（自动索引 GitHub，需仓库有 star） |
+| skills.sh | `npx skills add` 官方目录 | ⏳ 待收录（需有人执行过 `skills add` 上报遥测） |
+| 腾讯 SkillHub | skillhub.cn | ⏳ 待发布（需 GitHub 授权后主动发布） |
+| ClawHub | clawhub.ai | ⏳ 待发布（需 `clawhub skill publish`） |
+
+> **目前最可靠的安装方式就是上面的方式一 / 方式二**（Gitee 镜像路径国内可用）。
 
 ### 安装后验证
 
